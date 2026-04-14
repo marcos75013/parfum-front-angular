@@ -1,0 +1,56 @@
+<div class="page">
+  <div class="hero">
+    <div class="hero-top">
+      <div>
+        <p class="eyebrow">Collection</p>
+        <h1>Catalogue de parfums</h1>
+        <p class="hero-subtitle">{{ filteredParfums.length }} parfum(s) disponibles</p>
+      </div>
+
+      <a routerLink="/cart" class="cart-link">
+        <span class="cart-icon">🛍️</span>
+        <span>Panier</span>
+        <span class="cart-badge">{{ cartService.count() }}</span>
+      </a>
+    </div>
+
+    <input
+      type="text"
+      [(ngModel)]="search"
+      (input)="filter()"
+      placeholder="Rechercher un parfum..."
+      class="search-input"
+    />
+  </div>
+
+  <div *ngIf="loading" class="state">Chargement des parfums...</div>
+
+  <div *ngIf="!loading && filteredParfums.length === 0" class="state">
+    Aucun parfum trouvé.
+  </div>
+
+  <div class="grid" *ngIf="!loading && filteredParfums.length > 0">
+    <article class="card" *ngFor="let parfum of filteredParfums; trackBy: trackByName">
+      <div class="image-wrapper">
+        <img [src]="parfum.image" [alt]="parfum.name" class="card-image" />
+      </div>
+
+      <div class="card-content">
+        <p class="brand">{{ parfum.brand }}</p>
+        <h2>{{ parfum.name }}</h2>
+        <p class="meta">{{ parfum.gender }}</p>
+
+        <div class="card-footer">
+          <p class="price">{{ parfum.price }} €</p>
+          <button
+            class="add-btn"
+            [class.added]="isInCart(parfum)"
+            (click)="addToCart(parfum)"
+          >
+            {{ isInCart(parfum) ? 'Ajouté au panier' : 'Ajouter au panier' }}
+          </button>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>

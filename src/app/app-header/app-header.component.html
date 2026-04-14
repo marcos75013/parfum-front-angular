@@ -1,0 +1,127 @@
+<header class="header">
+  <div class="header__container">
+    <!-- Logo / marque -->
+    <a routerLink="/" class="brand" aria-label="Retour à l'accueil ParfumDeals">
+      <img
+        src="images/parfumLogo1.png"
+        alt="ParfumDeals logo"
+        class="brand__logo-img"
+      />
+
+      <div class="brand__text">
+        <span class="brand__name">ParfumDeals</span>
+        <span class="brand__tag">Parfums en promo & outlet</span>
+      </div>
+    </a>
+
+    <!-- Navigation desktop -->
+    <nav class="nav nav--desktop" aria-label="Navigation principale">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        Accueil
+      </a>
+      <a routerLink="/parfums" routerLinkActive="active">
+        Parfums
+      </a>
+      <a routerLink="/promotions" routerLinkActive="active">
+        Promotions
+      </a>
+      <a routerLink="/marques" routerLinkActive="active">
+        Marques
+      </a>
+    </nav>
+
+    <!-- Actions desktop -->
+    <div class="actions actions--desktop">
+      <a routerLink="/favoris" class="action-btn">
+        ❤ <span>Favoris</span>
+      </a>
+
+      <a routerLink="/cart" class="cart-btn">
+        🛒 <span>Panier</span>
+      </a>
+    </div>
+
+    <!-- Bouton burger mobile -->
+    <button
+      class="burger"
+      type="button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen()"
+      aria-label="Ouvrir le menu"
+    >
+      ☰
+    </button>
+  </div>
+
+  <!-- Bannière promo -->
+  <div class="promo-bar">
+    ✨ Jusqu’à -70% sur une sélection de parfums de grandes marques
+  </div>
+
+  <!-- OVERLAY -->
+  <div
+    class="overlay"
+    *ngIf="menuOpen()"
+    (click)="closeMenu()"
+  ></div>
+
+  <!-- MENU MOBILE -->
+  <aside class="mobile-menu" *ngIf="menuOpen()" aria-label="Menu mobile">
+    <div class="mobile-menu__top">
+      <div class="mobile-menu__brand">
+        <img
+          src="images/parfumLogo1.png"
+          alt="ParfumDeals logo"
+          class="mobile-menu__brand-logo"
+        />
+        <div class="mobile-menu__brand-text">
+          <span class="mobile-menu__title">ParfumDeals</span>
+          <span class="mobile-menu__subtitle">Outlet parfums & bons plans</span>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        class="mobile-menu__close"
+        (click)="closeMenu()"
+        aria-label="Fermer le menu"
+      >
+        ✕
+      </button>
+    </div>
+
+
+    <nav class="nav nav--mobile">
+      <a routerLink="/" (click)="closeMenu()">
+        <span class="nav-mobile__icon">🏠</span>
+        <span>Accueil</span>
+      </a>
+
+      <a routerLink="/parfums" (click)="closeMenu()">
+        <span class="nav-mobile__icon">✨</span>
+        <span>Parfums</span>
+      </a>
+
+      <a routerLink="/promotions" (click)="closeMenu()">
+        <span class="nav-mobile__icon">🔥</span>
+        <span>Promotions</span>
+      </a>
+
+      <a routerLink="/marques" (click)="closeMenu()">
+        <span class="nav-mobile__icon">💎</span>
+        <span>Marques</span>
+      </a>
+    </nav>
+
+
+    <div class="mobile-menu__actions">
+      <a routerLink="/cart" class="mobile-menu__cart" (click)="closeMenu()">
+        <div>
+          <span class="mobile-menu__cart-title">Panier</span>
+          <span class="mobile-menu__cart-subtitle">Voir mes produits</span>
+        </div>
+        <span class="mobile-menu__cart-icon">🛒</span>
+      </a>
+    </div>
+  </aside>
+</header>

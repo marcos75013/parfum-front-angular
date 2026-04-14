@@ -1,0 +1,73 @@
+<div class="page">
+  <div class="header">
+    <div>
+      <p class="eyebrow">Commande</p>
+      <h1>Finaliser votre demande</h1>
+      <p class="subtitle">
+        Vous ne payez pas sur le site. La commande vous sera confirmée ensuite par email.
+      </p>
+    </div>
+
+    <a routerLink="/cart" class="back-link">← Retour au panier</a>
+  </div>
+
+  <div class="layout">
+    <form class="form-card" (ngSubmit)="submit()">
+      <div class="form-grid">
+        <div class="field">
+          <label for="firstName">Prénom</label>
+          <input id="firstName" name="firstName" [(ngModel)]="form.firstName" required />
+        </div>
+
+        <div class="field">
+          <label for="lastName">Nom</label>
+          <input id="lastName" name="lastName" [(ngModel)]="form.lastName" required />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" [(ngModel)]="form.email" required />
+        </div>
+
+        <div class="field">
+          <label for="phone">Téléphone</label>
+          <input id="phone" name="phone" [(ngModel)]="form.phone" required />
+        </div>
+
+        <div class="field full">
+          <label for="address">Adresse</label>
+          <textarea
+            id="address"
+            name="address"
+            rows="5"
+            [(ngModel)]="form.address"
+            required
+          ></textarea>
+        </div>
+      </div>
+
+      <button class="submit-btn" type="submit" [disabled]="sending || cartService.items().length === 0">
+        {{ sending ? 'Envoi en cours...' : 'Passer la commande' }}
+      </button>
+
+      <p class="success-message" *ngIf="successMessage">{{ successMessage }}</p>
+    </form>
+
+    <aside class="summary">
+      <h3>Récapitulatif</h3>
+
+      <div class="summary-item" *ngFor="let item of cartService.items()">
+        <div>
+          <p class="item-name">{{ item.parfum.name }}</p>
+          <p class="item-meta">Qté : {{ item.quantity }}</p>
+        </div>
+        <strong>{{ item.parfum.price * item.quantity }} €</strong>
+      </div>
+
+      <div class="summary-total">
+        <span>Total</span>
+        <strong>{{ cartService.total() }} €</strong>
+      </div>
+    </aside>
+  </div>
+</div>
