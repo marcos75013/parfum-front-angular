@@ -1,0 +1,48 @@
+<div class="page">
+  <section class="hero">
+    <div class="hero__text">
+      <p class="eyebrow">Univers des marques</p>
+      <h1>Toutes les marques</h1>
+      <p class="hero-subtitle">
+        {{ filteredBrands.length }} marque(s) disponible(s)
+      </p>
+    </div>
+
+    <div class="search-bar-wrapper">
+      <div class="search-bar">
+        <span class="search-icon">🔎</span>
+        <input
+          type="text"
+          [(ngModel)]="search"
+          (input)="filterBrands()"
+          placeholder="Rechercher une marque..."
+          class="search-input"
+        />
+      </div>
+    </div>
+  </section>
+
+  <div *ngIf="loading" class="state">Chargement des marques...</div>
+
+  <div *ngIf="!loading && filteredBrands.length === 0" class="state">
+    Aucune marque trouvée.
+  </div>
+
+  <div class="brands-grid" *ngIf="!loading && filteredBrands.length > 0">
+    <a
+      class="brand-card"
+      *ngFor="let brand of filteredBrands; trackBy: trackByBrand"
+      [routerLink]="getBrandLink(brand)"
+    >
+      <div class="brand-card__content">
+        <p class="brand-card__label">Marque</p>
+        <h2>{{ brand }}</h2>
+        <p class="brand-card__count">
+          {{ getCountForBrand(brand) }} parfum(s)
+        </p>
+      </div>
+
+      <span class="brand-card__arrow">→</span>
+    </a>
+  </div>
+</div>

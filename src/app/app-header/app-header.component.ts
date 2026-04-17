@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +13,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class AppHeaderComponent {
   readonly menuOpen = signal(false);
+  readonly cartService = inject(CartService);
 
   toggleMenu(): void {
     this.menuOpen.update((value) => !value);

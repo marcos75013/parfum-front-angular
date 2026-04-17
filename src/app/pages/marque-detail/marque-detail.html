@@ -1,0 +1,52 @@
+<div class="page">
+  <section class="hero">
+    <a routerLink="/marques" class="back-link">← Retour aux marques</a>
+
+    <div class="hero__text">
+      <p class="eyebrow">Sélection de la marque</p>
+      <h1>{{ brand }}</h1>
+      <p class="hero-subtitle">
+        {{ parfums.length }} parfum(s) disponible(s)
+      </p>
+    </div>
+  </section>
+
+  <div class="disclaimer" role="note" aria-label="Information sur les visuels produits">
+    <span class="disclaimer__icon">⚠️</span>
+    <p class="disclaimer__text">
+      Les images des produits sont non contractuelles et présentées à titre illustratif.
+    </p>
+  </div>
+
+  <div *ngIf="loading" class="state">Chargement des produits...</div>
+
+  <div *ngIf="!loading && parfums.length === 0" class="state">
+    Aucun produit trouvé pour cette marque.
+  </div>
+
+  <div class="grid" *ngIf="!loading && parfums.length > 0">
+    <article class="card" *ngFor="let parfum of parfums; trackBy: trackByName">
+      <div class="image-wrapper">
+        <img [src]="parfum.image" [alt]="parfum.name" class="card-image" />
+      </div>
+
+      <div class="card-content">
+        <p class="brand">{{ parfum.brand }}</p>
+        <h2>{{ parfum.name }}</h2>
+        <p class="meta">{{ parfum.gender }}</p>
+
+        <div class="card-footer">
+          <p class="price">{{ parfum.price }} €</p>
+
+          <button
+            class="add-btn"
+            [class.added]="isInCart(parfum)"
+            (click)="addToCart(parfum)"
+          >
+            {{ isInCart(parfum) ? 'Ajouté au panier' : 'Ajouter au panier' }}
+          </button>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>

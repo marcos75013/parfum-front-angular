@@ -1,0 +1,88 @@
+.cgv-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 35%),
+    linear-gradient(180deg, #0f0f12 0%, #17171d 100%);
+  padding: 48px 20px 72px;
+  color: #f5f5f7;
+}
+
+.cgv-container {
+  max-width: 980px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.cgv-hero {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cgv-kicker {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #d7b56d;
+}
+
+.cgv-hero h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+}
+
+.cgv-updated {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cgv-section {
+  margin-bottom: 28px;
+}
+
+.cgv-section h2 {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+  color: #f0d28a;
+}
+
+.cgv-section p {
+  margin: 0 0 12px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+strong {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .cgv-page {
+    padding: 24px 14px 48px;
+  }
+
+  .cgv-container {
+    padding: 22px 18px;
+    border-radius: 18px;
+  }
+
+  .cgv-hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .cgv-section h2 {
+    font-size: 1.05rem;
+  }
+
+  .cgv-section p {
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+}

@@ -1,26 +1,36 @@
 <div class="page">
-  <div class="hero">
-    <div class="hero-top">
-      <div>
+  <section class="hero">
+    <div class="hero__content">
+      <div class="hero__text">
         <p class="eyebrow">Collection</p>
         <h1>Catalogue de parfums</h1>
-        <p class="hero-subtitle">{{ filteredParfums.length }} parfum(s) disponibles</p>
+        <p class="hero-subtitle">
+          {{ filteredParfums.length }} parfum(s) disponibles
+        </p>
       </div>
 
-      <a routerLink="/cart" class="cart-link">
-        <span class="cart-icon">🛍️</span>
-        <span>Panier</span>
-        <span class="cart-badge">{{ cartService.count() }}</span>
-      </a>
+
     </div>
 
-    <input
-      type="text"
-      [(ngModel)]="search"
-      (input)="filter()"
-      placeholder="Rechercher un parfum..."
-      class="search-input"
-    />
+    <div class="search-bar-wrapper">
+      <div class="search-bar">
+        <span class="search-icon">🔎</span>
+        <input
+          type="text"
+          [(ngModel)]="search"
+          (input)="filter()"
+          placeholder="Rechercher un parfum, une marque..."
+          class="search-input"
+        />
+      </div>
+    </div>
+  </section>
+
+  <div class="disclaimer" role="note" aria-label="Information sur les visuels produits">
+    <span class="disclaimer__icon">⚠️</span>
+    <p class="disclaimer__text">
+      Les images des produits sont non contractuelles et présentées à titre illustratif.
+    </p>
   </div>
 
   <div *ngIf="loading" class="state">Chargement des parfums...</div>
@@ -32,7 +42,14 @@
   <div class="grid" *ngIf="!loading && filteredParfums.length > 0">
     <article class="card" *ngFor="let parfum of filteredParfums; trackBy: trackByName">
       <div class="image-wrapper">
-        <img [src]="parfum.image" [alt]="parfum.name" class="card-image" />
+        <img
+          [src]="parfum.image"
+          [alt]="parfum.name"
+          loading="lazy"
+          width="200"
+          height="200"
+          class="card-image"
+        />
       </div>
 
       <div class="card-content">
@@ -42,6 +59,7 @@
 
         <div class="card-footer">
           <p class="price">{{ parfum.price }} €</p>
+
           <button
             class="add-btn"
             [class.added]="isInCart(parfum)"
@@ -53,4 +71,5 @@
       </div>
     </article>
   </div>
+
 </div>

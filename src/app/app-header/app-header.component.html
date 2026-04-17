@@ -1,7 +1,11 @@
 <header class="header">
   <div class="header__container">
-    <!-- Logo / marque -->
-    <a routerLink="/" class="brand" aria-label="Retour à l'accueil ParfumDeals">
+    <a
+      routerLink="/"
+      class="brand"
+      aria-label="Retour à l'accueil ParfumDeals"
+      (click)="closeMenu()"
+    >
       <img
         src="images/parfumLogo1.png"
         alt="ParfumDeals logo"
@@ -14,34 +18,37 @@
       </div>
     </a>
 
-    <!-- Navigation desktop -->
     <nav class="nav nav--desktop" aria-label="Navigation principale">
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-        Accueil
-      </a>
-      <a routerLink="/parfums" routerLinkActive="active">
-        Parfums
-      </a>
-      <a routerLink="/promotions" routerLinkActive="active">
+      <a
+        routerLink="/promotions"
+        routerLinkActive="active"
+        (click)="closeMenu()"
+      >
         Promotions
       </a>
-      <a routerLink="/marques" routerLinkActive="active">
+
+      <a
+        routerLink="/marques"
+        routerLinkActive="active"
+        (click)="closeMenu()"
+      >
         Marques
       </a>
     </nav>
 
-    <!-- Actions desktop -->
     <div class="actions actions--desktop">
-      <a routerLink="/favoris" class="action-btn">
-        ❤ <span>Favoris</span>
-      </a>
-
-      <a routerLink="/cart" class="cart-btn">
-        🛒 <span>Panier</span>
+      <a
+        routerLink="/cart"
+        class="cart-btn"
+        aria-label="Voir le panier"
+        (click)="closeMenu()"
+      >
+        <span class="cart-btn__icon">🛒</span>
+        <span>Panier</span>
+        <span class="cart-btn__badge">{{ cartService.count() }}</span>
       </a>
     </div>
 
-    <!-- Bouton burger mobile -->
     <button
       class="burger"
       type="button"
@@ -53,19 +60,16 @@
     </button>
   </div>
 
-  <!-- Bannière promo -->
   <div class="promo-bar">
     ✨ Jusqu’à -70% sur une sélection de parfums de grandes marques
   </div>
 
-  <!-- OVERLAY -->
   <div
     class="overlay"
     *ngIf="menuOpen()"
     (click)="closeMenu()"
   ></div>
 
-  <!-- MENU MOBILE -->
   <aside class="mobile-menu" *ngIf="menuOpen()" aria-label="Menu mobile">
     <div class="mobile-menu__top">
       <div class="mobile-menu__brand">
@@ -90,18 +94,7 @@
       </button>
     </div>
 
-
     <nav class="nav nav--mobile">
-      <a routerLink="/" (click)="closeMenu()">
-        <span class="nav-mobile__icon">🏠</span>
-        <span>Accueil</span>
-      </a>
-
-      <a routerLink="/parfums" (click)="closeMenu()">
-        <span class="nav-mobile__icon">✨</span>
-        <span>Parfums</span>
-      </a>
-
       <a routerLink="/promotions" (click)="closeMenu()">
         <span class="nav-mobile__icon">🔥</span>
         <span>Promotions</span>
@@ -113,14 +106,21 @@
       </a>
     </nav>
 
-
     <div class="mobile-menu__actions">
-      <a routerLink="/cart" class="mobile-menu__cart" (click)="closeMenu()">
+      <a
+        routerLink="/cart"
+        class="mobile-menu__cart"
+        (click)="closeMenu()"
+      >
         <div>
           <span class="mobile-menu__cart-title">Panier</span>
           <span class="mobile-menu__cart-subtitle">Voir mes produits</span>
         </div>
-        <span class="mobile-menu__cart-icon">🛒</span>
+
+        <div class="mobile-menu__cart-right">
+          <span class="mobile-menu__cart-badge">{{ cartService.count() }}</span>
+          <span class="mobile-menu__cart-icon">🛒</span>
+        </div>
       </a>
     </div>
   </aside>

@@ -1,7 +1,6 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { ChangeDetectorRef, Component, Inject, OnInit, PLATFORM_ID, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
 
 import { Parfum } from '../../models/parfum';
 import { CartService } from '../../services/cart.service';
@@ -10,7 +9,7 @@ import { ParfumService } from '../../services/parfum.service';
 @Component({
   selector: 'app-parfums',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink],
+  imports: [CommonModule, FormsModule],
   templateUrl: './parfums.html',
   styleUrl: './parfums.scss',
 })
@@ -22,17 +21,34 @@ export class ParfumsComponent implements OnInit {
 
   readonly cartService = inject(CartService);
 
-  constructor(private parfumService: ParfumService) {}
+  constructor(
+    private readonly parfumService: ParfumService,
+    private readonly cdr: ChangeDetectorRef,
+    @Inject(PLATFORM_ID) private readonly platformId: object,
+  ) {}
 
   async ngOnInit(): Promise<void> {
+    if (!isPlatformBrowser(this.platformId)) {
+      this.loading = false;
+      this.cdr.detectChanges();
+      return;
+    }
+
     try {
       this.parfums = await this.parfumService.loadParfums();
       this.filteredParfums = [...this.parfums];
+
       void this.loadImagesInBackground();
     } catch (error) {
       console.error('Erreur chargement parfums', error);
+      this.parfums = [];
+      this.filteredParfums = [];
     } finally {
       this.loading = false;
+
+      // Force le refresh de la vue après chargement async
+      // pour éviter d’avoir à recliquer pour voir la liste.
+      this.cdr.detectChanges();
     }
   }
 
@@ -67,15 +83,22 @@ export class ParfumsComponent implements OnInit {
   }
 
   private async loadImagesInBackground(): Promise<void> {
-    for (const parfum of this.parfums) {
-      try {
-        const image = await this.parfumService.fetchPerfumeImage(parfum);
-        parfum.image = image;
-      } catch (error) {
-        console.error(`Erreur mise à jour image pour "${parfum.name}"`, error);
-      }
+    const updates = await Promise.all(
+      this.parfums.map(async (parfum) => {
+        try {
+          const image = await this.parfumService.fetchPerfumeImage(parfum);
+          return { parfum, image };
+        } catch {
+          return { parfum, image: parfum.image };
+        }
+      }),
+    );
+
+    for (const update of updates) {
+      update.parfum.image = update.image;
     }
 
     this.filteredParfums = [...this.filteredParfums];
+    this.cdr.detectChanges();
   }
 }
