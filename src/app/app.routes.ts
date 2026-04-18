@@ -5,7 +5,7 @@ import { CheckoutComponent } from './pages/checkout/checkout';
 import { MarquesComponent } from './pages/marques/marques';
 import { MarqueDetailComponent } from './pages/marque-detail/marque-detail';
 import { CgvComponent } from './pages/cgv/cgv';
-import { PromotionsComponent } from './pages/promotions/promotions';
+import { MeilleuresAffairesComponent } from './pages/meilleures-affaires/meilleures-affaires';
 
 export const routes: Routes = [
   {
@@ -19,9 +19,14 @@ export const routes: Routes = [
     title: 'ParfumDeals - Parfums',
   },
   {
+    path: 'meilleures-affaires',
+    component: MeilleuresAffairesComponent,
+    title: 'ParfumDeals - Meilleures affaires',
+  },
+  {
     path: 'promotions',
-    component: PromotionsComponent,
-    title: 'ParfumDeals - Promotions',
+    redirectTo: 'meilleures-affaires',
+    pathMatch: 'full',
   },
   {
     path: 'marques',

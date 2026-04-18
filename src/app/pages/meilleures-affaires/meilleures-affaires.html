@@ -1,0 +1,252 @@
+<div class="page">
+  <section class="hero">
+    <div class="hero__badge">🔥 Sélection ultra avantageuse</div>
+
+    <div class="hero__content">
+      <div class="hero__text">
+        <p class="eyebrow">Meilleures affaires</p>
+        <h1>Les parfums les plus intéressants du moment</h1>
+        <p class="hero__subtitle">
+          Une sélection triée par remise réelle et économie constatée par rapport au prix boutique.
+        </p>
+
+        <div class="hero__stats" *ngIf="!loading && deals.length > 0">
+          <div class="hero-stat">
+            <span class="hero-stat__label">Offres détectées</span>
+            <strong class="hero-stat__value">{{ deals.length }}</strong>
+          </div>
+
+          <div class="hero-stat">
+            <span class="hero-stat__label">Remise moyenne</span>
+            <strong class="hero-stat__value">-{{ getAverageDiscount() }}%</strong>
+          </div>
+
+          <div class="hero-stat">
+            <span class="hero-stat__label">Économie moyenne</span>
+            <strong class="hero-stat__value">
+              {{ getAverageSavings() | number:'1.2-2' }} €
+            </strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__actions">
+        <a routerLink="/parfums" class="hero__ghost-link">Voir tout le catalogue</a>
+      </div>
+    </div>
+
+    <div class="search-shell">
+      <div class="search-bar">
+        <span class="search-icon">🔎</span>
+        <input
+          type="text"
+          [(ngModel)]="search"
+          (input)="filter()"
+          placeholder="Rechercher une meilleure affaire..."
+          class="search-input"
+        />
+      </div>
+    </div>
+  </section>
+
+  <div class="disclaimer" role="note" aria-label="Information sur les visuels produits">
+    <span class="disclaimer__icon">⚠️</span>
+    <p class="disclaimer__text">
+      Les images des produits sont non contractuelles et présentées à titre illustratif.
+    </p>
+  </div>
+
+  <div *ngIf="loading" class="state">Chargement des meilleures affaires...</div>
+
+  <div *ngIf="!loading && deals.length === 0" class="state">
+    Aucune meilleure affaire disponible pour le moment.
+  </div>
+
+  <section
+    class="carousel"
+    *ngIf="!loading && bannerDeals.length > 0"
+    aria-label="Meilleures affaires du moment"
+    (mouseenter)="stopAutoSlide()"
+    (mouseleave)="startAutoSlide()"
+  >
+    <div class="carousel__container">
+      <button
+        type="button"
+        class="carousel__nav carousel__nav--left"
+        (click)="prev()"
+        aria-label="Offre précédente"
+      >
+        ‹
+      </button>
+
+      <ng-container *ngIf="getCurrentBannerDeal() as parfum">
+        <article class="carousel-card">
+          <div class="carousel-card__left">
+            <div class="carousel-card__pill">🔥 Affaire du moment</div>
+
+            <p class="carousel-card__brand">{{ parfum.brand }}</p>
+            <h2 class="carousel-card__title">{{ parfum.name }}</h2>
+            <p class="carousel-card__gender">{{ parfum.gender }}</p>
+
+            <div class="carousel-card__metrics">
+              <div class="carousel-metric">
+                <span class="carousel-metric__label">Remise</span>
+                <strong class="carousel-metric__value">
+                  -{{ getDiscountPercent(parfum) }}%
+                </strong>
+              </div>
+
+              <div class="carousel-metric">
+                <span class="carousel-metric__label">Prix boutique</span>
+                <strong class="carousel-metric__value">
+                  {{ getOldPrice(parfum) | number:'1.2-2' }} €
+                </strong>
+              </div>
+
+              <div class="carousel-metric">
+                <span class="carousel-metric__label">Économie</span>
+                <strong class="carousel-metric__value carousel-metric__value--green">
+                  {{ getSavings(parfum) | number:'1.2-2' }} €
+                </strong>
+              </div>
+            </div>
+
+            <div class="carousel-card__prices">
+              <span class="carousel-card__old-price">
+                {{ getOldPrice(parfum) | number:'1.2-2' }} €
+              </span>
+
+              <span class="carousel-card__price">
+                {{ parfum.price | number:'1.2-2' }} €
+              </span>
+            </div>
+
+            <button
+              type="button"
+              class="carousel-card__button"
+              [class.carousel-card__button--added]="isInCart(parfum)"
+              (click)="addToCart(parfum)"
+            >
+              {{ isInCart(parfum) ? 'Ajouté au panier' : 'Ajouter cette affaire' }}
+            </button>
+          </div>
+
+          <div class="carousel-card__right">
+            <div class="carousel-card__image-wrap">
+              <img
+                *ngIf="hasValidImage(parfum)"
+                [src]="parfum.image"
+                [alt]="parfum.name"
+                loading="lazy"
+                width="320"
+                height="320"
+                class="carousel-card__image"
+                (error)="onBannerImageError(parfum)"
+              />
+
+              <span class="carousel-card__discount">
+                -{{ getDiscountPercent(parfum) }}%
+              </span>
+            </div>
+          </div>
+        </article>
+      </ng-container>
+
+      <button
+        type="button"
+        class="carousel__nav carousel__nav--right"
+        (click)="next()"
+        aria-label="Offre suivante"
+      >
+        ›
+      </button>
+    </div>
+
+    <div class="carousel__dots" *ngIf="bannerDeals.length > 1">
+      <button
+        type="button"
+        class="carousel__dot"
+        *ngFor="let parfum of bannerDeals; let i = index; trackBy: trackByName"
+        [class.carousel__dot--active]="i === currentIndex"
+        (click)="goToSlide(i)"
+        [attr.aria-label]="'Aller à l’offre ' + (i + 1)"
+      ></button>
+    </div>
+  </section>
+
+  <section
+    class="deals-section"
+    *ngIf="!loading && filteredDeals.length > 0"
+    aria-label="Toutes les meilleures affaires"
+  >
+    <div class="section-heading">
+      <div>
+        <p class="section-heading__eyebrow">Sélection</p>
+        <h2 class="section-heading__title">Toutes les meilleures affaires</h2>
+      </div>
+
+      <div class="section-heading__counter">
+        {{ filteredDeals.length }} offre(s)
+      </div>
+    </div>
+
+    <div class="deals-grid">
+      <article
+        class="deal-card"
+        *ngFor="let parfum of filteredDeals; trackBy: trackByName"
+      >
+        <div class="deal-card__image-wrap">
+          <img
+            *ngIf="hasValidImage(parfum)"
+            [src]="parfum.image"
+            [alt]="parfum.name"
+            loading="lazy"
+            width="220"
+            height="220"
+            class="deal-card__image"
+            (error)="onDealImageError(parfum)"
+          />
+
+          <span class="deal-card__discount">
+            -{{ getDiscountPercent(parfum) }}%
+          </span>
+        </div>
+
+        <div class="deal-card__body">
+          <p class="deal-card__brand">{{ parfum.brand }}</p>
+          <h3 class="deal-card__title">{{ parfum.name }}</h3>
+          <p class="deal-card__gender">{{ parfum.gender }}</p>
+
+          <div class="deal-card__price-block">
+            <span class="deal-card__old-price">
+              {{ getOldPrice(parfum) | number:'1.2-2' }} €
+            </span>
+
+            <span class="deal-card__price">
+              {{ parfum.price | number:'1.2-2' }} €
+            </span>
+          </div>
+
+          <div class="deal-card__footer">
+            <span class="deal-card__saving">
+              +{{ getSavings(parfum) | number:'1.2-2' }} € economisés
+            </span>
+
+            <button
+              type="button"
+              class="deal-card__button"
+              [class.deal-card__button--added]="isInCart(parfum)"
+              (click)="addToCart(parfum)"
+            >
+              {{ isInCart(parfum) ? 'Ajouté' : 'Ajouter' }}
+            </button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div *ngIf="!loading && filteredDeals.length === 0" class="state">
+    Aucune affaire ne correspond à votre recherche.
+  </div>
+</div>

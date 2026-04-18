@@ -11,16 +11,26 @@ interface PerfumeImageResponse {
 
 interface RawParfumJson {
   nom?: unknown;
+  name?: unknown;
+  marque?: unknown;
+  brand?: unknown;
   genre?: unknown;
+  gender?: unknown;
   prix?: unknown;
+  price?: unknown;
+  prix_boutique?: unknown;
+  prixBoutique?: unknown;
+  oldPrice?: unknown;
   image?: unknown;
+  type?: unknown;
+  typeProduit?: unknown;
 }
 
 @Injectable({
   providedIn: 'root',
 })
 export class ParfumService {
-  private readonly jsonUrl = '/data/parfums_clean.json';
+  private readonly jsonUrl = '/data/parfums_with_real_market_prices.json';
   private readonly apiBaseUrl = environement.apiBaseUrl;
 
   /**
@@ -123,27 +133,58 @@ export class ParfumService {
       const parfums: Parfum[] = [];
 
       for (const item of data) {
-        const name = this.cleanString(item.nom);
-        const gender = this.normalizeGender(item.genre);
-        const price = this.parsePrice(item.prix);
+        const name = this.cleanString(item.nom ?? item.name);
+        const explicitBrand = this.cleanString(item.marque ?? item.brand);
+        const gender = this.normalizeGender(item.genre ?? item.gender);
+        const price = this.parsePrice(item.prix ?? item.price);
+        const prixBoutique = this.parsePrice(
+          item.prix_boutique ?? item.prixBoutique ?? item.oldPrice,
+        );
 
         if (!name || !gender || price === null) {
           continue;
         }
 
-        parfums.push({
+        const finalPrixBoutique =
+          prixBoutique !== null && prixBoutique > price ? prixBoutique : undefined;
+
+        const parfum: Parfum = {
           name,
-          brand: this.extractBrand(name),
+          brand: explicitBrand || this.extractBrand(name),
           gender,
           price,
-          image: this.cleanString(item.image) || this.getFallbackImage({ name }),
-        });
+          prix_boutique: finalPrixBoutique,
+          image: this.cleanString(item.image),
+          type: this.normalizeType(item.type ?? item.typeProduit ?? name),
+        };
+
+        parfums.push(parfum);
       }
 
-      console.log('✅ Parfums JSON chargés :', parfums.length);
-      console.log('✅ Marques détectées :', this.getBrands(parfums));
+      const parfumsWithImages = await Promise.all(
+        parfums.map(async (parfum) => {
+          if (parfum.image) {
+            return parfum;
+          }
 
-      return [...parfums].sort((a, b) =>
+          const image = await this.fetchPerfumeImage(parfum);
+
+          return {
+            ...parfum,
+            image,
+          };
+        }),
+      );
+
+      console.log('✅ Parfums JSON chargés :', parfumsWithImages.length);
+      console.log('✅ Marques détectées :', this.getBrands(parfumsWithImages));
+      console.log('✅ Types détectés :', {
+        standard: parfumsWithImages.filter((p) => p.type === 'standard').length,
+        testeur: parfumsWithImages.filter((p) => p.type === 'testeur').length,
+        coffret: parfumsWithImages.filter((p) => p.type === 'coffret').length,
+      });
+
+      return [...parfumsWithImages].sort((a, b) =>
         a.name.localeCompare(b.name, 'fr', { sensitivity: 'base' }),
       );
     } catch (error) {
@@ -190,6 +231,26 @@ export class ParfumService {
     return this.getParfumsByBrand(parfums, brand).length;
   }
 
+  getDiscountPercent(parfum: Parfum): number {
+    if (!parfum.prix_boutique || parfum.prix_boutique <= parfum.price) {
+      return 0;
+    }
+
+    return Math.round(((parfum.prix_boutique - parfum.price) / parfum.prix_boutique) * 100);
+  }
+
+  getSavings(parfum: Parfum): number {
+    if (!parfum.prix_boutique || parfum.prix_boutique <= parfum.price) {
+      return 0;
+    }
+
+    return Number((parfum.prix_boutique - parfum.price).toFixed(2));
+  }
+
+  getParfumsByType(parfums: Parfum[], type: 'standard' | 'testeur' | 'coffret'): Parfum[] {
+    return parfums.filter((parfum) => parfum.type === type);
+  }
+
   private cleanString(value: unknown): string {
     if (typeof value !== 'string') {
       return '';
@@ -234,6 +295,62 @@ export class ParfumService {
     return '';
   }
 
+  private normalizeType(value: unknown): 'standard' | 'testeur' | 'coffret' {
+    const raw = this.cleanString(value).toLowerCase();
+
+    if (raw === 'testeur') {
+      return 'testeur';
+    }
+
+    if (raw === 'coffret') {
+      return 'coffret';
+    }
+
+    if (raw === 'standard') {
+      return 'standard';
+    }
+
+    if (raw.includes('testeur')) {
+      return 'testeur';
+    }
+
+    const coffretKeywords = [
+      'coffret',
+      'découverte',
+      'decouverte',
+      'discovery',
+      'set travel',
+      'trousse',
+      'miniature',
+      'gel douche',
+      'gel ',
+      ' lait',
+      'lait ',
+      'deo',
+      'déodorant',
+      'deodorant',
+      'crème',
+      'creme',
+      'mascara',
+      'huile pure',
+      'savon',
+      'pochette',
+      'sac bandoulière',
+      'avec boite',
+      'avec boîte',
+      '4x',
+      '5x',
+      '8x',
+      '+',
+    ];
+
+    if (coffretKeywords.some((keyword) => raw.includes(keyword))) {
+      return 'coffret';
+    }
+
+    return 'standard';
+  }
+
   private extractBrand(name: string): string {
     const normalizedName = this.normalizeForCompare(name);
 
@@ -245,8 +362,6 @@ export class ParfumService {
       }
     }
 
-    // Fallback si aucune marque connue n'est reconnue :
-    // on prend les 2 premiers mots si possible, sinon le premier.
     const parts = name.split(/\s+/).filter(Boolean);
 
     if (parts.length >= 2) {
