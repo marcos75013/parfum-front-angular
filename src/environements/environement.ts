@@ -1,5 +1,5 @@
 export const environement = {
   production: false,
   unsplashAccessKey: '',
-  apiBaseUrl: 'http://localhost:3000/api',
+  apiBaseUrl: 'https://parfum-backend-node.onrender.com/api',
 };
