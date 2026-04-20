@@ -1,11 +1,13 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { ChangeDetectorRef, Component, Inject, OnInit, PLATFORM_ID, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 
 import { Parfum } from '../../models/parfum';
 import { CartService } from '../../services/cart.service';
 import { ParfumService } from '../../services/parfum.service';
+
+type TabType = 'all' | 'standard' | 'testeur' | 'coffret';
 
 @Component({
   selector: 'app-parfums',
@@ -17,39 +19,53 @@ import { ParfumService } from '../../services/parfum.service';
 export class ParfumsComponent implements OnInit {
   parfums: Parfum[] = [];
   filteredParfums: Parfum[] = [];
+
   search = '';
   loading = true;
+  activeTab: TabType = 'all';
 
   readonly cartService = inject(CartService);
 
-  constructor(private parfumService: ParfumService) {}
+  constructor(
+    private readonly parfumService: ParfumService,
+    private readonly cdr: ChangeDetectorRef,
+    @Inject(PLATFORM_ID) private readonly platformId: object,
+  ) {}
 
   async ngOnInit(): Promise<void> {
+    if (!isPlatformBrowser(this.platformId)) {
+      this.loading = false;
+      this.cdr.detectChanges();
+      return;
+    }
+
     try {
       this.parfums = await this.parfumService.loadParfums();
-      this.filteredParfums = [...this.parfums];
+      this.applyFilters();
+
+      // charge les images internet via le backend sans bloquer l'affichage initial
       void this.loadImagesInBackground();
+
+      // force le rafraîchissement pour éviter le double clic nécessaire
+      this.cdr.detectChanges();
     } catch (error) {
       console.error('Erreur chargement parfums', error);
+      this.parfums = [];
+      this.filteredParfums = [];
     } finally {
       this.loading = false;
+      this.cdr.detectChanges();
     }
   }
 
   filter(): void {
-    const term = this.search.trim().toLowerCase();
+    this.applyFilters();
+  }
 
-    if (!term) {
-      this.filteredParfums = [...this.parfums];
-      return;
-    }
-
-    this.filteredParfums = this.parfums.filter((parfum) =>
-      [parfum.name, parfum.brand, parfum.gender, String(parfum.price)]
-        .join(' ')
-        .toLowerCase()
-        .includes(term),
-    );
+  setTab(tab: TabType): void {
+    this.activeTab = tab;
+    this.applyFilters();
+    this.cdr.detectChanges();
   }
 
   addToCart(parfum: Parfum): void {
@@ -66,16 +82,72 @@ export class ParfumsComponent implements OnInit {
     return `${parfum.brand}-${parfum.name}`;
   }
 
+  getDiscountPercent(parfum: Parfum): number {
+    return this.parfumService.getDiscountPercent(parfum);
+  }
+
+  getOldPrice(parfum: Parfum): number {
+    return parfum.prix_boutique ?? parfum.price;
+  }
+
+  getSavings(parfum: Parfum): number {
+    return this.parfumService.getSavings(parfum);
+  }
+
+  countByType(type: TabType): number {
+    if (type === 'all') {
+      return this.parfums.length;
+    }
+
+    return this.parfums.filter((parfum) => parfum.type === type).length;
+  }
+
+  private applyFilters(): void {
+    const term = this.search.trim().toLowerCase();
+
+    let result = [...this.parfums];
+
+    if (this.activeTab !== 'all') {
+      result = result.filter((parfum) => parfum.type === this.activeTab);
+    }
+
+    if (term) {
+      result = result.filter((parfum) =>
+        [
+          parfum.name,
+          parfum.brand,
+          parfum.gender,
+          parfum.type ?? '',
+          String(parfum.price),
+          String(parfum.prix_boutique ?? ''),
+          String(this.getDiscountPercent(parfum)),
+        ]
+          .join(' ')
+          .toLowerCase()
+          .includes(term),
+      );
+    }
+
+    this.filteredParfums = result;
+  }
+
   private async loadImagesInBackground(): Promise<void> {
-    for (const parfum of this.parfums) {
-      try {
-        const image = await this.parfumService.fetchPerfumeImage(parfum);
-        parfum.image = image;
-      } catch (error) {
-        console.error(`Erreur mise à jour image pour "${parfum.name}"`, error);
-      }
+    const updates = await Promise.all(
+      this.parfums.map(async (parfum) => {
+        try {
+          const image = await this.parfumService.fetchPerfumeImage(parfum);
+          return { parfum, image };
+        } catch {
+          return { parfum, image: parfum.image };
+        }
+      }),
+    );
+
+    for (const update of updates) {
+      update.parfum.image = update.image;
     }
 
     this.filteredParfums = [...this.filteredParfums];
+    this.cdr.detectChanges();
   }
 }

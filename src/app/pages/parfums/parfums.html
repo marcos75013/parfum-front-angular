@@ -1,26 +1,82 @@
 <div class="page">
-  <div class="hero">
-    <div class="hero-top">
-      <div>
+  <section class="hero">
+    <div class="hero__content">
+      <div class="hero__text">
         <p class="eyebrow">Collection</p>
         <h1>Catalogue de parfums</h1>
-        <p class="hero-subtitle">{{ filteredParfums.length }} parfum(s) disponibles</p>
+        <p class="hero-subtitle">
+          {{ filteredParfums.length }} parfum(s) disponible(s)
+        </p>
       </div>
 
-      <a routerLink="/cart" class="cart-link">
-        <span class="cart-icon">🛍️</span>
-        <span>Panier</span>
-        <span class="cart-badge">{{ cartService.count() }}</span>
-      </a>
+      <div class="hero__actions">
+        <a routerLink="/meilleures-affaires" class="hero__link">
+          🔥 Meilleures affaires
+        </a>
+      </div>
     </div>
 
-    <input
-      type="text"
-      [(ngModel)]="search"
-      (input)="filter()"
-      placeholder="Rechercher un parfum..."
-      class="search-input"
-    />
+    <div class="search-bar-wrapper">
+      <div class="search-bar">
+        <span class="search-icon">🔎</span>
+        <input
+          type="text"
+          [(ngModel)]="search"
+          (input)="filter()"
+          placeholder="Rechercher un parfum, une marque..."
+          class="search-input"
+        />
+      </div>
+    </div>
+
+    <div class="tabs" aria-label="Filtres par type de parfum">
+      <button
+        type="button"
+        class="tab-button"
+        [class.active]="activeTab === 'all'"
+        (click)="setTab('all')"
+      >
+        Tous ({{ countByType('all') }})
+      </button>
+
+      <button
+        type="button"
+        class="tab-button"
+        [class.active]="activeTab === 'standard'"
+        (click)="setTab('standard')"
+      >
+        Standards ({{ countByType('standard') }})
+      </button>
+
+      <button
+        type="button"
+        class="tab-button"
+        [class.active]="activeTab === 'testeur'"
+        (click)="setTab('testeur')"
+      >
+        Testeurs ({{ countByType('testeur') }})
+      </button>
+
+      <button
+        type="button"
+        class="tab-button"
+        [class.active]="activeTab === 'coffret'"
+        (click)="setTab('coffret')"
+      >
+        Coffrets ({{ countByType('coffret') }})
+      </button>
+    </div>
+  </section>
+
+  <div
+    class="disclaimer"
+    role="note"
+    aria-label="Information sur les visuels produits"
+  >
+    <span class="disclaimer__icon">⚠️</span>
+    <p class="disclaimer__text">
+      Les images des produits sont non contractuelles et présentées à titre illustratif.
+    </p>
   </div>
 
   <div *ngIf="loading" class="state">Chargement des parfums...</div>
@@ -30,26 +86,75 @@
   </div>
 
   <div class="grid" *ngIf="!loading && filteredParfums.length > 0">
-    <article class="card" *ngFor="let parfum of filteredParfums; trackBy: trackByName">
-      <div class="image-wrapper">
-        <img [src]="parfum.image" [alt]="parfum.name" class="card-image" />
+    <article
+      class="card"
+      *ngFor="let parfum of filteredParfums; trackBy: trackByName"
+    >
+      <div class="card__image-wrap">
+        <img
+          [src]="parfum.image"
+          [alt]="parfum.name"
+          loading="lazy"
+          width="200"
+          height="200"
+          class="card__image"
+        />
+
+        <span
+          class="card__discount"
+          *ngIf="getDiscountPercent(parfum) > 0"
+        >
+          -{{ getDiscountPercent(parfum) }}%
+        </span>
+
+        <span
+          class="card__type-badge card__type-badge--testeur"
+          *ngIf="parfum.type === 'testeur'"
+        >
+          Testeur
+        </span>
+
+        <span
+          class="card__type-badge card__type-badge--coffret"
+          *ngIf="parfum.type === 'coffret'"
+        >
+          Coffret
+        </span>
       </div>
 
-      <div class="card-content">
-        <p class="brand">{{ parfum.brand }}</p>
-        <h2>{{ parfum.name }}</h2>
-        <p class="meta">{{ parfum.gender }}</p>
+      <div class="card__body">
+        <p class="card__brand">{{ parfum.brand }}</p>
+        <h2 class="card__title">{{ parfum.name }}</h2>
+        <p class="card__gender">{{ parfum.gender }}</p>
 
-        <div class="card-footer">
-          <p class="price">{{ parfum.price }} €</p>
-          <button
-            class="add-btn"
-            [class.added]="isInCart(parfum)"
-            (click)="addToCart(parfum)"
+        <div class="card__prices">
+          <span
+            class="card__old-price"
+            *ngIf="parfum.prix_boutique && parfum.prix_boutique > parfum.price"
           >
-            {{ isInCart(parfum) ? 'Ajouté au panier' : 'Ajouter au panier' }}
-          </button>
+            {{ getOldPrice(parfum) | number:'1.2-2' }} €
+          </span>
+
+          <span class="card__price">
+            {{ parfum.price | number:'1.2-2' }} €
+          </span>
         </div>
+
+        <p
+          class="card__saving"
+          *ngIf="parfum.prix_boutique && parfum.prix_boutique > parfum.price"
+        >
+          Économie de {{ getSavings(parfum) | number:'1.2-2' }} €
+        </p>
+
+        <button
+          type="button"
+          class="card__button"
+          [class.card__button--added]="isInCart(parfum)"
+          (click)="addToCart(parfum)"
+        >
+          {{ isInCart(parfum) ? 'Ajouté au panier' : 'Ajouter au panier' }}
+        </button>
       </div>
     </article>
   </div>
