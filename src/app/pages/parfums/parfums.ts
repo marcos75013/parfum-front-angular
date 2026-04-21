@@ -32,6 +32,26 @@ export class ParfumsComponent implements OnInit {
   // Nombre de skeleton cards affichées pendant le chargement
   readonly skeletonItems = Array.from({ length: 8 });
 
+  /**
+   * Marques prioritaires dans l'affichage aléatoire.
+   * Elles restent mélangées, mais ont plus de chances de remonter.
+   */
+  private readonly priorityBrands: string[] = [
+    'xerjoff',
+    'creed',
+    'dior',
+    'hermès',
+    'hermes',
+    'kenzo',
+    'chanel',
+    'gucci',
+    'versace',
+    'tom ford',
+    'tomford',
+    'dolce & gabbana',
+    'dolce and gabbana',
+  ];
+
   constructor(
     private readonly parfumService: ParfumService,
     private readonly cdr: ChangeDetectorRef,
@@ -150,7 +170,40 @@ export class ParfumsComponent implements OnInit {
       );
     }
 
-    this.filteredParfums = result;
+    this.filteredParfums = this.shuffleWithPriority(result);
+  }
+
+  /**
+   * Donne plus de poids à certaines marques pour qu'elles remontent
+   * plus souvent dans l'ordre final, tout en gardant un rendu aléatoire.
+   */
+  private getPriorityWeight(parfum: Parfum): number {
+    const brand = (parfum.brand ?? '').trim().toLowerCase();
+    const name = (parfum.name ?? '').trim().toLowerCase();
+
+    if (this.priorityBrands.includes(brand)) {
+      return 4;
+    }
+
+    // Bonus pour Angels' Share / Angel
+    if (name.includes('creed')) {
+      return 3;
+    }
+
+    return 1;
+  }
+
+  /**
+   * Mélange la liste avec priorité douce pour certaines marques.
+   */
+  private shuffleWithPriority(parfums: Parfum[]): Parfum[] {
+    return [...parfums]
+      .map((parfum) => ({
+        parfum,
+        score: Math.random() * this.getPriorityWeight(parfum),
+      }))
+      .sort((a, b) => b.score - a.score)
+      .map((entry) => entry.parfum);
   }
 
   private async loadImagesInBackground(): Promise<void> {
