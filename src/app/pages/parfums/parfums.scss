@@ -250,6 +250,9 @@
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   overflow: hidden;
   border: 1px solid #ece7ec;
   border-radius: 24px;
@@ -332,6 +335,7 @@
 
 .card__body {
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 10px;
   padding: 18px 18px 20px;
@@ -388,7 +392,7 @@
 }
 
 .card__button {
-  margin-top: 6px;
+  margin-top: auto;
   min-height: 46px;
   border: none;
   border-radius: 14px;
