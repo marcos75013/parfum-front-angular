@@ -6,6 +6,7 @@ import { Router, RouterLink } from '@angular/router';
 
 import { CartService } from '../../services/cart.service';
 import { Parfum } from '../../models/parfum';
+import { environement } from '../../../environements/environement';
 
 @Component({
   selector: 'app-checkout',
@@ -192,7 +193,7 @@ export class CheckoutComponent {
 
     console.log('📤 Payload envoyé =', payload);
 
-    this.http.post('http://localhost:3000/api/order', payload).subscribe({
+    this.http.post(`${environement.apiBaseUrl}/order`, payload).subscribe({
       next: () => {
         this.cartService.clearCart();
         this.successMessage = 'Commande envoyée avec succès.';
