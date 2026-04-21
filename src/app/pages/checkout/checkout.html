@@ -15,38 +15,158 @@
     <form class="form-card" (ngSubmit)="submit()">
       <div class="form-grid">
         <div class="field">
-          <label for="firstName">Prénom</label>
-          <input id="firstName" name="firstName" [(ngModel)]="form.firstName" required />
-        </div>
-
-        <div class="field">
-          <label for="lastName">Nom</label>
-          <input id="lastName" name="lastName" [(ngModel)]="form.lastName" required />
-        </div>
-
-        <div class="field">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" [(ngModel)]="form.email" required />
-        </div>
-
-        <div class="field">
-          <label for="phone">Téléphone</label>
-          <input id="phone" name="phone" [(ngModel)]="form.phone" required />
-        </div>
-
-        <div class="field full">
-          <label for="address">Adresse</label>
-          <textarea
-            id="address"
-            name="address"
-            rows="5"
-            [(ngModel)]="form.address"
+          <label for="firstName">Prénom *</label>
+          <input
+            id="firstName"
+            name="firstName"
+            [(ngModel)]="form.firstName"
             required
-          ></textarea>
+            autocomplete="given-name"
+          />
+          <small class="error-text" *ngIf="!form.firstName.trim()">
+            Le prénom est obligatoire.
+          </small>
         </div>
+
+        <div class="field">
+          <label for="lastName">Nom *</label>
+          <input
+            id="lastName"
+            name="lastName"
+            [(ngModel)]="form.lastName"
+            required
+            autocomplete="family-name"
+          />
+          <small class="error-text" *ngIf="!form.lastName.trim()">
+            Le nom est obligatoire.
+          </small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email *</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            [(ngModel)]="form.email"
+            required
+            autocomplete="email"
+            placeholder="exemple@email.com"
+            [class.invalid]="form.email.trim() !== '' && !isEmailValid()"
+          />
+          <small class="error-text" *ngIf="form.email.trim() === ''">
+            L’email est obligatoire.
+          </small>
+          <small class="error-text" *ngIf="form.email.trim() !== '' && !isEmailValid()">
+            Merci de saisir un email valide.
+          </small>
+        </div>
+
+        <div class="field">
+          <label for="phone">Téléphone *</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            inputmode="tel"
+            [(ngModel)]="form.phone"
+            (input)="onPhoneInput()"
+            required
+            autocomplete="tel"
+            placeholder="06 12 34 56 78"
+            [class.invalid]="form.phone.trim() !== '' && !isPhoneValid()"
+          />
+          <small class="helper-text">
+            Format accepté : 06 12 34 56 78 ou +33 6 12 34 56 78
+          </small>
+          <small class="error-text" *ngIf="form.phone.trim() === ''">
+            Le téléphone est obligatoire.
+          </small>
+          <small class="error-text" *ngIf="form.phone.trim() !== '' && !isPhoneValid()">
+            Merci de saisir un numéro français valide.
+          </small>
+        </div>
+
+        <div class="field full checkbox-field">
+          <label class="checkbox-label" for="hasDeliveryPreferences">
+            <input
+              id="hasDeliveryPreferences"
+              name="hasDeliveryPreferences"
+              type="checkbox"
+              [(ngModel)]="form.hasDeliveryPreferences"
+              (ngModelChange)="toggleDeliveryPreferences()"
+            />
+            <span>Je signale mes préférences de livraison</span>
+          </label>
+          <small class="helper-text">
+            Optionnel : vous pouvez indiquer une adresse et deux créneaux souhaités.
+          </small>
+        </div>
+
+        <ng-container *ngIf="form.hasDeliveryPreferences">
+          <div class="field full">
+            <label for="address">Adresse de livraison souhaitée *</label>
+            <textarea
+              id="address"
+              name="address"
+              rows="5"
+              [(ngModel)]="form.address"
+              placeholder="Numéro, rue, code postal, ville, informations utiles..."
+              [class.invalid]="form.hasDeliveryPreferences && !form.address.trim()"
+            ></textarea>
+            <small class="error-text" *ngIf="form.hasDeliveryPreferences && !form.address.trim()">
+              L’adresse est requise si vous indiquez des préférences de livraison.
+            </small>
+          </div>
+
+          <div class="field">
+            <label for="deliverySlot1">Créneau souhaité 1 *</label>
+            <input
+              id="deliverySlot1"
+              name="deliverySlot1"
+              type="datetime-local"
+              [(ngModel)]="form.deliverySlot1"
+              [class.invalid]="form.hasDeliveryPreferences && !form.deliverySlot1"
+            />
+            <small class="error-text" *ngIf="form.hasDeliveryPreferences && !form.deliverySlot1">
+              Merci de renseigner un premier créneau.
+            </small>
+          </div>
+
+          <div class="field">
+            <label for="deliverySlot2">Créneau souhaité 2 *</label>
+            <input
+              id="deliverySlot2"
+              name="deliverySlot2"
+              type="datetime-local"
+              [(ngModel)]="form.deliverySlot2"
+              [class.invalid]="
+                (form.hasDeliveryPreferences && !form.deliverySlot2) ||
+                (form.deliverySlot1 && form.deliverySlot2 && form.deliverySlot1 === form.deliverySlot2)
+              "
+            />
+            <small class="error-text" *ngIf="form.hasDeliveryPreferences && !form.deliverySlot2">
+              Merci de renseigner un second créneau.
+            </small>
+            <small
+              class="error-text"
+              *ngIf="
+                form.deliverySlot1 &&
+                form.deliverySlot2 &&
+                form.deliverySlot1 === form.deliverySlot2
+              "
+            >
+              Les deux créneaux doivent être différents.
+            </small>
+          </div>
+        </ng-container>
       </div>
 
-      <button class="submit-btn" type="submit" [disabled]="sending || cartService.items().length === 0">
+      <button
+        class="submit-btn"
+        type="submit"
+        [disabled]="sending || cartService.items().length === 0 || !isFormValid()"
+      >
         {{ sending ? 'Envoi en cours...' : 'Passer la commande' }}
       </button>
 
