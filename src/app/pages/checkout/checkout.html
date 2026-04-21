@@ -120,40 +120,86 @@
           </div>
 
           <div class="field">
-            <label for="deliverySlot1">Créneau souhaité 1 *</label>
+            <label for="deliveryDate1">Date souhaitée 1 *</label>
             <input
-              id="deliverySlot1"
-              name="deliverySlot1"
-              type="datetime-local"
-              [(ngModel)]="form.deliverySlot1"
-              [class.invalid]="form.hasDeliveryPreferences && !form.deliverySlot1"
+              id="deliveryDate1"
+              name="deliveryDate1"
+              type="date"
+              [(ngModel)]="form.deliveryDate1"
+              [class.invalid]="form.hasDeliveryPreferences && !form.deliveryDate1"
             />
-            <small class="error-text" *ngIf="form.hasDeliveryPreferences && !form.deliverySlot1">
-              Merci de renseigner un premier créneau.
+            <small class="error-text" *ngIf="form.hasDeliveryPreferences && !form.deliveryDate1">
+              Merci de renseigner une première date.
             </small>
           </div>
 
           <div class="field">
-            <label for="deliverySlot2">Créneau souhaité 2 *</label>
+            <label for="deliveryTime1">Horaire 1 *</label>
+            <select
+              id="deliveryTime1"
+              name="deliveryTime1"
+              [(ngModel)]="form.deliveryTime1"
+              [class.invalid]="form.hasDeliveryPreferences && !form.deliveryTime1"
+            >
+              <option value="">Choisir un horaire</option>
+              <option *ngFor="let slot of deliveryTimeSlots" [value]="slot">
+                {{ slot }}
+              </option>
+            </select>
+            <small class="error-text" *ngIf="form.hasDeliveryPreferences && !form.deliveryTime1">
+              Merci de renseigner un premier horaire.
+            </small>
+          </div>
+
+          <div class="field">
+            <label for="deliveryDate2">Date souhaitée 2 *</label>
             <input
-              id="deliverySlot2"
-              name="deliverySlot2"
-              type="datetime-local"
-              [(ngModel)]="form.deliverySlot2"
-              [class.invalid]="
-                (form.hasDeliveryPreferences && !form.deliverySlot2) ||
-                (form.deliverySlot1 && form.deliverySlot2 && form.deliverySlot1 === form.deliverySlot2)
-              "
+              id="deliveryDate2"
+              name="deliveryDate2"
+              type="date"
+              [(ngModel)]="form.deliveryDate2"
+              [class.invalid]="form.hasDeliveryPreferences && !form.deliveryDate2"
             />
-            <small class="error-text" *ngIf="form.hasDeliveryPreferences && !form.deliverySlot2">
-              Merci de renseigner un second créneau.
+            <small class="error-text" *ngIf="form.hasDeliveryPreferences && !form.deliveryDate2">
+              Merci de renseigner une deuxième date.
+            </small>
+          </div>
+
+          <div class="field">
+            <label for="deliveryTime2">Horaire 2 *</label>
+            <select
+              id="deliveryTime2"
+              name="deliveryTime2"
+              [(ngModel)]="form.deliveryTime2"
+              [class.invalid]="
+                (form.hasDeliveryPreferences && !form.deliveryTime2) ||
+                (
+                  form.deliveryDate1 &&
+                  form.deliveryTime1 &&
+                  form.deliveryDate2 &&
+                  form.deliveryTime2 &&
+                  (form.deliveryDate1 + ' ' + form.deliveryTime1) ===
+                    (form.deliveryDate2 + ' ' + form.deliveryTime2)
+                )
+              "
+            >
+              <option value="">Choisir un horaire</option>
+              <option *ngFor="let slot of deliveryTimeSlots" [value]="slot">
+                {{ slot }}
+              </option>
+            </select>
+            <small class="error-text" *ngIf="form.hasDeliveryPreferences && !form.deliveryTime2">
+              Merci de renseigner un second horaire.
             </small>
             <small
               class="error-text"
               *ngIf="
-                form.deliverySlot1 &&
-                form.deliverySlot2 &&
-                form.deliverySlot1 === form.deliverySlot2
+                form.deliveryDate1 &&
+                form.deliveryTime1 &&
+                form.deliveryDate2 &&
+                form.deliveryTime2 &&
+                (form.deliveryDate1 + ' ' + form.deliveryTime1) ===
+                  (form.deliveryDate2 + ' ' + form.deliveryTime2)
               "
             >
               Les deux créneaux doivent être différents.
@@ -181,16 +227,16 @@
           <p class="item-name">{{ item.parfum.name }}</p>
           <p class="item-meta">Qté : {{ item.quantity }}</p>
         </div>
-        <strong>{{ item.parfum.price * item.quantity }} €</strong>
+        <strong>{{ item.parfum.price * item.quantity | number:'1.2-2' }} €</strong>
       </div>
 
       <div class="summary-total">
         <span>Total</span>
-        <strong>{{ cartService.total() }} €</strong>
+        <strong>{{ cartService.total() | number:'1.2-2' }} €</strong>
       </div>
 
       <p class="summary-saving" *ngIf="getTotalSavings() > 0">
-        Vous allez faire une économie de {{ getTotalSavings() }} €
+        Vous allez faire une économie de {{ getTotalSavings() | number:'1.2-2' }} €
       </p>
     </aside>
   </div>

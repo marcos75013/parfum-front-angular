@@ -24,9 +24,27 @@ export class CheckoutComponent {
     phone: '',
     hasDeliveryPreferences: false,
     address: '',
-    deliverySlot1: '',
-    deliverySlot2: '',
+    deliveryDate1: '',
+    deliveryTime1: '',
+    deliveryDate2: '',
+    deliveryTime2: '',
   };
+
+  readonly deliveryTimeSlots = [
+    '09:00',
+    '10:00',
+    '11:00',
+    '12:00',
+    '13:00',
+    '14:00',
+    '15:00',
+    '16:00',
+    '17:00',
+    '18:00',
+    '19:00',
+    '20:00',
+    '21:00',
+  ];
 
   sending = false;
   successMessage = '';
@@ -86,20 +104,31 @@ export class CheckoutComponent {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.form.email.trim());
   }
 
+  private buildSlot(date: string, time: string): string {
+    if (!date || !time) {
+      return '';
+    }
+
+    return `${date} ${time}`;
+  }
+
   isDeliveryPreferencesValid(): boolean {
     if (!this.form.hasDeliveryPreferences) {
       return true;
     }
 
     const hasAddress = this.form.address.trim().length > 0;
-    const hasSlot1 = this.form.deliverySlot1.trim().length > 0;
-    const hasSlot2 = this.form.deliverySlot2.trim().length > 0;
-    const slotsAreDifferent =
-      this.form.deliverySlot1.trim() !== '' &&
-      this.form.deliverySlot2.trim() !== '' &&
-      this.form.deliverySlot1 !== this.form.deliverySlot2;
+    const hasDate1 = this.form.deliveryDate1.trim().length > 0;
+    const hasTime1 = this.form.deliveryTime1.trim().length > 0;
+    const hasDate2 = this.form.deliveryDate2.trim().length > 0;
+    const hasTime2 = this.form.deliveryTime2.trim().length > 0;
 
-    return hasAddress && hasSlot1 && hasSlot2 && slotsAreDifferent;
+    const slot1 = this.buildSlot(this.form.deliveryDate1, this.form.deliveryTime1);
+    const slot2 = this.buildSlot(this.form.deliveryDate2, this.form.deliveryTime2);
+
+    const slotsAreDifferent = slot1 !== '' && slot2 !== '' && slot1 !== slot2;
+
+    return hasAddress && hasDate1 && hasTime1 && hasDate2 && hasTime2 && slotsAreDifferent;
   }
 
   isFormValid(): boolean {
@@ -115,8 +144,10 @@ export class CheckoutComponent {
   toggleDeliveryPreferences(): void {
     if (!this.form.hasDeliveryPreferences) {
       this.form.address = '';
-      this.form.deliverySlot1 = '';
-      this.form.deliverySlot2 = '';
+      this.form.deliveryDate1 = '';
+      this.form.deliveryTime1 = '';
+      this.form.deliveryDate2 = '';
+      this.form.deliveryTime2 = '';
     }
   }
 
@@ -134,8 +165,8 @@ export class CheckoutComponent {
         ? {
             enabled: true,
             address: this.form.address.trim(),
-            deliverySlot1: this.form.deliverySlot1,
-            deliverySlot2: this.form.deliverySlot2,
+            deliverySlot1: this.buildSlot(this.form.deliveryDate1, this.form.deliveryTime1),
+            deliverySlot2: this.buildSlot(this.form.deliveryDate2, this.form.deliveryTime2),
           }
         : {
             enabled: false,
@@ -150,39 +181,14 @@ export class CheckoutComponent {
   }
 
   submit(): void {
-    if (this.cartService.items().length === 0) {
+    if (this.cartService.items().length === 0 || !this.isFormValid()) {
       return;
     }
 
     this.sending = true;
     this.successMessage = '';
 
-    const normalizedPhone = this.getNormalizedPhone(this.form.phone);
-
-    const payload = {
-      customer: {
-        firstName: this.form.firstName.trim(),
-        lastName: this.form.lastName.trim(),
-        email: this.form.email.trim(),
-        phone: normalizedPhone,
-      },
-      deliveryPreferences: this.form.hasDeliveryPreferences
-        ? {
-          enabled: true,
-          address: this.form.address.trim(),
-          deliverySlot1: this.form.deliverySlot1,
-          deliverySlot2: this.form.deliverySlot2,
-        }
-        : {
-          enabled: false,
-          address: '',
-          deliverySlot1: '',
-          deliverySlot2: '',
-        },
-      items: this.cartService.items(),
-      total: this.cartService.total(),
-      savings: this.getTotalSavings(),
-    };
+    const payload = this.buildPayload();
 
     console.log('📤 Payload envoyé =', payload);
 

@@ -98,7 +98,8 @@ label {
 }
 
 input,
-textarea {
+textarea,
+select {
   width: 100%;
   border: 1px solid #e5e7eb;
   border-radius: 16px;
@@ -108,16 +109,19 @@ textarea {
   background: #fff;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   box-sizing: border-box;
+  font-family: inherit;
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   border-color: #c4b5fd;
   box-shadow: 0 0 0 4px rgba(196, 181, 253, 0.2);
 }
 
 input.invalid,
-textarea.invalid {
+textarea.invalid,
+select.invalid {
   border-color: #ef4444;
   background: #fffafa;
 }
