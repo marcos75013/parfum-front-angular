@@ -1,3 +1,18 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(255, 215, 230, 0.42), transparent 30%),
+    radial-gradient(circle at top right, rgba(220, 230, 255, 0.38), transparent 35%),
+    linear-gradient(180deg, #fcfcfd 0%, #f6eff7 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .page {
   padding: 32px 20px 48px;
   max-width: 1200px;
@@ -30,6 +45,7 @@ h1 {
   margin: 0 0 8px;
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.05;
+  color: #111827;
 }
 
 .hero-subtitle {
@@ -66,6 +82,11 @@ h1 {
   outline: none;
   background: transparent;
   font-size: 1rem;
+  color: #111827;
+}
+
+.search-input::placeholder {
+  color: #98a2b3;
 }
 
 .state {
@@ -75,12 +96,17 @@ h1 {
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.06);
   color: #5f6470;
+  font-weight: 600;
 }
 
 .brands-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 18px;
+}
+
+.brands-grid--skeleton {
+  pointer-events: none;
 }
 
 .brand-card {
@@ -107,9 +133,22 @@ h1 {
   border-color: rgba(160, 106, 133, 0.35);
 }
 
+.brand-card--skeleton:hover {
+  transform: none;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.brand-card__content {
+  min-width: 0;
+}
+
 .brand-card__content h2 {
   margin: 0 0 6px;
   font-size: 1.2rem;
+  color: #111827;
+  line-height: 1.3;
+  word-break: break-word;
 }
 
 .brand-card__label {
@@ -130,4 +169,122 @@ h1 {
   font-size: 1.5rem;
   color: #a06a85;
   flex-shrink: 0;
+}
+
+/* Skeleton */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #f2edf2 25%, #fbf8fb 50%, #f2edf2 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.35s infinite linear;
+}
+
+.skeleton--label {
+  width: 68px;
+  height: 12px;
+  margin-bottom: 12px;
+}
+
+.skeleton--title {
+  width: 150px;
+  max-width: 100%;
+  height: 22px;
+  margin-bottom: 10px;
+}
+
+.skeleton--count {
+  width: 100px;
+  height: 14px;
+}
+
+.skeleton--arrow {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 24px 16px 40px;
+  }
+
+  .hero {
+    padding: 24px 18px;
+  }
+
+  .brands-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .brand-card {
+    padding: 18px 16px;
+    border-radius: 20px;
+  }
+
+  .brand-card__content h2 {
+    font-size: 1.02rem;
+  }
+
+  .brand-card__arrow {
+    font-size: 1.25rem;
+  }
+
+  .skeleton--title {
+    width: 120px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    padding: 18px 14px 34px;
+  }
+
+  .hero {
+    border-radius: 22px;
+    padding: 18px 16px;
+  }
+
+  .brands-grid {
+    gap: 14px;
+  }
+
+  .brand-card {
+    padding: 16px 14px;
+  }
+
+  .brand-card__label {
+    font-size: 0.72rem;
+  }
+
+  .brand-card__content h2 {
+    font-size: 0.94rem;
+  }
+
+  .brand-card__count {
+    font-size: 0.88rem;
+  }
+
+  .skeleton--title {
+    width: 96px;
+    height: 18px;
+  }
+
+  .skeleton--count {
+    width: 82px;
+  }
 }

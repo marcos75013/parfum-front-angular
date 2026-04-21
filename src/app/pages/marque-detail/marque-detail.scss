@@ -1,6 +1,21 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(255, 215, 230, 0.42), transparent 30%),
+    radial-gradient(circle at top right, rgba(220, 230, 255, 0.38), transparent 35%),
+    linear-gradient(180deg, #fcfcfd 0%, #f6eff7 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .page {
   padding: 32px 20px 48px;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -18,7 +33,7 @@
   margin-bottom: 18px;
   color: #8e5875;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .back-link:hover {
@@ -28,7 +43,7 @@
 .eyebrow {
   margin: 0 0 8px;
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #a06a85;
@@ -38,6 +53,7 @@ h1 {
   margin: 0 0 8px;
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.05;
+  color: #111827;
 }
 
 .hero-subtitle {
@@ -65,6 +81,7 @@ h1 {
 .disclaimer__text {
   margin: 0;
   color: #6d5b2f;
+  font-weight: 600;
 }
 
 .state {
@@ -74,12 +91,17 @@ h1 {
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.06);
   color: #5f6470;
+  font-weight: 600;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 22px;
+}
+
+.grid--skeleton {
+  pointer-events: none;
 }
 
 .card {
@@ -98,66 +120,151 @@ h1 {
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.09);
 }
 
+.card--skeleton:hover {
+  transform: none;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
+}
+
 .image-wrapper {
-  aspect-ratio: 1 / 1;
+  position: relative;
+  min-height: 240px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(180deg, #faf7fb 0%, #f2eef4 100%);
+  overflow: hidden;
 }
 
 .card-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 220px;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.card-image.loaded {
+  opacity: 1;
+}
+
+.card-discount {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  box-shadow: 0 10px 18px rgba(220, 38, 38, 0.24);
+}
+
+.card-type-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.card-type-badge--testeur {
+  background: linear-gradient(135deg, #111827 0%, #374151 100%);
+}
+
+.card-type-badge--coffret {
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
 }
 
 .card-content {
   padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .brand {
-  margin: 0 0 6px;
+  margin: 0;
   color: #a06a85;
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size: 0.78rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.16em;
 }
 
 .card-content h2 {
-  margin: 0 0 8px;
-  font-size: 1.1rem;
-  line-height: 1.3;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  color: #1f1720;
 }
 
 .meta {
-  margin: 0 0 18px;
+  margin: 0;
   color: #6c7380;
+  font-size: 0.95rem;
+  min-height: 22px;
+  text-transform: capitalize;
 }
 
-.card-footer {
+.price-block {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.old-price {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #9b8f98;
+  text-decoration: line-through;
 }
 
 .price {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #c81d57;
+}
+
+.saving {
+  margin: 0;
+  font-size: 0.92rem;
   font-weight: 700;
+  color: #15803d;
 }
 
 .add-btn {
+  margin-top: 6px;
   border: none;
   border-radius: 14px;
-  padding: 12px 14px;
-  font-weight: 700;
+  min-height: 46px;
+  padding: 0 16px;
+  font-weight: 800;
+  font-size: 0.95rem;
   cursor: pointer;
-  background: #111827;
+  background: linear-gradient(135deg, #111827 0%, #374151 100%);
   color: #fff;
   transition:
     transform 0.2s ease,
     opacity 0.2s ease,
     background 0.2s ease;
+  box-shadow: 0 10px 22px rgba(17, 24, 39, 0.16);
 }
 
 .add-btn:hover {
@@ -165,5 +272,144 @@ h1 {
 }
 
 .add-btn.added {
-  background: #16a34a;
+  background: linear-gradient(135deg, #15803d 0%, #22c55e 100%);
+  box-shadow: 0 10px 22px rgba(34, 197, 94, 0.18);
+}
+
+/* skeleton */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #f2edf2 25%, #fbf8fb 50%, #f2edf2 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.35s infinite linear;
+}
+
+.skeleton--image {
+  width: 100%;
+  height: 220px;
+  border-radius: 20px;
+}
+
+.skeleton--brand {
+  width: 34%;
+  height: 12px;
+}
+
+.skeleton--title {
+  width: 88%;
+  height: 18px;
+}
+
+.skeleton--title-short {
+  width: 62%;
+}
+
+.skeleton--meta {
+  width: 40%;
+  height: 14px;
+}
+
+.skeleton--old-price {
+  width: 72px;
+  height: 14px;
+}
+
+.skeleton--price {
+  width: 90px;
+  height: 24px;
+}
+
+.skeleton--saving {
+  width: 120px;
+  height: 14px;
+}
+
+.skeleton--button {
+  width: 100%;
+  height: 46px;
+  margin-top: 6px;
+  border-radius: 14px;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 24px 16px 40px;
+  }
+
+  .hero {
+    padding: 24px 18px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .image-wrapper {
+    min-height: 180px;
+    padding: 14px;
+  }
+
+  .card-image,
+  .skeleton--image {
+    height: 160px;
+  }
+
+  .card-content {
+    padding: 14px;
+  }
+
+  .card-content h2 {
+    font-size: 0.96rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+
+  .add-btn {
+    min-height: 42px;
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    padding: 18px 14px 34px;
+  }
+
+  .hero {
+    border-radius: 22px;
+    padding: 18px 16px;
+  }
+
+  .card {
+    border-radius: 20px;
+  }
+
+  .image-wrapper {
+    min-height: 160px;
+    padding: 12px;
+  }
+
+  .card-image,
+  .skeleton--image {
+    height: 140px;
+  }
+
+  .grid {
+    gap: 14px;
+  }
 }

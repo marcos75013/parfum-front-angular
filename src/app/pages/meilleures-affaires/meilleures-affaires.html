@@ -28,6 +28,23 @@
             </strong>
           </div>
         </div>
+
+        <div class="hero__stats hero__stats--skeleton" *ngIf="loading" aria-hidden="true">
+          <div class="hero-stat hero-stat--skeleton">
+            <div class="skeleton skeleton--stat-label"></div>
+            <div class="skeleton skeleton--stat-value"></div>
+          </div>
+
+          <div class="hero-stat hero-stat--skeleton">
+            <div class="skeleton skeleton--stat-label"></div>
+            <div class="skeleton skeleton--stat-value"></div>
+          </div>
+
+          <div class="hero-stat hero-stat--skeleton">
+            <div class="skeleton skeleton--stat-label"></div>
+            <div class="skeleton skeleton--stat-value"></div>
+          </div>
+        </div>
       </div>
 
       <div class="hero__actions">
@@ -56,9 +73,41 @@
     </p>
   </div>
 
-  <div *ngIf="loading" class="state">Chargement des meilleures affaires...</div>
+  <section class="carousel carousel--skeleton" *ngIf="loading" aria-hidden="true">
+    <div class="carousel__container">
+      <article class="carousel-card carousel-card--skeleton">
+        <div class="carousel-card__left">
+          <div class="skeleton skeleton--pill"></div>
+          <div class="skeleton skeleton--brand"></div>
+          <div class="skeleton skeleton--title"></div>
+          <div class="skeleton skeleton--title skeleton--title-short"></div>
+          <div class="skeleton skeleton--gender"></div>
 
-  <div *ngIf="!loading && deals.length === 0" class="state">
+          <div class="carousel-card__metrics">
+            <div class="carousel-metric carousel-metric--skeleton" *ngFor="let item of [1,2,3]">
+              <div class="skeleton skeleton--metric-label"></div>
+              <div class="skeleton skeleton--metric-value"></div>
+            </div>
+          </div>
+
+          <div class="carousel-card__prices">
+            <div class="skeleton skeleton--old-price"></div>
+            <div class="skeleton skeleton--price"></div>
+          </div>
+
+          <div class="skeleton skeleton--button"></div>
+        </div>
+
+        <div class="carousel-card__right">
+          <div class="carousel-card__image-wrap">
+            <div class="skeleton skeleton--carousel-image"></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="state" *ngIf="!loading && deals.length === 0">
     Aucune meilleure affaire disponible pour le moment.
   </div>
 
@@ -134,14 +183,14 @@
           <div class="carousel-card__right">
             <div class="carousel-card__image-wrap">
               <img
-                *ngIf="hasValidImage(parfum)"
-                [src]="parfum.image"
+                [src]="parfum.image || placeholderImage"
                 [alt]="parfum.name"
                 loading="lazy"
                 width="320"
                 height="320"
                 class="carousel-card__image"
-                (error)="onBannerImageError(parfum)"
+                (load)="onImageLoad($event)"
+                (error)="onImageError($event)"
               />
 
               <span class="carousel-card__discount">
@@ -197,14 +246,14 @@
       >
         <div class="deal-card__image-wrap">
           <img
-            *ngIf="hasValidImage(parfum)"
-            [src]="parfum.image"
+            [src]="parfum.image || placeholderImage"
             [alt]="parfum.name"
             loading="lazy"
             width="220"
             height="220"
             class="deal-card__image"
-            (error)="onDealImageError(parfum)"
+            (load)="onImageLoad($event)"
+            (error)="onImageError($event)"
           />
 
           <span class="deal-card__discount">
@@ -240,6 +289,44 @@
             >
               {{ isInCart(parfum) ? 'Ajouté' : 'Ajouter' }}
             </button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="deals-section" *ngIf="loading" aria-hidden="true">
+    <div class="section-heading">
+      <div>
+        <p class="section-heading__eyebrow">Sélection</p>
+        <h2 class="section-heading__title">Toutes les meilleures affaires</h2>
+      </div>
+
+      <div class="section-heading__counter">
+        Chargement...
+      </div>
+    </div>
+
+    <div class="deals-grid">
+      <article class="deal-card deal-card--skeleton" *ngFor="let item of skeletonItems">
+        <div class="deal-card__image-wrap">
+          <div class="skeleton skeleton--deal-image"></div>
+        </div>
+
+        <div class="deal-card__body">
+          <div class="skeleton skeleton--brand"></div>
+          <div class="skeleton skeleton--title"></div>
+          <div class="skeleton skeleton--title skeleton--title-short"></div>
+          <div class="skeleton skeleton--gender"></div>
+
+          <div class="deal-card__price-block">
+            <div class="skeleton skeleton--old-price"></div>
+            <div class="skeleton skeleton--price"></div>
+          </div>
+
+          <div class="deal-card__footer">
+            <div class="skeleton skeleton--saving"></div>
+            <div class="skeleton skeleton--small-button"></div>
           </div>
         </div>
       </article>

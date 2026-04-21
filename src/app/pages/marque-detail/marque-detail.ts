@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectorRef, Component, OnInit, inject } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { ChangeDetectorRef, Component, Inject, OnInit, PLATFORM_ID, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 
 import { Parfum } from '../../models/parfum';
@@ -19,14 +19,23 @@ export class MarqueDetailComponent implements OnInit {
   loading = true;
 
   readonly cartService = inject(CartService);
+  readonly placeholderImage = 'assets/placeholder.png';
+  readonly skeletonItems = Array.from({ length: 8 });
 
   constructor(
     private readonly route: ActivatedRoute,
     private readonly parfumService: ParfumService,
     private readonly cdr: ChangeDetectorRef,
+    @Inject(PLATFORM_ID) private readonly platformId: object,
   ) {}
 
   async ngOnInit(): Promise<void> {
+    if (!isPlatformBrowser(this.platformId)) {
+      this.loading = false;
+      this.cdr.detectChanges();
+      return;
+    }
+
     try {
       const brandParam = this.route.snapshot.paramMap.get('brand') ?? '';
       this.brand = decodeURIComponent(brandParam);
@@ -34,17 +43,12 @@ export class MarqueDetailComponent implements OnInit {
       const allParfums = await this.parfumService.loadParfums();
       this.parfums = this.parfumService.getParfumsByBrand(allParfums, this.brand);
 
-      console.log('Brand param:', this.brand);
-      console.log('Produits trouvés:', this.parfums.length);
-      console.log('Exemple produits:', this.parfums.slice(0, 5));
-
-      this.loading = false;
       this.cdr.detectChanges();
-
       void this.loadImagesInBackground();
     } catch (error) {
       console.error('Erreur chargement produits par marque', error);
       this.parfums = [];
+    } finally {
       this.loading = false;
       this.cdr.detectChanges();
     }
@@ -64,14 +68,48 @@ export class MarqueDetailComponent implements OnInit {
     return `${parfum.brand}-${parfum.name}`;
   }
 
+  getDiscountPercent(parfum: Parfum): number {
+    return this.parfumService.getDiscountPercent(parfum);
+  }
+
+  getOldPrice(parfum: Parfum): number {
+    return parfum.prix_boutique ?? parfum.price;
+  }
+
+  getSavings(parfum: Parfum): number {
+    return this.parfumService.getSavings(parfum);
+  }
+
+  onImageLoad(event: Event): void {
+    const img = event.target as HTMLImageElement;
+    img.classList.add('loaded');
+  }
+
+  onImageError(event: Event): void {
+    const img = event.target as HTMLImageElement;
+
+    if (!img.src.includes(this.placeholderImage)) {
+      img.src = this.placeholderImage;
+      return;
+    }
+
+    img.classList.add('loaded');
+  }
+
   private async loadImagesInBackground(): Promise<void> {
-    for (const parfum of this.parfums) {
-      try {
-        const image = await this.parfumService.fetchPerfumeImage(parfum);
-        parfum.image = image;
-      } catch (error) {
-        console.error(`Erreur mise à jour image pour "${parfum.name}"`, error);
-      }
+    const updates = await Promise.all(
+      this.parfums.map(async (parfum) => {
+        try {
+          const image = await this.parfumService.fetchPerfumeImage(parfum);
+          return { parfum, image };
+        } catch {
+          return { parfum, image: parfum.image };
+        }
+      }),
+    );
+
+    for (const update of updates) {
+      update.parfum.image = update.image;
     }
 
     this.parfums = [...this.parfums];

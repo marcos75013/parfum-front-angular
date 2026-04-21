@@ -79,7 +79,26 @@
     </p>
   </div>
 
-  <div *ngIf="loading" class="state">Chargement des parfums...</div>
+  <div class="grid grid--skeleton" *ngIf="loading" aria-hidden="true">
+    <article class="card card--skeleton" *ngFor="let item of skeletonItems">
+      <div class="card__image-wrap skeleton skeleton--image"></div>
+
+      <div class="card__body">
+        <div class="skeleton skeleton--brand"></div>
+        <div class="skeleton skeleton--title"></div>
+        <div class="skeleton skeleton--title skeleton--title-short"></div>
+        <div class="skeleton skeleton--gender"></div>
+
+        <div class="card__prices">
+          <div class="skeleton skeleton--old-price"></div>
+          <div class="skeleton skeleton--price"></div>
+        </div>
+
+        <div class="skeleton skeleton--saving"></div>
+        <div class="skeleton skeleton--button"></div>
+      </div>
+    </article>
+  </div>
 
   <div *ngIf="!loading && filteredParfums.length === 0" class="state">
     Aucun parfum trouvé.
@@ -92,12 +111,14 @@
     >
       <div class="card__image-wrap">
         <img
-          [src]="parfum.image"
+          [src]="parfum.image || placeholderImage"
           [alt]="parfum.name"
           loading="lazy"
           width="200"
           height="200"
           class="card__image"
+          (load)="onImageLoad($event)"
+          (error)="onImageError($event)"
         />
 
         <span
