@@ -68,6 +68,10 @@
         <span>Total</span>
         <strong>{{ cartService.total() }} €</strong>
       </div>
+
+      <p class="summary-saving" *ngIf="getTotalSavings() > 0">
+        Vous allez faire une économie de {{ getTotalSavings() }} €
+      </p>
     </aside>
   </div>
 </div>
