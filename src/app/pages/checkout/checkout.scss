@@ -89,6 +89,7 @@ label {
   font-weight: 700;
   color: #374151;
 }
+
 .summary-saving {
   margin: 10px 0 0;
   color: #16a34a;
@@ -97,7 +98,8 @@ label {
 }
 
 input,
-textarea {
+textarea,
+select {
   width: 100%;
   border: 1px solid #e5e7eb;
   border-radius: 16px;
@@ -107,12 +109,56 @@ textarea {
   background: #fff;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   box-sizing: border-box;
+  font-family: inherit;
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   border-color: #c4b5fd;
   box-shadow: 0 0 0 4px rgba(196, 181, 253, 0.2);
+}
+
+input.invalid,
+textarea.invalid,
+select.invalid {
+  border-color: #ef4444;
+  background: #fffafa;
+}
+
+.helper-text {
+  margin: -2px 0 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.error-text {
+  margin: -2px 0 0;
+  font-size: 13px;
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.checkbox-field {
+  margin-top: 4px;
+  padding: 16px;
+  border: 1px solid #ede9fe;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.checkbox-label input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #8b5cf6;
 }
 
 .submit-btn {

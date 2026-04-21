@@ -22,8 +22,29 @@ export class CheckoutComponent {
     lastName: '',
     email: '',
     phone: '',
+    hasDeliveryPreferences: false,
     address: '',
+    deliveryDate1: '',
+    deliveryTime1: '',
+    deliveryDate2: '',
+    deliveryTime2: '',
   };
+
+  readonly deliveryTimeSlots = [
+    '09:00',
+    '10:00',
+    '11:00',
+    '12:00',
+    '13:00',
+    '14:00',
+    '15:00',
+    '16:00',
+    '17:00',
+    '18:00',
+    '19:00',
+    '20:00',
+    '21:00',
+  ];
 
   sending = false;
   successMessage = '';
@@ -60,26 +81,123 @@ export class CheckoutComponent {
     }, 0);
   }
 
+  onPhoneInput(): void {
+    this.form.phone = this.form.phone.replace(/[^\d+()\s.-]/g, '');
+  }
+
+  getNormalizedPhone(phone: string): string {
+    const cleaned = phone.replace(/\D/g, '');
+
+    if (cleaned.startsWith('33') && cleaned.length === 11) {
+      return `0${cleaned.slice(2)}`;
+    }
+
+    return cleaned;
+  }
+
+  isPhoneValid(): boolean {
+    const normalizedPhone = this.getNormalizedPhone(this.form.phone);
+    return /^0[1-9]\d{8}$/.test(normalizedPhone);
+  }
+
+  isEmailValid(): boolean {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.form.email.trim());
+  }
+
+  private buildSlot(date: string, time: string): string {
+    if (!date || !time) {
+      return '';
+    }
+
+    return `${date} ${time}`;
+  }
+
+  isDeliveryPreferencesValid(): boolean {
+    if (!this.form.hasDeliveryPreferences) {
+      return true;
+    }
+
+    const hasAddress = this.form.address.trim().length > 0;
+    const hasDate1 = this.form.deliveryDate1.trim().length > 0;
+    const hasTime1 = this.form.deliveryTime1.trim().length > 0;
+    const hasDate2 = this.form.deliveryDate2.trim().length > 0;
+    const hasTime2 = this.form.deliveryTime2.trim().length > 0;
+
+    const slot1 = this.buildSlot(this.form.deliveryDate1, this.form.deliveryTime1);
+    const slot2 = this.buildSlot(this.form.deliveryDate2, this.form.deliveryTime2);
+
+    const slotsAreDifferent = slot1 !== '' && slot2 !== '' && slot1 !== slot2;
+
+    return hasAddress && hasDate1 && hasTime1 && hasDate2 && hasTime2 && slotsAreDifferent;
+  }
+
+  isFormValid(): boolean {
+    const hasRequiredIdentityFields =
+      this.form.firstName.trim().length > 0 &&
+      this.form.lastName.trim().length > 0 &&
+      this.isEmailValid() &&
+      this.isPhoneValid();
+
+    return hasRequiredIdentityFields && this.isDeliveryPreferencesValid();
+  }
+
+  toggleDeliveryPreferences(): void {
+    if (!this.form.hasDeliveryPreferences) {
+      this.form.address = '';
+      this.form.deliveryDate1 = '';
+      this.form.deliveryTime1 = '';
+      this.form.deliveryDate2 = '';
+      this.form.deliveryTime2 = '';
+    }
+  }
+
+  private buildPayload() {
+    const normalizedPhone = this.getNormalizedPhone(this.form.phone);
+
+    return {
+      customer: {
+        firstName: this.form.firstName.trim(),
+        lastName: this.form.lastName.trim(),
+        email: this.form.email.trim(),
+        phone: normalizedPhone,
+      },
+      deliveryPreferences: this.form.hasDeliveryPreferences
+        ? {
+            enabled: true,
+            address: this.form.address.trim(),
+            deliverySlot1: this.buildSlot(this.form.deliveryDate1, this.form.deliveryTime1),
+            deliverySlot2: this.buildSlot(this.form.deliveryDate2, this.form.deliveryTime2),
+          }
+        : {
+            enabled: false,
+            address: '',
+            deliverySlot1: '',
+            deliverySlot2: '',
+          },
+      items: this.cartService.items(),
+      total: this.cartService.total(),
+      savings: this.getTotalSavings(),
+    };
+  }
+
   submit(): void {
-    if (this.cartService.items().length === 0) {
+    if (this.cartService.items().length === 0 || !this.isFormValid()) {
       return;
     }
 
     this.sending = true;
     this.successMessage = '';
 
-    const payload = {
-      customer: this.form,
-      items: this.cartService.items(),
-      total: this.cartService.total(),
-      savings: this.getTotalSavings(),
-    };
+    const payload = this.buildPayload();
+
+    console.log('📤 Payload envoyé =', payload);
 
     this.http.post('http://localhost:3000/api/order', payload).subscribe({
       next: () => {
         this.cartService.clearCart();
         this.successMessage = 'Commande envoyée avec succès.';
         this.sending = false;
+
         setTimeout(() => {
           this.router.navigateByUrl('/');
         }, 1200);

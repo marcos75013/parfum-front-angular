@@ -39,10 +39,10 @@
         </div>
 
         <div class="item-pricing">
-          <div class="item-total">{{ item.parfum.price * item.quantity }} €</div>
+          <div class="item-total">{{ item.parfum.price * item.quantity | number:'1.2-2' }} €</div>
 
           <p class="item-saving" *ngIf="getItemSavings(item.parfum, item.quantity) > 0">
-            Économie : {{ getItemSavings(item.parfum, item.quantity) }} €
+            Économie : {{ getItemSavings(item.parfum, item.quantity) | number:'1.2-2' }} €
           </p>
         </div>
       </article>
@@ -58,11 +58,11 @@
 
       <div class="summary-row total">
         <span>Total</span>
-        <span>{{ cartService.total() }} €</span>
+        <span>{{ cartService.total() | number:'1.2-2' }} €</span>
       </div>
 
       <p class="summary-saving" *ngIf="getTotalSavings() > 0">
-        Vous allez faire une économie de {{ getTotalSavings() }} €
+        Vous allez faire une économie de {{ getTotalSavings() | number:'1.2-2' }} €
       </p>
 
       <a routerLink="/checkout" class="checkout-btn">Passer la commande</a>
