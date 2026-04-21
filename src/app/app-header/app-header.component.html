@@ -125,3 +125,15 @@
     </div>
   </aside>
 </header>
+
+<div class="header-spacer"></div>
+
+<a
+  routerLink="/cart"
+  class="floating-cart"
+  aria-label="Voir le panier"
+  (click)="closeMenu()"
+>
+  <span class="floating-cart__icon">🛒</span>
+  <span class="floating-cart__badge">{{ cartService.count() }}</span>
+</a>
