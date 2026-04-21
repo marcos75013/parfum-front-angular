@@ -20,6 +20,8 @@ export class MarquesComponent implements OnInit {
   search = '';
   loading = true;
 
+  readonly skeletonItems = Array.from({ length: 10 });
+
   constructor(
     private readonly parfumService: ParfumService,
     private readonly cdr: ChangeDetectorRef,

@@ -22,7 +22,17 @@
     </div>
   </section>
 
-  <div *ngIf="loading" class="state">Chargement des marques...</div>
+  <div class="brands-grid brands-grid--skeleton" *ngIf="loading" aria-hidden="true">
+    <article class="brand-card brand-card--skeleton" *ngFor="let item of skeletonItems">
+      <div class="brand-card__content">
+        <div class="skeleton skeleton--label"></div>
+        <div class="skeleton skeleton--title"></div>
+        <div class="skeleton skeleton--count"></div>
+      </div>
+
+      <div class="skeleton skeleton--arrow"></div>
+    </article>
+  </div>
 
   <div *ngIf="!loading && filteredBrands.length === 0" class="state">
     Aucune marque trouvée.

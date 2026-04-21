@@ -26,6 +26,12 @@ export class ParfumsComponent implements OnInit {
 
   readonly cartService = inject(CartService);
 
+  // Image de secours si une image ne charge pas
+  readonly placeholderImage = 'assets/placeholder.png';
+
+  // Nombre de skeleton cards affichées pendant le chargement
+  readonly skeletonItems = Array.from({ length: 8 });
+
   constructor(
     private readonly parfumService: ParfumService,
     private readonly cdr: ChangeDetectorRef,
@@ -100,6 +106,22 @@ export class ParfumsComponent implements OnInit {
     }
 
     return this.parfums.filter((parfum) => parfum.type === type).length;
+  }
+
+  onImageLoad(event: Event): void {
+    const img = event.target as HTMLImageElement;
+    img.classList.add('loaded');
+  }
+
+  onImageError(event: Event): void {
+    const img = event.target as HTMLImageElement;
+
+    if (!img.src.includes(this.placeholderImage)) {
+      img.src = this.placeholderImage;
+      return;
+    }
+
+    img.classList.add('loaded');
   }
 
   private applyFilters(): void {

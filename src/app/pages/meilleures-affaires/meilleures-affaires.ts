@@ -23,18 +23,19 @@ import { ParfumService } from '../../services/parfum.service';
   styleUrl: './meilleures-affaires.scss',
 })
 export class MeilleuresAffairesComponent implements OnInit, OnDestroy {
-  parfums: Parfum[] = [];
   deals: Parfum[] = [];
   filteredDeals: Parfum[] = [];
   bannerDeals: Parfum[] = [];
 
   search = '';
   loading = true;
-
   currentIndex = 0;
-  private autoSlideInterval: ReturnType<typeof setInterval> | null = null;
 
   readonly cartService = inject(CartService);
+  readonly placeholderImage = 'assets/placeholder.png';
+  readonly skeletonItems = Array.from({ length: 8 });
+
+  private autoSlideInterval: ReturnType<typeof setInterval> | null = null;
 
   constructor(
     private readonly parfumService: ParfumService,
@@ -50,29 +51,24 @@ export class MeilleuresAffairesComponent implements OnInit, OnDestroy {
     }
 
     try {
-      this.parfums = await this.parfumService.loadParfums();
+      const parfums = await this.parfumService.loadParfums();
 
-      const sorted = [...this.parfums]
+      this.deals = [...parfums]
         .filter((parfum) => this.getDiscountPercent(parfum) > 0)
-        .sort((a, b) => {
-          const discountDiff = this.getDiscountPercent(b) - this.getDiscountPercent(a);
+        .sort((a, b) => this.getSavings(b) - this.getSavings(a));
 
-          if (discountDiff !== 0) {
-            return discountDiff;
-          }
+      this.filteredDeals = [...this.deals];
+      this.bannerDeals = this.deals.slice(0, 8);
 
-          return this.getSavings(b) - this.getSavings(a);
-        });
+      void this.loadImagesInBackground();
 
-      this.deals = sorted;
-      this.filteredDeals = [...sorted];
+      if (this.bannerDeals.length > 1) {
+        this.startAutoSlide();
+      }
 
-      this.rebuildBannerDeals();
-
-      await this.loadImagesInBackground();
+      this.cdr.detectChanges();
     } catch (error) {
       console.error('Erreur chargement meilleures affaires', error);
-      this.parfums = [];
       this.deals = [];
       this.filteredDeals = [];
       this.bannerDeals = [];
@@ -91,24 +87,23 @@ export class MeilleuresAffairesComponent implements OnInit, OnDestroy {
 
     if (!term) {
       this.filteredDeals = [...this.deals];
-    } else {
-      this.filteredDeals = this.deals.filter((parfum) =>
-        [
-          parfum.name,
-          parfum.brand,
-          parfum.gender,
-          String(parfum.price),
-          String(parfum.prix_boutique ?? ''),
-          String(this.getDiscountPercent(parfum)),
-          String(this.getSavings(parfum)),
-        ]
-          .join(' ')
-          .toLowerCase()
-          .includes(term),
-      );
+      return;
     }
 
-    this.rebuildBannerDeals();
+    this.filteredDeals = this.deals.filter((parfum) =>
+      [
+        parfum.name,
+        parfum.brand,
+        parfum.gender,
+        parfum.type ?? '',
+        String(parfum.price),
+        String(parfum.prix_boutique ?? ''),
+        String(this.getDiscountPercent(parfum)),
+      ]
+        .join(' ')
+        .toLowerCase()
+        .includes(term),
+    );
   }
 
   addToCart(parfum: Parfum): void {
@@ -143,7 +138,6 @@ export class MeilleuresAffairesComponent implements OnInit, OnDestroy {
     }
 
     const total = this.deals.reduce((sum, parfum) => sum + this.getDiscountPercent(parfum), 0);
-
     return Math.round(total / this.deals.length);
   }
 
@@ -153,7 +147,6 @@ export class MeilleuresAffairesComponent implements OnInit, OnDestroy {
     }
 
     const total = this.deals.reduce((sum, parfum) => sum + this.getSavings(parfum), 0);
-
     return total / this.deals.length;
   }
 
@@ -165,14 +158,6 @@ export class MeilleuresAffairesComponent implements OnInit, OnDestroy {
     return this.bannerDeals[this.currentIndex] ?? null;
   }
 
-  next(): void {
-    if (!this.bannerDeals.length) {
-      return;
-    }
-
-    this.currentIndex = (this.currentIndex + 1) % this.bannerDeals.length;
-  }
-
   prev(): void {
     if (!this.bannerDeals.length) {
       return;
@@ -181,11 +166,15 @@ export class MeilleuresAffairesComponent implements OnInit, OnDestroy {
     this.currentIndex = (this.currentIndex - 1 + this.bannerDeals.length) % this.bannerDeals.length;
   }
 
-  goToSlide(index: number): void {
-    if (index < 0 || index >= this.bannerDeals.length) {
+  next(): void {
+    if (!this.bannerDeals.length) {
       return;
     }
 
+    this.currentIndex = (this.currentIndex + 1) % this.bannerDeals.length;
+  }
+
+  goToSlide(index: number): void {
     this.currentIndex = index;
   }
 
@@ -209,81 +198,30 @@ export class MeilleuresAffairesComponent implements OnInit, OnDestroy {
     }
   }
 
-  onBannerImageError(parfum: Parfum): void {
-    parfum.image = '';
-
-    this.bannerDeals = this.bannerDeals.filter((item) => !this.isSameParfum(item, parfum));
-
-    if (this.currentIndex >= this.bannerDeals.length) {
-      this.currentIndex = 0;
-    }
-
-    this.startAutoSlide();
-    this.cdr.detectChanges();
+  onImageLoad(event: Event): void {
+    const img = event.target as HTMLImageElement;
+    img.classList.add('loaded');
   }
 
-  onDealImageError(parfum: Parfum): void {
-    parfum.image = '';
-    this.rebuildBannerDeals();
-    this.cdr.detectChanges();
-  }
+  onImageError(event: Event): void {
+    const img = event.target as HTMLImageElement;
 
-  hasValidImage(parfum: Parfum): boolean {
-    const image = (parfum.image ?? '').trim();
-
-    if (!image) {
-      return false;
+    if (!img.src.includes(this.placeholderImage)) {
+      img.src = this.placeholderImage;
+      return;
     }
 
-    const normalized = image.toLowerCase();
-
-    if (
-      normalized.includes('placeholder') ||
-      normalized.includes('default') ||
-      normalized.includes('no-image') ||
-      normalized.includes('no_image') ||
-      normalized.includes('image-not-found') ||
-      normalized.endsWith('/undefined') ||
-      normalized.endsWith('/null')
-    ) {
-      return false;
-    }
-
-    return (
-      normalized.startsWith('http://') ||
-      normalized.startsWith('https://') ||
-      normalized.startsWith('/assets/') ||
-      normalized.startsWith('assets/') ||
-      normalized.startsWith('/images/') ||
-      normalized.startsWith('images/')
-    );
-  }
-
-  private rebuildBannerDeals(): void {
-    this.bannerDeals = this.filteredDeals
-      .filter((parfum) => this.hasValidImage(parfum))
-      .slice(0, 5);
-
-    if (this.currentIndex >= this.bannerDeals.length) {
-      this.currentIndex = 0;
-    }
-
-    this.startAutoSlide();
-    this.cdr.detectChanges();
-  }
-
-  private isSameParfum(a: Parfum, b: Parfum): boolean {
-    return a.name === b.name && a.brand === b.brand;
+    img.classList.add('loaded');
   }
 
   private async loadImagesInBackground(): Promise<void> {
     const updates = await Promise.all(
-      this.parfums.map(async (parfum) => {
+      this.deals.map(async (parfum) => {
         try {
           const image = await this.parfumService.fetchPerfumeImage(parfum);
-          return { parfum, image: image?.trim() ?? '' };
+          return { parfum, image };
         } catch {
-          return { parfum, image: '' };
+          return { parfum, image: parfum.image };
         }
       }),
     );
@@ -292,6 +230,8 @@ export class MeilleuresAffairesComponent implements OnInit, OnDestroy {
       update.parfum.image = update.image;
     }
 
-    this.rebuildBannerDeals();
+    this.filteredDeals = [...this.filteredDeals];
+    this.bannerDeals = [...this.bannerDeals];
+    this.cdr.detectChanges();
   }
 }

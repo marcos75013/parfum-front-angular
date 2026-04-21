@@ -18,7 +18,28 @@
     </p>
   </div>
 
-  <div *ngIf="loading" class="state">Chargement des produits...</div>
+  <div class="grid grid--skeleton" *ngIf="loading" aria-hidden="true">
+    <article class="card card--skeleton" *ngFor="let item of skeletonItems">
+      <div class="image-wrapper">
+        <div class="skeleton skeleton--image"></div>
+      </div>
+
+      <div class="card-content">
+        <div class="skeleton skeleton--brand"></div>
+        <div class="skeleton skeleton--title"></div>
+        <div class="skeleton skeleton--title skeleton--title-short"></div>
+        <div class="skeleton skeleton--meta"></div>
+
+        <div class="price-block">
+          <div class="skeleton skeleton--old-price"></div>
+          <div class="skeleton skeleton--price"></div>
+        </div>
+
+        <div class="skeleton skeleton--saving"></div>
+        <div class="skeleton skeleton--button"></div>
+      </div>
+    </article>
+  </div>
 
   <div *ngIf="!loading && parfums.length === 0" class="state">
     Aucun produit trouvé pour cette marque.
@@ -27,7 +48,37 @@
   <div class="grid" *ngIf="!loading && parfums.length > 0">
     <article class="card" *ngFor="let parfum of parfums; trackBy: trackByName">
       <div class="image-wrapper">
-        <img [src]="parfum.image" [alt]="parfum.name" class="card-image" />
+        <img
+          [src]="parfum.image || placeholderImage"
+          [alt]="parfum.name"
+          class="card-image"
+          loading="lazy"
+          width="220"
+          height="220"
+          (load)="onImageLoad($event)"
+          (error)="onImageError($event)"
+        />
+
+        <span
+          class="card-discount"
+          *ngIf="getDiscountPercent(parfum) > 0"
+        >
+          -{{ getDiscountPercent(parfum) }}%
+        </span>
+
+        <span
+          class="card-type-badge card-type-badge--testeur"
+          *ngIf="parfum.type === 'testeur'"
+        >
+          Testeur
+        </span>
+
+        <span
+          class="card-type-badge card-type-badge--coffret"
+          *ngIf="parfum.type === 'coffret'"
+        >
+          Coffret
+        </span>
       </div>
 
       <div class="card-content">
@@ -35,17 +86,32 @@
         <h2>{{ parfum.name }}</h2>
         <p class="meta">{{ parfum.gender }}</p>
 
-        <div class="card-footer">
-          <p class="price">{{ parfum.price }} €</p>
-
-          <button
-            class="add-btn"
-            [class.added]="isInCart(parfum)"
-            (click)="addToCart(parfum)"
+        <div class="price-block">
+          <span
+            class="old-price"
+            *ngIf="parfum.prix_boutique && parfum.prix_boutique > parfum.price"
           >
-            {{ isInCart(parfum) ? 'Ajouté au panier' : 'Ajouter au panier' }}
-          </button>
+            {{ getOldPrice(parfum) | number:'1.2-2' }} €
+          </span>
+
+          <p class="price">{{ parfum.price | number:'1.2-2' }} €</p>
         </div>
+
+        <p
+          class="saving"
+          *ngIf="parfum.prix_boutique && parfum.prix_boutique > parfum.price"
+        >
+          Économie de {{ getSavings(parfum) | number:'1.2-2' }} €
+        </p>
+
+        <button
+          class="add-btn"
+          [class.added]="isInCart(parfum)"
+          (click)="addToCart(parfum)"
+          type="button"
+        >
+          {{ isInCart(parfum) ? 'Ajouté au panier' : 'Ajouter au panier' }}
+        </button>
       </div>
     </article>
   </div>
