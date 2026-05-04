@@ -1,5 +1,5 @@
 export const environement = {
-  production: false,
+  production: true,
   unsplashAccessKey: '',
-  apiBaseUrl: "apiBaseUrl: 'http://localhost:3000/api'",
+  apiBaseUrl: 'https://backend-escale-olfactive.onrender.com/api',
 };
