@@ -355,6 +355,6 @@ export class ParfumService {
   }
 
   private getFallbackImage(_: Partial<Parfum>): string {
-    return '/images/placeholder-parfum.jpg';
+    return '';
   }
 }

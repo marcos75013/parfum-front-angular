@@ -19,7 +19,7 @@ export class MarqueDetailComponent implements OnInit {
   loading = true;
 
   readonly cartService = inject(CartService);
-  readonly placeholderImage = 'assets/placeholder.png';
+  readonly placeholderImage = '/assets/images/placeholder-parfum.jpg';
   readonly skeletonItems = Array.from({ length: 8 });
 
   constructor(

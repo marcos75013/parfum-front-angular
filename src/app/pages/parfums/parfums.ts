@@ -27,8 +27,20 @@ export class ParfumsComponent implements OnInit {
   readonly cartService = inject(CartService);
 
   // Image de secours si une image ne charge pas
-  readonly placeholderImage = 'assets/placeholder.png';
-
+  readonly placeholderImage =
+    'data:image/svg+xml;utf8,' +
+    encodeURIComponent(`
+    <svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+      <rect width="600" height="600" rx="40" fill="#f5eff7"/>
+      <rect x="230" y="180" width="140" height="260" rx="24" fill="#ffffff" stroke="#4a2b3d" stroke-width="10"/>
+      <rect x="260" y="120" width="80" height="70" rx="14" fill="#4a2b3d"/>
+      <rect x="245" y="155" width="110" height="40" rx="12" fill="#7c3aed"/>
+      <circle cx="300" cy="310" r="54" fill="#e9d5ff"/>
+      <text x="300" y="505" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#4a2b3d">
+        Escale Olfactive
+      </text>
+    </svg>
+  `);
   // Nombre de skeleton cards affichées pendant le chargement
   readonly skeletonItems = Array.from({ length: 8 });
 
@@ -136,11 +148,8 @@ export class ParfumsComponent implements OnInit {
   onImageError(event: Event): void {
     const img = event.target as HTMLImageElement;
 
-    if (!img.src.includes(this.placeholderImage)) {
-      img.src = this.placeholderImage;
-      return;
-    }
-
+    img.onerror = null;
+    img.src = this.placeholderImage;
     img.classList.add('loaded');
   }
 
