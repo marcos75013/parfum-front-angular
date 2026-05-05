@@ -141,7 +141,6 @@ export class CheckoutComponent {
   isFormValid(): boolean {
     const hasRequiredIdentityFields =
       this.form.firstName.trim().length > 0 &&
-      this.form.lastName.trim().length > 0 &&
       this.isEmailValid() &&
       this.isPhoneValid();
 

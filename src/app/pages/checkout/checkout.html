@@ -43,17 +43,13 @@
         </div>
 
         <div class="field">
-          <label for="lastName">Nom *</label>
+          <label for="lastName">Nom</label>
           <input
             id="lastName"
             name="lastName"
             [(ngModel)]="form.lastName"
-            required
             autocomplete="family-name"
           />
-          <small class="error-text" *ngIf="!form.lastName.trim()">
-            Le nom est obligatoire.
-          </small>
         </div>
 
         <div class="field">
