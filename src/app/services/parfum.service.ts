@@ -30,7 +30,7 @@ interface RawParfumJson {
   providedIn: 'root',
 })
 export class ParfumService {
-  private readonly jsonUrl = '/data/parfums_with_real_market_prices.json';
+  private readonly jsonUrl = '/data/parfums_with_type_mai_2026.json';
   private readonly apiBaseUrl = environement.apiBaseUrl;
 
   private imageCache = new Map<string, string>();
