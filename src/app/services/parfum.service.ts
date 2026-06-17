@@ -3,11 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 
 import { Parfum } from '../models/parfum';
-import { environement } from '../../environements/environement';
-
-interface PerfumeImageResponse {
-  imageUrl: string;
-}
 
 interface RawParfumJson {
   nom?: unknown;
@@ -30,17 +25,13 @@ interface RawParfumJson {
   providedIn: 'root',
 })
 export class ParfumService {
-  private readonly jsonUrl = '/data/parfums_with_type_mai_2026.json';
-  private readonly apiBaseUrl = environement.apiBaseUrl;
-
-  private imageCache = new Map<string, string>();
-  private isBrowser = typeof window !== 'undefined';
+  private readonly jsonUrl =
+    '/data/parfums_with_type_mai_2026_with_images.json';
 
   private readonly knownBrands: string[] = [
     'Yves Saint Laurent',
     'Jean Paul Gaultier',
     'Dolce & Gabbana',
-    'Van Cleef And Arpels',
     'Narciso Rodriguez',
     'Viktor & Rolf',
     'Carolina Herrera',
@@ -89,6 +80,7 @@ export class ParfumService {
     'Castel',
     'Cerruti',
     'Chloé',
+    'Chloe',
     'Chopard',
     'Clinique',
     'Creed',
@@ -111,7 +103,6 @@ export class ParfumService {
     'Mancera',
     'Moschino',
     'Nishane',
-    'Nuxe',
     'Prada',
     'Rochas',
     'Serge Lutens',
@@ -127,7 +118,9 @@ export class ParfumService {
 
   async loadParfums(): Promise<Parfum[]> {
     try {
-      const data = await firstValueFrom(this.http.get<RawParfumJson[]>(this.jsonUrl));
+      const data = await firstValueFrom(
+        this.http.get<RawParfumJson[]>(this.jsonUrl),
+      );
 
       const parfums: Parfum[] = [];
 
@@ -136,32 +129,32 @@ export class ParfumService {
         const explicitBrand = this.cleanString(item.marque ?? item.brand);
         const gender = this.normalizeGender(item.genre ?? item.gender);
         const price = this.parsePrice(item.prix ?? item.price);
+
         const prixBoutique = this.parsePrice(
           item.prix_boutique ?? item.prixBoutique ?? item.oldPrice,
         );
 
-        if (!name || !gender || price === null) continue;
+        if (!name || !gender || price === null) {
+          continue;
+        }
 
         const finalPrixBoutique =
-          prixBoutique !== null && prixBoutique > price ? prixBoutique : undefined;
+          prixBoutique !== null && prixBoutique > price
+            ? prixBoutique
+            : undefined;
 
-        const parfum: Parfum = {
+        parfums.push({
           name,
           brand: explicitBrand || this.extractBrand(name),
           gender,
           price,
           prix_boutique: finalPrixBoutique,
-          image: this.cleanString(item.image),
+          image: this.getSafeLocalImage(item.image),
           type: this.normalizeType(item.type ?? item.typeProduit ?? name),
-        };
-
-        parfums.push(parfum);
+        });
       }
 
-      // ✅ BON ENDROIT
-      this.loadImagesInBackground(parfums);
-
-      return [...parfums].sort((a, b) =>
+      return parfums.sort((a, b) =>
         a.name.localeCompare(b.name, 'fr', { sensitivity: 'base' }),
       );
     } catch (error) {
@@ -170,74 +163,22 @@ export class ParfumService {
     }
   }
 
-  private async loadImagesInBackground(parfums: Parfum[]) {
-    const BATCH_SIZE = 5;
-
-    for (let i = 0; i < parfums.length; i += BATCH_SIZE) {
-      const batch = parfums.slice(i, i + BATCH_SIZE);
-
-      await Promise.all(
-        batch.map(async (parfum) => {
-          if (parfum.image) return;
-
-          const image = await this.fetchPerfumeImage(parfum);
-          parfum.image = image;
-        }),
-      );
-    }
-
-    console.log('✅ Images chargées progressivement');
-  }
-
   async fetchPerfumeImage(parfum: Parfum): Promise<string> {
-    const key = `${parfum.brand}_${parfum.name}`.toLowerCase().trim();
-
-    if (this.imageCache.has(key)) {
-      return this.imageCache.get(key)!;
-    }
-
-    if (this.isBrowser) {
-      const stored = localStorage.getItem(key);
-      if (stored) {
-        this.imageCache.set(key, stored);
-        return stored;
-      }
-    }
-
-    try {
-      const response = await firstValueFrom(
-        this.http.get<PerfumeImageResponse>(`${this.apiBaseUrl}/perfumes/image`, {
-          params: {
-            name: parfum.name,
-            brand: parfum.brand,
-          },
-        }),
-      );
-
-      const image = response?.imageUrl || this.getFallbackImage(parfum);
-
-      this.imageCache.set(key, image);
-
-      if (this.isBrowser) {
-        localStorage.setItem(key, image);
-      }
-
-      return image;
-    } catch {
-      return this.getFallbackImage(parfum);
-    }
+    return this.getSafeLocalImage(parfum.image);
   }
 
   getBrands(parfums: Parfum[]): string[] {
-    return [...new Set(parfums.map((p) => p.brand).filter(Boolean))].sort((a, b) =>
-      a.localeCompare(b, 'fr', { sensitivity: 'base' }),
+    return [...new Set(parfums.map((p) => p.brand).filter(Boolean))].sort(
+      (a, b) => a.localeCompare(b, 'fr', { sensitivity: 'base' }),
     );
   }
 
   getParfumsByBrand(parfums: Parfum[], brand: string): Parfum[] {
     const normalizedBrand = this.normalizeForCompare(brand);
 
-    return parfums.filter((p) => this.normalizeForCompare(p.brand) === normalizedBrand);
+    return parfums.filter(
+      (p) => this.normalizeForCompare(p.brand) === normalizedBrand,
+    );
   }
 
   getBrandProductCount(parfums: Parfum[], brand: string): number {
@@ -245,19 +186,62 @@ export class ParfumService {
   }
 
   getDiscountPercent(parfum: Parfum): number {
-    if (!parfum.prix_boutique || parfum.prix_boutique <= parfum.price) return 0;
+    if (!parfum.prix_boutique || parfum.prix_boutique <= parfum.price) {
+      return 0;
+    }
 
-    return Math.round(((parfum.prix_boutique - parfum.price) / parfum.prix_boutique) * 100);
+    return Math.round(
+      ((parfum.prix_boutique - parfum.price) / parfum.prix_boutique) * 100,
+    );
   }
 
   getSavings(parfum: Parfum): number {
-    if (!parfum.prix_boutique || parfum.prix_boutique <= parfum.price) return 0;
+    if (!parfum.prix_boutique || parfum.prix_boutique <= parfum.price) {
+      return 0;
+    }
 
     return Number((parfum.prix_boutique - parfum.price).toFixed(2));
   }
 
-  getParfumsByType(parfums: Parfum[], type: 'standard' | 'testeur' | 'coffret'): Parfum[] {
+  getParfumsByType(
+    parfums: Parfum[],
+    type: 'standard' | 'testeur' | 'coffret',
+  ): Parfum[] {
     return parfums.filter((p) => p.type === type);
+  }
+
+  private getSafeLocalImage(value: unknown): string {
+    const image = this.cleanString(value);
+
+    if (!image) {
+      return '';
+    }
+
+    if (image.startsWith('/images/')) {
+      return image;
+    }
+
+    if (image.startsWith('images/')) {
+      return `/${image}`;
+    }
+
+    if (image.startsWith('/assets/')) {
+      return image;
+    }
+
+    if (image.startsWith('assets/')) {
+      return `/${image}`;
+    }
+
+    if (image.startsWith('public/images/')) {
+      return image.replace('public', '');
+    }
+
+    if (image.startsWith('/public/images/')) {
+      return image.replace('/public', '');
+    }
+
+    return '';
   }
 
   private cleanString(value: unknown): string {
@@ -265,7 +249,9 @@ export class ParfumService {
   }
 
   private parsePrice(value: unknown): number | null {
-    if (typeof value === 'number') return value;
+    if (typeof value === 'number') {
+      return value;
+    }
 
     if (typeof value === 'string') {
       const parsed = Number(value.replace(',', '.').replace(/[^\d.]/g, ''));
@@ -276,22 +262,20 @@ export class ParfumService {
   }
 
   private normalizeGender(value: unknown): string {
-    const g = this.cleanString(value).toLowerCase();
-    if (g === 'homme') return 'Homme';
-    if (g === 'femme') return 'Femme';
-    if (['mixte', 'unisexe', 'unisex'].includes(g)) return 'Mixte';
+    const gender = this.cleanString(value).toLowerCase();
+
+    if (gender === 'homme') return 'Homme';
+    if (gender === 'femme') return 'Femme';
+    if (['mixte', 'unisexe', 'unisex'].includes(gender)) return 'Mixte';
+
     return '';
   }
 
   private normalizeType(value: unknown): 'standard' | 'testeur' | 'coffret' {
     const raw = this.cleanString(value).toLowerCase();
 
-    if (raw === 'testeur' || raw.includes('testeur')) {
+    if (raw.includes('testeur') || raw.includes('tester')) {
       return 'testeur';
-    }
-
-    if (raw === 'coffret' || raw.includes('coffret')) {
-      return 'coffret';
     }
 
     const coffretKeywords = [
@@ -303,9 +287,7 @@ export class ParfumService {
       'trousse',
       'miniature',
       'gel douche',
-      'gel ',
-      ' lait',
-      'lait ',
+      'lait',
       'deo',
       'déodorant',
       'deodorant',
@@ -316,13 +298,19 @@ export class ParfumService {
       'savon',
       'pochette',
       'sac bandoulière',
+      'sac bandouliere',
       'avec boite',
       'avec boîte',
       '4x',
       '5x',
       '8x',
+      '10x',
       '+',
     ];
+
+    if (raw.includes('coffret')) {
+      return 'coffret';
+    }
 
     if (coffretKeywords.some((keyword) => raw.includes(keyword))) {
       return 'coffret';
@@ -337,7 +325,10 @@ export class ParfumService {
     for (const brand of this.knownBrands) {
       const normalizedBrand = this.normalizeForCompare(brand);
 
-      if (normalizedName === normalizedBrand || normalizedName.startsWith(`${normalizedBrand} `)) {
+      if (
+        normalizedName === normalizedBrand ||
+        normalizedName.startsWith(`${normalizedBrand} `)
+      ) {
         return brand;
       }
     }
@@ -352,9 +343,5 @@ export class ParfumService {
       .replace(/\s+/g, ' ')
       .trim()
       .toLowerCase();
-  }
-
-  private getFallbackImage(_: Partial<Parfum>): string {
-    return '';
   }
 }

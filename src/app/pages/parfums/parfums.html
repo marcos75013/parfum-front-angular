@@ -75,7 +75,8 @@
   >
     <span class="disclaimer__icon">⚠️</span>
     <p class="disclaimer__text">
-      Les images des produits sont non contractuelles et présentées à titre illustratif.
+      Les images des produits sont non contractuelles et présentées à titre
+      illustratif.
     </p>
   </div>
 
@@ -121,10 +122,7 @@
           (error)="onImageError($event)"
         />
 
-        <span
-          class="card__discount"
-          *ngIf="getDiscountPercent(parfum) > 0"
-        >
+        <span class="card__discount" *ngIf="getDiscountPercent(parfum) > 0">
           -{{ getDiscountPercent(parfum) }}%
         </span>
 
@@ -153,11 +151,11 @@
             class="card__old-price"
             *ngIf="parfum.prix_boutique && parfum.prix_boutique > parfum.price"
           >
-            {{ getOldPrice(parfum) | number:'1.2-2' }} €
+            {{ getOldPrice(parfum) | number: '1.2-2' }} €
           </span>
 
           <span class="card__price">
-            {{ parfum.price | number:'1.2-2' }} €
+            {{ parfum.price | number: '1.2-2' }} €
           </span>
         </div>
 
@@ -165,7 +163,7 @@
           class="card__saving"
           *ngIf="parfum.prix_boutique && parfum.prix_boutique > parfum.price"
         >
-          Économie de {{ getSavings(parfum) | number:'1.2-2' }} €
+          Économie de {{ getSavings(parfum) | number: '1.2-2' }} €
         </p>
 
         <button

@@ -1,5 +1,12 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { ChangeDetectorRef, Component, Inject, OnInit, PLATFORM_ID, inject } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  Inject,
+  OnInit,
+  PLATFORM_ID,
+  inject,
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 
@@ -26,28 +33,10 @@ export class ParfumsComponent implements OnInit {
 
   readonly cartService = inject(CartService);
 
-  // Image de secours si une image ne charge pas
-  readonly placeholderImage =
-    'data:image/svg+xml;utf8,' +
-    encodeURIComponent(`
-    <svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-      <rect width="600" height="600" rx="40" fill="#f5eff7"/>
-      <rect x="230" y="180" width="140" height="260" rx="24" fill="#ffffff" stroke="#4a2b3d" stroke-width="10"/>
-      <rect x="260" y="120" width="80" height="70" rx="14" fill="#4a2b3d"/>
-      <rect x="245" y="155" width="110" height="40" rx="12" fill="#7c3aed"/>
-      <circle cx="300" cy="310" r="54" fill="#e9d5ff"/>
-      <text x="300" y="505" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="#4a2b3d">
-        Escale Olfactive
-      </text>
-    </svg>
-  `);
-  // Nombre de skeleton cards affichées pendant le chargement
+  readonly placeholderImage = '/images/parfums/placeholder-parfum.png';
+
   readonly skeletonItems = Array.from({ length: 8 });
 
-  /**
-   * Marques prioritaires dans l'affichage aléatoire.
-   * Elles restent mélangées, mais ont plus de chances de remonter.
-   */
   private readonly priorityBrands: string[] = [
     'xerjoff',
     'creed',
@@ -78,14 +67,14 @@ export class ParfumsComponent implements OnInit {
     }
 
     try {
-      this.parfums = await this.parfumService.loadParfums();
+      const loadedParfums = await this.parfumService.loadParfums();
+
+      this.parfums = loadedParfums.map((parfum) => ({
+        ...parfum,
+        image: this.getSafeDisplayImage(parfum.image),
+      }));
+
       this.applyFilters();
-
-      // charge les images internet via le backend sans bloquer l'affichage initial
-      void this.loadImagesInBackground();
-
-      // force le rafraîchissement pour éviter le double clic nécessaire
-      this.cdr.detectChanges();
     } catch (error) {
       console.error('Erreur chargement parfums', error);
       this.parfums = [];
@@ -111,9 +100,11 @@ export class ParfumsComponent implements OnInit {
   }
 
   isInCart(parfum: Parfum): boolean {
-    return this.cartService
-      .items()
-      .some((item) => item.parfum.name === parfum.name && item.parfum.brand === parfum.brand);
+    return this.cartService.items().some(
+      (item) =>
+        item.parfum.name === parfum.name &&
+        item.parfum.brand === parfum.brand,
+    );
   }
 
   trackByName(_index: number, parfum: Parfum): string {
@@ -182,10 +173,24 @@ export class ParfumsComponent implements OnInit {
     this.filteredParfums = this.shuffleWithPriority(result);
   }
 
-  /**
-   * Donne plus de poids à certaines marques pour qu'elles remontent
-   * plus souvent dans l'ordre final, tout en gardant un rendu aléatoire.
-   */
+  private getSafeDisplayImage(image: string | null | undefined): string {
+    const cleanImage = String(image ?? '').trim();
+
+    if (!cleanImage) {
+      return this.placeholderImage;
+    }
+
+    if (
+      cleanImage.startsWith('/images/') ||
+      cleanImage.startsWith('/assets/') ||
+      cleanImage.startsWith('data:image/')
+    ) {
+      return cleanImage;
+    }
+
+    return this.placeholderImage;
+  }
+
   private getPriorityWeight(parfum: Parfum): number {
     const brand = (parfum.brand ?? '').trim().toLowerCase();
     const name = (parfum.name ?? '').trim().toLowerCase();
@@ -194,7 +199,6 @@ export class ParfumsComponent implements OnInit {
       return 4;
     }
 
-    // Bonus pour Angels' Share / Angel
     if (name.includes('creed')) {
       return 3;
     }
@@ -202,9 +206,6 @@ export class ParfumsComponent implements OnInit {
     return 1;
   }
 
-  /**
-   * Mélange la liste avec priorité douce pour certaines marques.
-   */
   private shuffleWithPriority(parfums: Parfum[]): Parfum[] {
     return [...parfums]
       .map((parfum) => ({
@@ -213,25 +214,5 @@ export class ParfumsComponent implements OnInit {
       }))
       .sort((a, b) => b.score - a.score)
       .map((entry) => entry.parfum);
-  }
-
-  private async loadImagesInBackground(): Promise<void> {
-    const updates = await Promise.all(
-      this.parfums.map(async (parfum) => {
-        try {
-          const image = await this.parfumService.fetchPerfumeImage(parfum);
-          return { parfum, image };
-        } catch {
-          return { parfum, image: parfum.image };
-        }
-      }),
-    );
-
-    for (const update of updates) {
-      update.parfum.image = update.image;
-    }
-
-    this.filteredParfums = [...this.filteredParfums];
-    this.cdr.detectChanges();
   }
 }
