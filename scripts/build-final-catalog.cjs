@@ -3,7 +3,7 @@ const path = require('path');
 
 const catalogPath = path.join(
   __dirname,
-  '../public/data/parfums_with_type_mai_2026.json'
+  '../public/data/parfums_with_type_juin_2026.json'
 );
 
 const groupsPath = path.join(
@@ -13,7 +13,7 @@ const groupsPath = path.join(
 
 const outputPath = path.join(
   __dirname,
-  '../public/data/parfums_with_type_mai_2026_with_images.json'
+  '../public/data/parfums_with_type_juin_2026_with_images.json'
 );
 
 const placeholder = '/images/parfums/placeholder-parfum.png';
