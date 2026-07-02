@@ -31,7 +31,7 @@ interface RawParfumJson {
 })
 export class ParfumService {
   private readonly jsonUrl =
-    '/data/parfums_with_type_juin_2026_with_images_nouveautes_ready.json';
+    '/data/parfums_with_type_juin_2026_with_images.json';
 
   private readonly knownBrands: string[] = [
     'Yves Saint Laurent',

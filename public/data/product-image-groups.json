@@ -1,158 +1,5 @@
 [
   {
-    "groupKey": "hermes barenia",
-    "representativeName": "Hermès Barénia 100ml Eau De Parfum",
-    "searchQuery": "Hermès Barénia 100ml Eau De Parfum perfume bottle",
-    "imageUrl": "",
-    "sourceUrl": "",
-    "localImage": "",
-    "status": "pending",
-    "products": [
-      {
-        "index": 716,
-        "nom": "Hermès Barénia 100ml Eau De Parfum",
-        "type": "standard",
-        "genre": "Femme"
-      }
-    ]
-  },
-  {
-    "groupKey": "hermes barenia intense",
-    "representativeName": "Hermès Barénia Intense 100ml Eau De Parfum",
-    "searchQuery": "Hermès Barénia Intense 100ml Eau De Parfum perfume bottle",
-    "imageUrl": "",
-    "sourceUrl": "",
-    "localImage": "",
-    "status": "pending",
-    "products": [
-      {
-        "index": 717,
-        "nom": "Hermès Barénia Intense 100ml Eau De Parfum",
-        "type": "standard",
-        "genre": "Femme"
-      }
-    ]
-  },
-  {
-    "groupKey": "prada paradoxe",
-    "representativeName": "Prada Paradoxe 90ml Eau De Parfum",
-    "searchQuery": "Prada Paradoxe 90ml Eau De Parfum perfume bottle",
-    "imageUrl": "",
-    "sourceUrl": "",
-    "localImage": "",
-    "status": "pending",
-    "products": [
-      {
-        "index": 718,
-        "nom": "Prada Paradoxe 90ml Eau De Parfum",
-        "type": "standard",
-        "genre": "Femme"
-      }
-    ]
-  },
-  {
-    "groupKey": "hermes terre d hermes pure",
-    "representativeName": "Hermès Terre D'hermès Pure Parfum 30ml",
-    "searchQuery": "Hermès Terre D'hermès Pure Parfum 30ml perfume bottle",
-    "imageUrl": "",
-    "sourceUrl": "",
-    "localImage": "",
-    "status": "pending",
-    "products": [
-      {
-        "index": 719,
-        "nom": "Hermès Terre D'hermès Pure Parfum 30ml + Recharge 125ml",
-        "type": "standard",
-        "genre": "Homme"
-      }
-    ]
-  },
-  {
-    "groupKey": "carolina herrera good girl blush elixir la bomba",
-    "representativeName": "Carolina Herrera Good Girl Blush Elixir La Bomba 80ml Eau De Parfum",
-    "searchQuery": "Carolina Herrera Good Girl Blush Elixir La Bomba 80ml Eau De Parfum perfume bottle",
-    "imageUrl": "",
-    "sourceUrl": "",
-    "localImage": "",
-    "status": "pending",
-    "products": [
-      {
-        "index": 720,
-        "nom": "Carolina Herrera Good Girl Blush Elixir La Bomba 80ml Eau De Parfum",
-        "type": "standard",
-        "genre": "Femme"
-      }
-    ]
-  },
-  {
-    "groupKey": "narciso rodriguez amber musc",
-    "representativeName": "Narciso Rodriguez Amber Musc 100ml Eau De Parfum",
-    "searchQuery": "Narciso Rodriguez Amber Musc 100ml Eau De Parfum perfume bottle",
-    "imageUrl": "",
-    "sourceUrl": "",
-    "localImage": "",
-    "status": "pending",
-    "products": [
-      {
-        "index": 722,
-        "nom": "Narciso Rodriguez Amber Musc 100ml Eau De Parfum",
-        "type": "standard",
-        "genre": "Femme"
-      }
-    ]
-  },
-  {
-    "groupKey": "nina ricci nina",
-    "representativeName": "Nina Ricci Nina 50ml Eau De Parfum",
-    "searchQuery": "Nina Ricci Nina 50ml Eau De Parfum perfume bottle",
-    "imageUrl": "",
-    "sourceUrl": "",
-    "localImage": "",
-    "status": "pending",
-    "products": [
-      {
-        "index": 723,
-        "nom": "Nina Ricci Nina 50ml Eau De Parfum",
-        "type": "standard",
-        "genre": "Femme"
-      }
-    ]
-  },
-  {
-    "groupKey": "lacoste original",
-    "representativeName": "Lacoste Original 100ml Eau De Parfum",
-    "searchQuery": "Lacoste Original 100ml Eau De Parfum perfume bottle",
-    "imageUrl": "",
-    "sourceUrl": "",
-    "localImage": "",
-    "status": "pending",
-    "products": [
-      {
-        "index": 724,
-        "nom": "Lacoste Original 100ml Eau De Parfum",
-        "type": "standard",
-        "genre": "Femme"
-      }
-    ]
-  },
-  {
-    "groupKey": "armani haute couture oud royal collector",
-    "representativeName": "Armani Haute Couture Oud Royal 100ml Collector",
-    "searchQuery": "Armani Haute Couture Oud Royal 100ml Collector perfume bottle",
-    "imageUrl": "",
-    "sourceUrl": "",
-    "localImage": "",
-    "status": "pending",
-    "products": [
-      {
-        "index": 727,
-        "nom": "Armani Haute Couture Oud Royal 100ml Collector",
-        "type": "standard",
-        "genre": "Mixte"
-      }
-    ]
-  },
-  {
     "groupKey": "dolce gabbana the one",
     "representativeName": "Dolce & Gabbana The One 100ml Eau De Parfum",
     "searchQuery": "Dolce & Gabbana The One 100ml Eau De Parfum perfume bottle",
@@ -10347,6 +10194,159 @@
         "nom": "Zadig & Voltaire This Is Him Undressed 100ml Eau De Toilette ( Format Testeur )",
         "type": "testeur",
         "genre": "Homme"
+      }
+    ]
+  },
+  {
+    "groupKey": "hermes barenia",
+    "representativeName": "Hermès Barénia 100ml Eau De Parfum",
+    "searchQuery": "Hermès Barénia 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://media.parfumo.com/perfume_imagery/b7/b75515-barenia-hermes_1200.jpg",
+    "sourceUrl": "https://www.parfumo.com/Perfumes/Hermes/barenia-eau-de-parfum",
+    "localImage": "/images/parfums/hermes-barenia-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 716,
+        "nom": "Hermès Barénia 100ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "hermes barenia intense",
+    "representativeName": "Hermès Barénia Intense 100ml Eau De Parfum",
+    "searchQuery": "Hermès Barénia Intense 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://fimgs.net/mdimg/perfume/o.111208.jpg",
+    "sourceUrl": "https://www.fragrantica.de/Parfum/Hermes/Barenia-Intense-111208.html",
+    "localImage": "/images/parfums/hermes-barenia-intense-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 717,
+        "nom": "Hermès Barénia Intense 100ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "prada paradoxe",
+    "representativeName": "Prada Paradoxe 90ml Eau De Parfum",
+    "searchQuery": "Prada Paradoxe 90ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://fimgs.net/mdimg/secundar/o.118685.jpg",
+    "sourceUrl": "https://www.fragrantica.com/perfume/Prada/Prada-Paradoxe-Virtual-Flower-95006.html",
+    "localImage": "/images/parfums/prada-paradoxe-90ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 718,
+        "nom": "Prada Paradoxe 90ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "hermes terre d hermes pure",
+    "representativeName": "Hermès Terre D'hermès Pure Parfum 30ml",
+    "searchQuery": "Hermès Terre D'hermès Pure Parfum 30ml perfume bottle",
+    "imageUrl": "https://fimgs.net/mdimg/perfume/social.65397.jpg",
+    "sourceUrl": "https://www.fragrantica.fr/parfum/Hermes/Terre-d-Hermes-Flacon-H-2021-Parfum-65397.html",
+    "localImage": "/images/parfums/hermes-terre-d-hermes-pure-parfum-30ml.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 719,
+        "nom": "Hermès Terre D'hermès Pure Parfum 30ml + Recharge 125ml",
+        "type": "standard",
+        "genre": "Homme"
+      }
+    ]
+  },
+  {
+    "groupKey": "carolina herrera good girl blush elixir la bomba",
+    "representativeName": "Carolina Herrera Good Girl Blush Elixir La Bomba 80ml Eau De Parfum",
+    "searchQuery": "Carolina Herrera Good Girl Blush Elixir La Bomba 80ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://fraguru.com/mdimg/secundar/o.98830.jpg",
+    "sourceUrl": "https://www.fragrantica.fr/parfum/Carolina-Herrera/Good-Girl-Blush-78576.html",
+    "localImage": "/images/parfums/carolina-herrera-good-girl-blush-elixir-la-bomba-80ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 720,
+        "nom": "Carolina Herrera Good Girl Blush Elixir La Bomba 80ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "narciso rodriguez amber musc",
+    "representativeName": "Narciso Rodriguez Amber Musc 100ml Eau De Parfum",
+    "searchQuery": "Narciso Rodriguez Amber Musc 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://i.notino.com/zoomMobile/narciso-rodriguez/narhamw_aedp10_02__12.jpg",
+    "sourceUrl": "https://www.notino.fr/narciso-rodriguez/for-her-amber-musc-eau-de-parfum-pour-femme/",
+    "localImage": "/images/parfums/narciso-rodriguez-amber-musc-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 722,
+        "nom": "Narciso Rodriguez Amber Musc 100ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "nina ricci nina",
+    "representativeName": "Nina Ricci Nina 50ml Eau De Parfum",
+    "searchQuery": "Nina Ricci Nina 50ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://media.parfumo.com/perfumes/0f/0f39c8_nina-eau-de-parfum-nina-ricci_1200.jpg?width=720&aspect_ratio=1:1",
+    "sourceUrl": "https://www.parfumo.com/Perfumes/Nina_Ricci/nina-eau-de-parfum",
+    "localImage": "/images/parfums/nina-ricci-nina-50ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 723,
+        "nom": "Nina Ricci Nina 50ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "lacoste original",
+    "representativeName": "Lacoste Original 100ml Eau De Parfum",
+    "searchQuery": "Lacoste Original 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://media.sephora.eu/content/dam/digital/pim/published/L/LACOSTE/791568/384801-media_swatch.jpg?scaleWidth=undefined&scaleHeight=undefined&scaleMode=undefined",
+    "sourceUrl": "https://www.sephora.fr/p/original-pour-femme---eau-de-parfum-P1000209142.html",
+    "localImage": "/images/parfums/lacoste-original-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 724,
+        "nom": "Lacoste Original 100ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "armani haute couture oud royal collector",
+    "representativeName": "Armani Haute Couture Oud Royal 100ml Collector",
+    "searchQuery": "Armani Haute Couture Oud Royal 100ml Collector perfume bottle",
+    "imageUrl": "https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_4_Product_3605521347671-Giorgio-Armani-Oud-Royal-Eau-De-Parf_0487acc0be00bb4fb6668962c92758faccdaebb7_1723636774.png",
+    "sourceUrl": "https://www.sephora.sg/products/armani-beauty-oud-royal-eau-de-parfum-intense",
+    "localImage": "/images/parfums/armani-haute-couture-oud-royal-100ml-collector.png",
+    "status": "validated",
+    "products": [
+      {
+        "index": 727,
+        "nom": "Armani Haute Couture Oud Royal 100ml Collector",
+        "type": "standard",
+        "genre": "Mixte"
       }
     ]
   }
