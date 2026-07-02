@@ -14,7 +14,7 @@ import { Parfum } from '../../models/parfum';
 import { CartService } from '../../services/cart.service';
 import { ParfumService } from '../../services/parfum.service';
 
-type TabType = 'all' | 'standard' | 'testeur' | 'coffret';
+type TabType = 'all' | 'standard' | 'testeur' | 'coffret' | 'nouveaute';
 
 @Component({
   selector: 'app-parfums',
@@ -128,6 +128,10 @@ export class ParfumsComponent implements OnInit {
       return this.parfums.length;
     }
 
+    if (type === 'nouveaute') {
+      return this.parfums.filter((parfum) => this.isMonthlyNew(parfum)).length;
+    }
+
     return this.parfums.filter((parfum) => parfum.type === type).length;
   }
 
@@ -149,7 +153,9 @@ export class ParfumsComponent implements OnInit {
 
     let result = [...this.parfums];
 
-    if (this.activeTab !== 'all') {
+    if (this.activeTab === 'nouveaute') {
+      result = result.filter((parfum) => this.isMonthlyNew(parfum));
+    } else if (this.activeTab !== 'all') {
       result = result.filter((parfum) => parfum.type === this.activeTab);
     }
 
@@ -163,6 +169,7 @@ export class ParfumsComponent implements OnInit {
           String(parfum.price),
           String(parfum.prix_boutique ?? ''),
           String(this.getDiscountPercent(parfum)),
+          this.isMonthlyNew(parfum) ? 'nouveauté nouveaute nouveau new' : '',
         ]
           .join(' ')
           .toLowerCase()
@@ -171,6 +178,19 @@ export class ParfumsComponent implements OnInit {
     }
 
     this.filteredParfums = this.shuffleWithPriority(result);
+  }
+
+  isMonthlyNew(parfum: Parfum): boolean {
+    return (
+        parfum as Parfum & {
+          nouveaute?: boolean;
+          nouveaute_mois?: boolean;
+          isNew?: boolean;
+        }
+      ).nouveaute === true ||
+      (parfum as Parfum & { nouveaute_mois?: boolean }).nouveaute_mois ===
+      true ||
+      (parfum as Parfum & { isNew?: boolean }).isNew === true;
   }
 
   private getSafeDisplayImage(image: string | null | undefined): string {

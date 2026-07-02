@@ -8,12 +8,12 @@ const catalogPath = path.join(
 
 const groupsPath = path.join(
   __dirname,
-  '../public/data/product-image-groups.json'
+  '../public/data/parfums_with_type_juin_2026_with_images_nouveautes_ready.json'
 );
 
 const outputPath = path.join(
   __dirname,
-  '../public/data/parfums_with_type_juin_2026_with_images.json'
+  '../public/data/parfums_with_type_juin_2026_with_images_nouveautes_ready.json'
 );
 
 const placeholder = '/images/parfums/placeholder-parfum.png';

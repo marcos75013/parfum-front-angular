@@ -19,6 +19,11 @@ interface RawParfumJson {
   image?: unknown;
   type?: unknown;
   typeProduit?: unknown;
+  nouveaute?: unknown;
+  nouveaute_mois?: unknown;
+  isNew?: unknown;
+  moisNouveaute?: unknown;
+  mois_nouveaute?: unknown;
 }
 
 @Injectable({
@@ -26,7 +31,7 @@ interface RawParfumJson {
 })
 export class ParfumService {
   private readonly jsonUrl =
-    '/data/parfums_with_type_juin_2026_with_images.json';
+    '/data/parfums_with_type_juin_2026_with_images_nouveautes_ready.json';
 
   private readonly knownBrands: string[] = [
     'Yves Saint Laurent',
@@ -143,7 +148,7 @@ export class ParfumService {
             ? prixBoutique
             : undefined;
 
-        parfums.push({
+        const mappedParfum = {
           name,
           brand: explicitBrand || this.extractBrand(name),
           gender,
@@ -151,7 +156,15 @@ export class ParfumService {
           prix_boutique: finalPrixBoutique,
           image: this.getSafeLocalImage(item.image),
           type: this.normalizeType(item.type ?? item.typeProduit ?? name),
-        });
+          nouveaute: this.normalizeBoolean(
+            item.nouveaute ?? item.nouveaute_mois ?? item.isNew,
+          ),
+          moisNouveaute: this.cleanString(
+            item.moisNouveaute ?? item.mois_nouveaute,
+          ),
+        } as Parfum & { nouveaute?: boolean; moisNouveaute?: string };
+
+        parfums.push(mappedParfum);
       }
 
       return parfums.sort((a, b) =>
@@ -269,6 +282,25 @@ export class ParfumService {
     if (['mixte', 'unisexe', 'unisex'].includes(gender)) return 'Mixte';
 
     return '';
+  }
+
+  private normalizeBoolean(value: unknown): boolean {
+    if (typeof value === 'boolean') {
+      return value;
+    }
+
+    if (typeof value === 'string') {
+      const normalized = value.trim().toLowerCase();
+      return ['true', 'oui', 'yes', '1', 'nouveau', 'nouveaute'].includes(
+        normalized,
+      );
+    }
+
+    if (typeof value === 'number') {
+      return value === 1;
+    }
+
+    return false;
   }
 
   private normalizeType(value: unknown): 'standard' | 'testeur' | 'coffret' {

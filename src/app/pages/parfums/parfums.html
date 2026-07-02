@@ -65,6 +65,15 @@
       >
         Coffrets ({{ countByType('coffret') }})
       </button>
+
+      <button
+        type="button"
+        class="tab-button tab-button--new"
+        [class.active]="activeTab === 'nouveaute'"
+        (click)="setTab('nouveaute')"
+      >
+        ✨ Nouveautés du mois ({{ countByType('nouveaute') }})
+      </button>
     </div>
   </section>
 
@@ -138,6 +147,13 @@
           *ngIf="parfum.type === 'coffret'"
         >
           Coffret
+        </span>
+
+        <span
+          class="card__new-badge"
+          *ngIf="isMonthlyNew(parfum)"
+        >
+          ✨ Nouveau
         </span>
       </div>
 

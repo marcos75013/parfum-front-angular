@@ -80,6 +80,19 @@ export class MarqueDetailComponent implements OnInit {
     return this.parfumService.getSavings(parfum);
   }
 
+  isMonthlyNew(parfum: Parfum): boolean {
+    return (
+        parfum as Parfum & {
+          nouveaute?: boolean;
+          nouveaute_mois?: boolean;
+          isNew?: boolean;
+        }
+      ).nouveaute === true ||
+      (parfum as Parfum & { nouveaute_mois?: boolean }).nouveaute_mois ===
+      true ||
+      (parfum as Parfum & { isNew?: boolean }).isNew === true;
+  }
+
   onImageLoad(event: Event): void {
     const img = event.target as HTMLImageElement;
     img.classList.add('loaded');
