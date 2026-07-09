@@ -3,7 +3,7 @@ const path = require('path');
 
 const inputPath = path.join(
   __dirname,
-  '../public/data/parfums_with_type_juin_2026_with_images_nouveautes_ready.json'
+  '../public/data/parfums_source.json'
 );
 
 const outputPath = path.join(

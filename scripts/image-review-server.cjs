@@ -28,18 +28,6 @@ function escapeHtml(value) {
 
 function getMainGender(group) {
   const genders = group.products
-    .map((p) => String(p.genre || '').toLowerCase())
-    .filter(Boolean);
-
-  if (genders.includes('homme')) return 'men';
-  if (genders.includes('femme')) return 'women';
-  if (genders.includes('mixte')) return 'unisex';
-
-  return '';
-}
-
-function getMainGender(group) {
-  const genders = group.products
     .map((product) => String(product.genre || '').toLowerCase())
     .filter(Boolean);
 
@@ -90,97 +78,272 @@ function safeQuery(group) {
     .join(' ');
 }
 
+function isPending(group) {
+  return group.status !== 'validated' && group.status !== 'skipped';
+}
+
+function findNextPendingIndex(groups, fromIndex = -1) {
+  const nextAfterCurrent = groups.findIndex((group, index) => index > fromIndex && isPending(group));
+
+  if (nextAfterCurrent !== -1) {
+    return nextAfterCurrent;
+  }
+
+  return groups.findIndex((group) => isPending(group));
+}
+
+function getStats(groups) {
+  const validated = groups.filter((group) => group.status === 'validated').length;
+  const skipped = groups.filter((group) => group.status === 'skipped').length;
+  const pending = groups.filter((group) => isPending(group)).length;
+
+  return {
+    total: groups.length,
+    validated,
+    skipped,
+    pending,
+  };
+}
+
 app.get('/', (_req, res) => {
   const groups = readGroups();
-  const pending = groups.findIndex((g) => g.status !== 'validated');
+  const stats = getStats(groups);
+  const nextPendingIndex = findNextPendingIndex(groups);
 
   res.send(`
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />  <title>Image Review Parfums</title>  <style>    body { font-family: Arial, sans-serif; padding: 24px; background:#f8f8f8; }    .card { background:#fff; padding:24px; border-radius:16px; max-width:900px; margin:auto; box-shadow:0 10px 30px rgba(0,0,0,.08); }    a { display:inline-block; margin-top:16px; padding:12px 18px; border-radius:10px; background:#eee; color:#111; text-decoration:none; }  </style></head>
+  <meta charset="utf-8" />
+  <title>Image Review Parfums</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 24px; background:#f8f8f8; }
+    .card { background:#fff; padding:24px; border-radius:16px; max-width:900px; margin:auto; box-shadow:0 10px 30px rgba(0,0,0,.08); }
+    a { display:inline-block; margin-top:16px; padding:12px 18px; border-radius:10px; background:#eee; color:#111; text-decoration:none; }
+    .success { color:#047857; font-weight:700; }
+    .stats { margin-top:18px; line-height:1.7; }
+  </style>
+</head>
 <body>
-  <div class="card">    <h1>Validation images parfums</h1>    <p><strong>${groups.length}</strong> groupes — prochain à valider : <strong>${pending + 1}</strong></p>
-    <a href="/review/${Math.max(pending, 0)}">Commencer / Continuer</a>
-  </div></body>
+  <div class="card">
+    <h1>Validation images parfums</h1>
+
+    <div class="stats">
+      <div><strong>${stats.total}</strong> groupes au total</div>
+      <div><strong>${stats.validated}</strong> groupes validés</div>
+      <div><strong>${stats.skipped}</strong> groupes passés</div>
+      <div><strong>${stats.pending}</strong> groupe(s) à valider</div>
+    </div>
+
+    ${stats.pending === 0
+    ? '<p class="success">Toutes les images sont validées 🎉</p>'
+    : `<a href="/review/${nextPendingIndex}">Commencer / Continuer les ${stats.pending} groupe(s) restants</a>`
+  }
+  </div>
+</body>
 </html>
   `);
+});
+
+app.get('/next', (req, res) => {
+  const groups = readGroups();
+  const fromIndex = Number(req.query.from ?? -1);
+  const nextPendingIndex = findNextPendingIndex(groups, fromIndex);
+
+  if (nextPendingIndex === -1) {
+    return res.redirect('/');
+  }
+
+  res.redirect(`/review/${nextPendingIndex}`);
 });
 
 app.get('/review/:index', (req, res) => {
   const groups = readGroups();
   const index = Number(req.params.index);
   const group = groups[index];
+  const stats = getStats(groups);
 
   if (!group) {
     return res.send('<h1>Terminé ✅</h1><a href="/">Retour</a>');
+  }
+
+  if (!isPending(group)) {
+    const nextPendingIndex = findNextPendingIndex(groups, index);
+
+    if (nextPendingIndex === -1) {
+      return res.redirect('/');
+    }
+
+    return res.redirect(`/review/${nextPendingIndex}`);
   }
 
   res.send(`
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />  <title>Review ${index + 1}</title>
-  <style>    body { font-family: Arial, sans-serif; padding: 24px; background:#f8f8f8; }    .card { background:#fff; padding:24px; border-radius:16px; max-width:1100px; margin:auto; box-shadow:0 10px 30px rgba(0,0,0,.08); }    .muted { color:#666; }    .actions a, button { display:inline-block; margin:8px 8px 8px 0; padding:10px 14px; border-radius:10px; text-decoration:none; border:0; cursor:pointer; }    a { background:#eee; color:#111; }    button { background:#1f2937; color:white; }    .validate { background:#047857; }    .skip { background:#b45309; }    input { width:100%; padding:12px; margin-top:12px; font-size:16px; }    .candidates { display:grid; grid-template-columns:repeat(auto-fill, minmax(190px, 1fr)); gap:16px; margin-top:24px; }    .candidate { border:1px solid #ddd; border-radius:14px; padding:12px; background:#fafafa; }    .candidate img { width:100%; height:180px; object-fit:contain; background:white; border-radius:10px; }    .candidate-title { font-size:13px; margin:8px 0; min-height:38px; }    .candidate-source { font-size:12px; color:#666; word-break:break-word; }    .danger { color:#b91c1c; }  </style></head>
+  <meta charset="utf-8" />
+  <title>Review ${index + 1}</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 24px; background:#f8f8f8; }
+    .card { background:#fff; padding:24px; border-radius:16px; max-width:1100px; margin:auto; box-shadow:0 10px 30px rgba(0,0,0,.08); }
+    .muted { color:#666; }
+    .actions a, button { display:inline-block; margin:8px 8px 8px 0; padding:10px 14px; border-radius:10px; text-decoration:none; border:0; cursor:pointer; font-size:14px; }
+    a { background:#eee; color:#111; }
+    button { background:#1f2937; color:white; }
+    .validate { background:#047857; color:white; }
+    .skip { background:#b45309; color:white; }
+    input { width:100%; padding:12px; margin-top:12px; font-size:16px; border:1px solid #ddd; border-radius:8px; }
+    .candidates { display:grid; grid-template-columns:repeat(auto-fill, minmax(190px, 1fr)); gap:16px; margin-top:24px; }
+    .candidate { border:1px solid #ddd; border-radius:14px; padding:12px; background:#fafafa; }
+    .candidate img { width:100%; height:180px; object-fit:contain; background:white; border-radius:10px; }
+    .candidate-title { font-size:13px; margin:8px 0; min-height:38px; }
+    .candidate-source { font-size:12px; color:#666; word-break:break-word; }
+    .danger { color:#b91c1c; }
+    .pill { display:inline-block; padding:6px 10px; border-radius:999px; background:#eef2ff; margin:4px 8px 4px 0; font-size:13px; }
+  </style>
+</head>
 <body>
-  <div class="card">    <p class="muted">Groupe ${index + 1} / ${groups.length}</p>
+  <div class="card">
+    <p class="muted">Groupe réel ${index + 1} / ${groups.length}</p>
+
+    <p>
+      <span class="pill">${stats.pending} à valider</span>
+      <span class="pill">${stats.validated} validés</span>
+      <span class="pill">${stats.skipped} passés</span>
+    </p>
+
     <h1>${escapeHtml(group.representativeName)}</h1>
-    <p>${group.products.length} produit(s)</p>    <p><strong>Genre :</strong> ${escapeHtml(getMainGender(group) || 'non précisé')}</p>
+    <p>${group.products.length} produit(s)</p>
+    <p><strong>Genre :</strong> ${escapeHtml(getMainGender(group) || 'non précisé')}</p>
     <p class="muted">${escapeHtml(group.groupKey)}</p>
 
-    <div class="actions">      <a target="_blank" href="https://www.google.com/search?tbm=isch&q=${encodeURIComponent(safeQuery(group))}">Google Images</a>
+    <div class="actions">
+      <a target="_blank" href="https://www.google.com/search?tbm=isch&q=${encodeURIComponent(safeQuery(group))}">Google Images</a>
       <a target="_blank" href="https://www.google.com/search?q=${encodeURIComponent(`${group.representativeName} site:fragrantica.fr/parfum`)}">Fragrantica</a>
       <button onclick="loadCandidates()">🔎 Charger images candidates</button>
       <button class="skip" onclick="skip()">Passer</button>
-      <a href="/review/${Math.max(index - 1, 0)}">← Précédent</a>
-      <a href="/review/${index + 1}">Suivant →</a>
+      <a href="/next?from=${index}">Groupe pending suivant →</a>
     </div>
+
     <input id="manualUrl" placeholder="Optionnel : coller une URL image manuellement" value="${escapeHtml(group.imageUrl || '')}" />
     <button class="validate" onclick="validateManual()">✅ Valider URL manuelle</button>
 
-    <p id="message" class="danger"></p>    <div id="candidates" class="candidates"></div>  </div>
-  <script>    async function loadCandidates() {
+    <p id="message" class="danger"></p>
+    <div id="candidates" class="candidates"></div>
+  </div>
+
+  <script>
+    var loadedCandidates = [];
+
+    async function loadCandidates() {
       const container = document.getElementById('candidates');
       const message = document.getElementById('message');
 
-      message.innerText = '';      container.innerHTML = '<p>Chargement des images candidates...</p>';
-      const res = await fetch('/api/candidates/${index}');
-      const data = await res.json();
+      message.innerText = '';
+      container.innerHTML = '<p>Chargement des images candidates...</p>';
 
-      if (!data.candidates || data.candidates.length === 0) {        container.innerHTML = '<p>Aucune image candidate fiable trouvée.</p>';        return;      }
-      container.innerHTML = data.candidates.map((candidate, i) => \`
-        <div class="candidate">          <img src="\${candidate.thumbnail || candidate.imageUrl}" onerror="this.style.display='none'" />
-          <div class="candidate-title">\${candidate.title || ''}</div>          <div class="candidate-source">\${candidate.source || ''}</div>          <button class="validate" onclick="validateCandidate('\${encodeURIComponent(candidate.imageUrl)}', '\${encodeURIComponent(candidate.sourceUrl || '')}')">            ✅ Choisir cette image          </button>        </div>      \`).join('');
+      try {
+        const res = await fetch('/api/candidates/${index}');
+        const data = await res.json();
+
+        loadedCandidates = data.candidates || [];
+
+        if (loadedCandidates.length === 0) {
+          container.innerHTML = '<p>Aucune image candidate fiable trouvée.</p>';
+          return;
+        }
+
+        container.innerHTML = '';
+
+        loadedCandidates.forEach(function(candidate, candidateIndex) {
+          const card = document.createElement('div');
+          card.className = 'candidate';
+
+          const img = document.createElement('img');
+          img.src = candidate.thumbnail || candidate.imageUrl;
+          card.appendChild(img);
+
+          const title = document.createElement('div');
+          title.className = 'candidate-title';
+          title.innerText = candidate.title || '';
+          card.appendChild(title);
+
+          const source = document.createElement('div');
+          source.className = 'candidate-source';
+          source.innerText = candidate.source || '';
+          card.appendChild(source);
+
+          const button = document.createElement('button');
+          button.className = 'validate';
+          button.type = 'button';
+          button.innerText = '✅ Choisir cette image';
+          button.addEventListener('click', function() {
+            validateCandidate(candidateIndex);
+          });
+          card.appendChild(button);
+
+          container.appendChild(card);
+        });
+      } catch (error) {
+        console.error(error);
+        container.innerHTML = '<p>Aucune image candidate fiable trouvée.</p>';
+        message.innerText = 'Erreur pendant le chargement des images candidates.';
+      }
     }
-    async function validateCandidate(encodedImageUrl, encodedSourceUrl) {
-      const imageUrl = decodeURIComponent(encodedImageUrl);
-      const sourceUrl = decodeURIComponent(encodedSourceUrl);
+
+    async function validateCandidate(candidateIndex) {
+      const candidate = loadedCandidates[candidateIndex];
+
+      if (!candidate || !candidate.imageUrl) {
+        document.getElementById('message').innerText = 'Image candidate introuvable.';
+        return;
+      }
 
       const res = await fetch('/api/validate/${index}', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ imageUrl, sourceUrl })      });
+        body: JSON.stringify({
+          imageUrl: candidate.imageUrl,
+          sourceUrl: candidate.sourceUrl || ''
+        })
+      });
+
       if (res.ok) {
-        window.location.href = '/review/${index + 1}';
-      } else {        document.getElementById('message').innerText = 'Erreur validation image.';      }    }
+        window.location.href = '/next?from=${index}';
+      } else {
+        document.getElementById('message').innerText = 'Erreur validation image.';
+      }
+    }
+
     async function validateManual() {
       const imageUrl = document.getElementById('manualUrl').value.trim();
 
       if (!imageUrl) {
-        document.getElementById('message').innerText = 'Colle une URL image avant de valider.';        return;      }
+        document.getElementById('message').innerText = 'Colle une URL image avant de valider.';
+        return;
+      }
+
       const res = await fetch('/api/validate/${index}', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ imageUrl })      });
+        body: JSON.stringify({ imageUrl })
+      });
+
       if (res.ok) {
-        window.location.href = '/review/${index + 1}';
-      }    }
+        window.location.href = '/next?from=${index}';
+      } else {
+        document.getElementById('message').innerText = 'Erreur validation URL manuelle.';
+      }
+    }
+
     async function skip() {
       await fetch('/api/skip/${index}', { method: 'POST' });
-      window.location.href = '/review/${index + 1}';
+      window.location.href = '/next?from=${index}';
     }
+
     loadCandidates();
-  </script></body>
+  </script>
+</body>
 </html>
   `);
 });
@@ -209,10 +372,12 @@ function scoreCandidate(candidate, group) {
   const words = name
     .replace(/[^\w\s]/g, ' ')
     .split(/\s+/)
-    .filter((w) => w.length > 2);
+    .filter((word) => word.length > 2);
 
   for (const word of words) {
-    if (text.includes(word)) score += 3;
+    if (text.includes(word)) {
+      score += 3;
+    }
   }
 
   if (text.includes('fragrantica')) score += 20;
@@ -240,7 +405,9 @@ function scoreCandidate(candidate, group) {
   ];
 
   for (const bad of badWords) {
-    if (text.includes(bad)) score -= 50;
+    if (text.includes(bad)) {
+      score -= 50;
+    }
   }
 
   return score;
@@ -330,4 +497,3 @@ app.post('/api/skip/:index', (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ Image Review lancé : http://localhost:${PORT}`);
 });
-
