@@ -97,10 +97,10 @@
     "groupKey": "maissa 66 avenue",
     "representativeName": "Maissa 66 Avenue 100ml Eau De Parfum",
     "searchQuery": "Maissa 66 Avenue 100ml Eau De Parfum perfume bottle",
-    "imageUrl": "",
+    "imageUrl": "https://fimgs.net/mdimg/perfume-thumbs/dark-375x500.68568.2x.avif",
     "sourceUrl": "",
     "localImage": "",
-    "status": "skipped",
+    "status": "validated",
     "products": [
       {
         "index": 400,
@@ -220,8 +220,8 @@
     "groupKey": "armani my way",
     "representativeName": "Armani My Way 50ml Eau De Parfum",
     "searchQuery": "Armani My Way 50ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://fimgs.net/himg/o.D4YPeTQgIsI.jpg",
-    "sourceUrl": "https://www.fragrantica.es/noticia/Giorgio-Armani-My-Way-Parfum-6339.html",
+    "imageUrl": "https://www.my-origines.com/dw/image/v2/BJRD_PRD/on/demandware.static/-/Sites-size-master/default/dw56f0c323/images/03013235_P.jpg?sw=900&sh=900&sm=fit",
+    "sourceUrl": "",
     "localImage": "/images/parfums/armani-my-way-50ml-eau-de-parfum.jpg",
     "status": "validated",
     "products": [
@@ -290,8 +290,8 @@
     "groupKey": "lolita lempicka mon premier",
     "representativeName": "Lolita Lempicka Mon Premier 100ml Eau De Parfum",
     "searchQuery": "Lolita Lempicka Mon Premier 100ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://fraguru.com/mdimg/secundar/o.114990.jpg",
-    "sourceUrl": "https://www.fragrantica.fr/parfum/Lolita-Lempicka/Mon-Premier-Parfum-Edition-Limitee-Flacon-Mon-Printemps-91426.html",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_mq/lolita-lempicka/3760269841000_01-o/lolita-lempicka-mon-premier-parfum___180711.jpg",
+    "sourceUrl": "https://www.notino.fr/lolita-lempicka/lolita-lempicka-mon-premier-parfum-eau-de-parfum-pour-femme/",
     "localImage": "/images/parfums/lolita-lempicka-mon-premier-100ml-eau-de-parfum.jpg",
     "status": "validated",
     "products": [
