@@ -19,7 +19,7 @@ export class MarqueDetailComponent implements OnInit {
   loading = true;
 
   readonly cartService = inject(CartService);
-  readonly placeholderImage = 'assets/placeholder.png';
+  readonly placeholderImage = '/assets/images/placeholder-parfum.jpg';
   readonly skeletonItems = Array.from({ length: 8 });
 
   constructor(
@@ -78,6 +78,19 @@ export class MarqueDetailComponent implements OnInit {
 
   getSavings(parfum: Parfum): number {
     return this.parfumService.getSavings(parfum);
+  }
+
+  isMonthlyNew(parfum: Parfum): boolean {
+    return (
+        parfum as Parfum & {
+          nouveaute?: boolean;
+          nouveaute_mois?: boolean;
+          isNew?: boolean;
+        }
+      ).nouveaute === true ||
+      (parfum as Parfum & { nouveaute_mois?: boolean }).nouveaute_mois ===
+      true ||
+      (parfum as Parfum & { isNew?: boolean }).isNew === true;
   }
 
   onImageLoad(event: Event): void {

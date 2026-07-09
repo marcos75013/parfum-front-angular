@@ -27,12 +27,13 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
               },
               {
                 "glob": "**/*",
                 "input": "src/assets",
-                "output": "assets"
+                "output": "/assets"
               },
               {
                 "glob": "manifest.webmanifest",
@@ -53,6 +54,12 @@
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environements/environement.ts",
+                  "with": "src/environements/environement.prod.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",

@@ -1,13 +1,15 @@
 {
   "name": "parfum-app",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:parfum-app": "node dist/parfum-app/server/server.mjs"
+    "serve:ssr:parfum-app": "node dist/parfum-app/server/server.mjs",
+    "images:prepare": "node scripts/prepare-perfume-images.js"
   },
   "private": true,
   "packageManager": "npm@10.9.4",
@@ -21,6 +23,8 @@
     "@angular/platform-server": "^21.2.0",
     "@angular/router": "^21.2.0",
     "@angular/ssr": "^21.2.0",
+    "axios": "^1.17.0",
+    "cheerio": "^1.2.0",
     "express": "^5.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

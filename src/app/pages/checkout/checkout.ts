@@ -7,6 +7,7 @@ import { Router, RouterLink } from '@angular/router';
 import { CartService } from '../../services/cart.service';
 import { Parfum } from '../../models/parfum';
 import { environement } from './../../../environements/environement';
+
 @Component({
   selector: 'app-checkout',
   standalone: true,
@@ -16,6 +17,12 @@ import { environement } from './../../../environements/environement';
 })
 export class CheckoutComponent {
   readonly cartService = inject(CartService);
+
+  /**
+   * Alias d’email affiché au client pour éviter toute surprise
+   * tant que l’envoi passe encore par le domaine existant.
+   */
+  readonly contactEmailAlias = 'commandes@negociobom.eu';
 
   form = {
     firstName: '',
@@ -134,7 +141,6 @@ export class CheckoutComponent {
   isFormValid(): boolean {
     const hasRequiredIdentityFields =
       this.form.firstName.trim().length > 0 &&
-      this.form.lastName.trim().length > 0 &&
       this.isEmailValid() &&
       this.isPhoneValid();
 
@@ -195,17 +201,17 @@ export class CheckoutComponent {
     this.http.post(`${environement.apiBaseUrl}/order`, payload).subscribe({
       next: () => {
         this.cartService.clearCart();
-        this.successMessage = 'Commande envoyée avec succès.';
+        this.successMessage = 'Demande envoyée avec succès. Nous vous recontacterons rapidement.';
         this.sending = false;
 
         setTimeout(() => {
           this.router.navigateByUrl('/');
-        }, 1200);
+        }, 1500);
       },
       error: (error) => {
         console.error('Erreur envoi commande', error);
         this.sending = false;
-        alert("Une erreur est survenue lors de l'envoi.");
+        alert("Une erreur est survenue lors de l'envoi de votre demande.");
       },
     });
   }

@@ -4,7 +4,9 @@
       <p class="eyebrow">Commande</p>
       <h1>Finaliser votre demande</h1>
       <p class="subtitle">
-        Vous ne payez pas sur le site. Vous serez contactez dans les plus brefs delais.
+        Vous ne payez pas sur le site. Votre demande est transmise à notre équipe,
+        qui vous recontactera dans les plus brefs délais pour confirmer la disponibilité
+        et les modalités de remise ou de livraison.
       </p>
     </div>
 
@@ -13,6 +15,18 @@
 
   <div class="layout">
     <form class="form-card" (ngSubmit)="submit()">
+      <div class="info-banner">
+        <p class="info-banner__title">Avant d’envoyer votre demande</p>
+        <p class="info-banner__text">
+          Aucun paiement n’est effectué sur le site. Après validation, nous revenons
+          vers vous rapidement pour finaliser votre commande.
+        </p>
+<!--        <p class="info-banner__text subtle" *ngIf="contactEmailAlias">-->
+<!--          Pour le moment, nos messages peuvent être envoyés depuis-->
+<!--          <strong>{{ contactEmailAlias }}</strong>.-->
+<!--        </p>-->
+      </div>
+
       <div class="form-grid">
         <div class="field">
           <label for="firstName">Prénom *</label>
@@ -34,12 +48,8 @@
             id="lastName"
             name="lastName"
             [(ngModel)]="form.lastName"
-            required
             autocomplete="family-name"
           />
-<!--          <small class="error-text" *ngIf="!form.lastName.trim()">-->
-<!--            Le nom est obligatoire.-->
-<!--          </small>-->
         </div>
 
         <div class="field">
@@ -213,7 +223,7 @@
         type="submit"
         [disabled]="sending || cartService.items().length === 0 || !isFormValid()"
       >
-        {{ sending ? 'Envoi en cours...' : 'Passer la commande' }}
+        {{ sending ? 'Envoi en cours...' : 'Envoyer ma demande' }}
       </button>
 
       <p class="success-message" *ngIf="successMessage">{{ successMessage }}</p>
@@ -221,6 +231,12 @@
 
     <aside class="summary">
       <h3>Récapitulatif</h3>
+
+      <div class="summary-note">
+        <p>
+          Cette demande ne vaut pas paiement immédiat. Nous vous recontactons pour la suite.
+        </p>
+      </div>
 
       <div class="summary-item" *ngFor="let item of cartService.items()">
         <div>

@@ -1,5 +1,12 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { ChangeDetectorRef, Component, Inject, OnInit, PLATFORM_ID, inject } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  Inject,
+  OnInit,
+  PLATFORM_ID,
+  inject,
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 
@@ -7,7 +14,7 @@ import { Parfum } from '../../models/parfum';
 import { CartService } from '../../services/cart.service';
 import { ParfumService } from '../../services/parfum.service';
 
-type TabType = 'all' | 'standard' | 'testeur' | 'coffret';
+type TabType = 'all' | 'standard' | 'testeur' | 'coffret' | 'nouveaute';
 
 @Component({
   selector: 'app-parfums',
@@ -26,16 +33,10 @@ export class ParfumsComponent implements OnInit {
 
   readonly cartService = inject(CartService);
 
-  // Image de secours si une image ne charge pas
-  readonly placeholderImage = 'assets/placeholder.png';
+  readonly placeholderImage = '/images/parfums/placeholder-parfum.png';
 
-  // Nombre de skeleton cards affichées pendant le chargement
   readonly skeletonItems = Array.from({ length: 8 });
 
-  /**
-   * Marques prioritaires dans l'affichage aléatoire.
-   * Elles restent mélangées, mais ont plus de chances de remonter.
-   */
   private readonly priorityBrands: string[] = [
     'xerjoff',
     'creed',
@@ -66,14 +67,14 @@ export class ParfumsComponent implements OnInit {
     }
 
     try {
-      this.parfums = await this.parfumService.loadParfums();
+      const loadedParfums = await this.parfumService.loadParfums();
+
+      this.parfums = loadedParfums.map((parfum) => ({
+        ...parfum,
+        image: this.getSafeDisplayImage(parfum.image),
+      }));
+
       this.applyFilters();
-
-      // charge les images internet via le backend sans bloquer l'affichage initial
-      void this.loadImagesInBackground();
-
-      // force le rafraîchissement pour éviter le double clic nécessaire
-      this.cdr.detectChanges();
     } catch (error) {
       console.error('Erreur chargement parfums', error);
       this.parfums = [];
@@ -99,9 +100,11 @@ export class ParfumsComponent implements OnInit {
   }
 
   isInCart(parfum: Parfum): boolean {
-    return this.cartService
-      .items()
-      .some((item) => item.parfum.name === parfum.name && item.parfum.brand === parfum.brand);
+    return this.cartService.items().some(
+      (item) =>
+        item.parfum.name === parfum.name &&
+        item.parfum.brand === parfum.brand,
+    );
   }
 
   trackByName(_index: number, parfum: Parfum): string {
@@ -125,6 +128,10 @@ export class ParfumsComponent implements OnInit {
       return this.parfums.length;
     }
 
+    if (type === 'nouveaute') {
+      return this.parfums.filter((parfum) => this.isMonthlyNew(parfum)).length;
+    }
+
     return this.parfums.filter((parfum) => parfum.type === type).length;
   }
 
@@ -136,11 +143,8 @@ export class ParfumsComponent implements OnInit {
   onImageError(event: Event): void {
     const img = event.target as HTMLImageElement;
 
-    if (!img.src.includes(this.placeholderImage)) {
-      img.src = this.placeholderImage;
-      return;
-    }
-
+    img.onerror = null;
+    img.src = this.placeholderImage;
     img.classList.add('loaded');
   }
 
@@ -149,7 +153,9 @@ export class ParfumsComponent implements OnInit {
 
     let result = [...this.parfums];
 
-    if (this.activeTab !== 'all') {
+    if (this.activeTab === 'nouveaute') {
+      result = result.filter((parfum) => this.isMonthlyNew(parfum));
+    } else if (this.activeTab !== 'all') {
       result = result.filter((parfum) => parfum.type === this.activeTab);
     }
 
@@ -163,6 +169,7 @@ export class ParfumsComponent implements OnInit {
           String(parfum.price),
           String(parfum.prix_boutique ?? ''),
           String(this.getDiscountPercent(parfum)),
+          this.isMonthlyNew(parfum) ? 'nouveauté nouveaute nouveau new' : '',
         ]
           .join(' ')
           .toLowerCase()
@@ -173,10 +180,37 @@ export class ParfumsComponent implements OnInit {
     this.filteredParfums = this.shuffleWithPriority(result);
   }
 
-  /**
-   * Donne plus de poids à certaines marques pour qu'elles remontent
-   * plus souvent dans l'ordre final, tout en gardant un rendu aléatoire.
-   */
+  isMonthlyNew(parfum: Parfum): boolean {
+    return (
+        parfum as Parfum & {
+          nouveaute?: boolean;
+          nouveaute_mois?: boolean;
+          isNew?: boolean;
+        }
+      ).nouveaute === true ||
+      (parfum as Parfum & { nouveaute_mois?: boolean }).nouveaute_mois ===
+      true ||
+      (parfum as Parfum & { isNew?: boolean }).isNew === true;
+  }
+
+  private getSafeDisplayImage(image: string | null | undefined): string {
+    const cleanImage = String(image ?? '').trim();
+
+    if (!cleanImage) {
+      return this.placeholderImage;
+    }
+
+    if (
+      cleanImage.startsWith('/images/') ||
+      cleanImage.startsWith('/assets/') ||
+      cleanImage.startsWith('data:image/')
+    ) {
+      return cleanImage;
+    }
+
+    return this.placeholderImage;
+  }
+
   private getPriorityWeight(parfum: Parfum): number {
     const brand = (parfum.brand ?? '').trim().toLowerCase();
     const name = (parfum.name ?? '').trim().toLowerCase();
@@ -185,7 +219,6 @@ export class ParfumsComponent implements OnInit {
       return 4;
     }
 
-    // Bonus pour Angels' Share / Angel
     if (name.includes('creed')) {
       return 3;
     }
@@ -193,9 +226,6 @@ export class ParfumsComponent implements OnInit {
     return 1;
   }
 
-  /**
-   * Mélange la liste avec priorité douce pour certaines marques.
-   */
   private shuffleWithPriority(parfums: Parfum[]): Parfum[] {
     return [...parfums]
       .map((parfum) => ({
@@ -204,25 +234,5 @@ export class ParfumsComponent implements OnInit {
       }))
       .sort((a, b) => b.score - a.score)
       .map((entry) => entry.parfum);
-  }
-
-  private async loadImagesInBackground(): Promise<void> {
-    const updates = await Promise.all(
-      this.parfums.map(async (parfum) => {
-        try {
-          const image = await this.parfumService.fetchPerfumeImage(parfum);
-          return { parfum, image };
-        } catch {
-          return { parfum, image: parfum.image };
-        }
-      }),
-    );
-
-    for (const update of updates) {
-      update.parfum.image = update.image;
-    }
-
-    this.filteredParfums = [...this.filteredParfums];
-    this.cdr.detectChanges();
   }
 }

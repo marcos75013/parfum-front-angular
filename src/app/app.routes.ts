@@ -11,17 +11,17 @@ export const routes: Routes = [
   {
     path: '',
     component: ParfumsComponent,
-    title: 'ParfumDeals - Accueil',
+    title: 'EscaleOlfactive - Accueil',
   },
   {
     path: 'parfums',
     component: ParfumsComponent,
-    title: 'ParfumDeals - Parfums',
+    title: 'EscaleOlfactive - Parfums',
   },
   {
     path: 'meilleures-affaires',
     component: MeilleuresAffairesComponent,
-    title: 'ParfumDeals - Meilleures affaires',
+    title: 'EscaleOlfactive - Meilleures affaires',
   },
   {
     path: 'promotions',
@@ -31,27 +31,27 @@ export const routes: Routes = [
   {
     path: 'marques',
     component: MarquesComponent,
-    title: 'ParfumDeals - Marques',
+    title: 'EscaleOlfactive - Marques',
   },
   {
     path: 'marques/:brand',
     component: MarqueDetailComponent,
-    title: 'ParfumDeals - Détail marque',
+    title: 'EscaleOlfactive - Détail marque',
   },
   {
     path: 'cart',
     component: CartComponent,
-    title: 'ParfumDeals - Panier',
+    title: 'EscaleOlfactive - Panier',
   },
   {
     path: 'checkout',
     component: CheckoutComponent,
-    title: 'ParfumDeals - Commande',
+    title: 'EscaleOlfactive - Commande',
   },
   {
     path: 'cgv',
     component: CgvComponent,
-    title: 'ParfumDeals - Conditions générales de vente',
+    title: 'EscaleOlfactive - Conditions générales de vente',
   },
   {
     path: '**',
