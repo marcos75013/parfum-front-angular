@@ -3,9 +3,9 @@
     "groupKey": "creed himalaya",
     "representativeName": "Creed Himalaya 100ml Eau De Parfum",
     "searchQuery": "Creed Himalaya 100ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://frenchfragrance.com/images/detailed/15/creed_himalaya_for_men_eau_de_parfum_100ml.jpg",
-    "sourceUrl": "https://frenchfragrance.com/perfumes/creed-himalaya-for-men-eau-de-parfum-100ml/",
-    "localImage": "",
+    "imageUrl": "https://i.notino.com/view/creed/crehlym_aedp20-03__19.jpg",
+    "sourceUrl": "https://www.notino.it/creed/himalaya-eau-de-parfum-per-uomo/",
+    "localImage": "/images/parfums/creed-himalaya-100ml-eau-de-parfum.jpg",
     "status": "validated",
     "products": [
       {
@@ -20,8 +20,7 @@
         "type": "testeur",
         "genre": "Homme"
       }
-    ],
-    "downloadError": "HTTP 403"
+    ]
   },
   {
     "groupKey": "van cleef arpels first",
@@ -84,8 +83,7 @@
         "type": "testeur",
         "genre": "Mixte"
       }
-    ],
-    "downloadError": "fetch failed"
+    ]
   },
   {
     "groupKey": "armani prive cuir rubis",
@@ -102,8 +100,7 @@
         "type": "testeur",
         "genre": "Mixte"
       }
-    ],
-    "downloadError": "HTTP 403"
+    ]
   },
   {
     "groupKey": "armani prive indigo tanzanite",
@@ -155,8 +152,7 @@
         "type": "testeur",
         "genre": "Mixte"
       }
-    ],
-    "downloadError": "fetch failed"
+    ]
   },
   {
     "groupKey": "armani prive oud royal intense",
@@ -327,8 +323,7 @@
         "type": "standard",
         "genre": "Mixte"
       }
-    ],
-    "downloadError": "fetch failed"
+    ]
   },
   {
     "groupKey": "dior diorella",
@@ -1062,8 +1057,7 @@
         "type": "testeur",
         "genre": "Femme"
       }
-    ],
-    "downloadError": "fetch failed"
+    ]
   },
   {
     "groupKey": "rosendo mateu n 5",
@@ -1183,8 +1177,7 @@
         "type": "standard",
         "genre": "Mixte"
       }
-    ],
-    "downloadError": "fetch failed"
+    ]
   },
   {
     "groupKey": "versace l homme",
@@ -7956,8 +7949,7 @@
         "type": "standard",
         "genre": "Femme"
       }
-    ],
-    "downloadError": "HTTP 403"
+    ]
   },
   {
     "groupKey": "lancome miracle",
