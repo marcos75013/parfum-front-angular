@@ -75,7 +75,7 @@
     "searchQuery": "Armani Privé Cuir Nu 100ml Eau De Parfum Intense ( Format Testeur ) perfume bottle",
     "imageUrl": "https://media.parfumo.com/perfume_imagery/6a/6aeeba_armani-prive-cuir-nu-giorgio-armani_1200.jpg",
     "sourceUrl": "https://www.parfumo.de/Parfums/Giorgio_Armani/armani-prive-cuir-nu",
-    "localImage": "",
+    "localImage": "/images/parfums/armani-prive-cuir-nu-100ml-eau-de-parfum-intense-format-testeur.jpg",
     "status": "validated",
     "products": [
       {
@@ -93,7 +93,7 @@
     "searchQuery": "Armani Privé Cuir Rubis 100ml Eau De Parfum ( Forma Testeur ) perfume bottle",
     "imageUrl": "https://media.marionnaud.ch/medias/sys_master/prd-images/h05/h51/12446031872030/prd-front-1427041_2000x2000/prd-front-1427041-2000x2000.jpg",
     "sourceUrl": "https://www.marionnaud.ch/de/giorgio-armani/prive-cuir-nu-eau-de-parfum/eau-de-parfum/p/BP_1427041",
-    "localImage": "",
+    "localImage": "/images/parfums/armani-prive-cuir-rubis-100ml-eau-de-parfum-forma-testeur.jpg",
     "status": "validated",
     "products": [
       {
@@ -146,7 +146,7 @@
     "searchQuery": "Armani Privé Noir Kogane 100ml Eau De Parfum ( Format Testeur ) perfume bottle",
     "imageUrl": "https://media.parfumo.com/perfumes/d1/d13fb9-armani-prive-noir-kogane-giorgio-armani_1200.jpg?width=720&aspect_ratio=1:1",
     "sourceUrl": "https://www.parfumo.de/Parfums/Giorgio_Armani/armani-prive-noir-kogane",
-    "localImage": "",
+    "localImage": "/images/parfums/armani-prive-noir-kogane-100ml-eau-de-parfum-format-testeur.jpg",
     "status": "validated",
     "products": [
       {
@@ -318,7 +318,7 @@
     "searchQuery": "Creed Silver Mountain Water 100ml Eau De Parfum perfume bottle",
     "imageUrl": "https://www.perfumeaddicts.in/wp-content/uploads/2024/09/Creed-Silver-Mountain-Water-Eau-de-Parfum-100ml-EDP-Main.webp",
     "sourceUrl": "https://www.perfumeaddicts.in/creed-silver-mountain-water-eau-de-parfum-100ml-edp-men-and-women/",
-    "localImage": "",
+    "localImage": "/images/parfums/creed-silver-mountain-water-100ml-eau-de-parfum.webp",
     "status": "validated",
     "products": [
       {
@@ -1053,7 +1053,7 @@
     "searchQuery": "Rochas Byzance 90ml Eau De Parfum ( Format Testeur ) perfume bottle",
     "imageUrl": "https://media.parfumo.com/perfume_imagery/7c/7ccbd7-byzance-2020-eau-de-parfum-rochas_1200.jpg",
     "sourceUrl": "https://www.parfumo.com/Perfumes/Rochas/byzance-2020-eau-de-parfum",
-    "localImage": "",
+    "localImage": "/images/parfums/rochas-byzance-90ml-eau-de-parfum-format-testeur.jpg",
     "status": "validated",
     "products": [
       {
@@ -1174,7 +1174,7 @@
     "searchQuery": "Tom Ford Soleil De Feu 50ml Eau De Parfum perfume bottle",
     "imageUrl": "https://media.parfumo.com/perfume_imagery/65/659371-soleil-de-feu-tom-ford_1200.jpg",
     "sourceUrl": "https://www.parfumo.com/Perfumes/Tom_Ford/soleil-de-feu",
-    "localImage": "",
+    "localImage": "/images/parfums/tom-ford-soleil-de-feu-50ml-eau-de-parfum.jpg",
     "status": "validated",
     "products": [
       {
@@ -4104,7 +4104,7 @@
         "genre": "Femme"
       }
     ],
-    "downloadError": "HTTP 400"
+    "downloadError": "HTTP 403"
   },
   {
     "groupKey": "mont blanc explorer ultra blue",
@@ -7947,7 +7947,7 @@
     "searchQuery": "Lancome Mascara Hypnose Grandiose – 10g (Avec Boite) perfume bottle",
     "imageUrl": "https://www.lancome.fr/dw/image/v2/AAQP_PRD/on/demandware.static/-/Sites-lac-master-catalog/fr_FR/dw178de2b6/images/PACKSHOTS/MAKEUP/EYES/HYPNOSE/3614272161788_LANCOME_HYPNOSE_NOIR.png",
     "sourceUrl": "",
-    "localImage": "",
+    "localImage": "/images/parfums/lancome-mascara-hypnose-grandiose-10g-avec-boite.png",
     "status": "validated",
     "products": [
       {
