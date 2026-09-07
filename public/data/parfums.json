@@ -60,29 +60,9 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Arabian Oud Blue Moon 100ml Eau De Parfum",
-    "genre": "Mixte",
-    "prix": 138,
-    "prix_boutique": 199.61,
-    "type": "standard",
-    "image": "/images/parfums/arabian-oud-blue-moon-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Arabian Oud Blue Moon 100ml Eau De Parfum ( Format Testeur )",
-    "genre": "Mixte",
-    "prix": 128,
-    "prix_boutique": 267.9,
-    "type": "testeur",
-    "image": "/images/parfums/arabian-oud-blue-moon-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
     "nom": "Arabian Oud Madawi 90ml Eau De Parfum",
     "genre": "Mixte",
-    "prix": 128,
+    "prix": 123,
     "prix_boutique": 251.71,
     "type": "standard",
     "image": "/images/parfums/arabian-oud-madawi-90ml-eau-de-parfum.jpg",
@@ -120,16 +100,6 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Armani Acqua Di Gio Profondo 125ml Eau De Parfum",
-    "genre": "Homme",
-    "prix": 73,
-    "prix_boutique": 132.85,
-    "type": "standard",
-    "image": "/images/parfums/armani-acqua-di-gio-profondo-125ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
     "nom": "Armani Acqua Di Gioia 150ml Eau De Parfum",
     "genre": "Femme",
     "prix": 71,
@@ -140,19 +110,9 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Armani Code 125ml Eau De Toilette",
-    "genre": "Homme",
-    "prix": 71,
-    "prix_boutique": 128.43,
-    "type": "standard",
-    "image": "/images/parfums/armani-code-50ml-eau-de-toilette.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
     "nom": "Armani Code 50ml Eau De Toilette + Gel Douche 75ml",
     "genre": "Homme",
-    "prix": 64,
+    "prix": 58,
     "prix_boutique": 104.51,
     "type": "coffret",
     "image": "/images/parfums/armani-code-50ml-eau-de-toilette.jpg",
@@ -178,16 +138,6 @@
     "image": "/images/parfums/armani-emporio-she-elle-100ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
-  },
-  {
-    "nom": "Armani Emporio She (Elle) 100ml Eau De Parfum (Format Testeur )",
-    "genre": "Femme",
-    "prix": 55,
-    "prix_boutique": 82.96,
-    "type": "testeur",
-    "image": "/images/parfums/armani-emporio-she-elle-100ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
   },
   {
     "nom": "Armani Lui 100ml Eau De Toilette",
@@ -242,42 +192,112 @@
   {
     "nom": "Armani Privé Bois D'encens 100ml Eau De Parfum ( Format Testeur )",
     "genre": "Mixte",
-    "prix": 145,
+    "prix": 137,
     "prix_boutique": 263.51,
     "type": "testeur",
     "image": "/images/parfums/armani-prive-bois-d-encens-100ml-eau-de-parfum-format-testeur.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Armani Privé Cuir Noir 100ml Eau De Parfum Intense ( Format Testeur )",
     "genre": "Mixte",
-    "prix": 145,
+    "prix": 137,
     "prix_boutique": 263.51,
     "type": "testeur",
     "image": "/images/parfums/armani-prive-cuir-noir-100ml-eau-de-parfum-intense-format-testeur.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
-  },
-  {
-    "nom": "Armani Privé Sable Nuit 100ml Eau De Parfum Intense ( Format Testeur )",
-    "genre": "Mixte",
-    "prix": 145,
-    "prix_boutique": 263.51,
-    "type": "testeur",
-    "image": "/images/parfums/armani-prive-sable-nuit-100ml-eau-de-parfum-intense-format-testeur.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
-  },
-  {
-    "nom": "Armani Si 100ml Eau De Parfum ( Format Testeur )",
-    "genre": "Femme",
-    "prix": 75,
-    "prix_boutique": 107.79,
-    "type": "testeur",
-    "image": "/images/parfums/armani-si-100ml-eau-de-parfum-format-testeur.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Armani Privé Cuir Nu 100ml Eau De Parfum Intense ( Format Testeur )",
+    "genre": "Mixte",
+    "prix": 137,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/placeholder-parfum.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Armani Privé Cuir Rubis 100ml Eau De Parfum ( Forma Testeur )",
+    "genre": "Mixte",
+    "prix": 147,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/placeholder-parfum.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Armani Privé Indigo Tanzanite 100ml Eau De Parfum ( Forma Testeur )",
+    "genre": "Mixte",
+    "prix": 147,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/placeholder-parfum.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Armani Privé Magenta Tanzanite 100ml Eau De Parfum ( Format Testeur )",
+    "genre": "Mixte",
+    "prix": 147,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/armani-prive-magenta-tanzanite-100ml-eau-de-parfum-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Armani Privé Noir Kogane 100ml Eau De Parfum ( Format Testeur )",
+    "genre": "Mixte",
+    "prix": 137,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/placeholder-parfum.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Armani Privé Oud Royal 100ml Eau De Parfum Intense ( Format Testeur )",
+    "genre": "Mixte",
+    "prix": 137,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/armani-prive-oud-royal-100ml-eau-de-parfum-intense-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Armani Privé Rose D’arabie 100ml Eau De Parfum ( Format Testeur )",
+    "genre": "Mixte",
+    "prix": 147,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/placeholder-parfum.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Armani Privé Vert Malachite 100ml Eau De Parfum ( Format Testeur )",
+    "genre": "Mixte",
+    "prix": 147,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/armani-prive-vert-malachite-100ml-eau-de-parfum-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Armani Rose D’alexandrie 100ml Eau De Toilette ( Format Testeur )",
+    "genre": "Mixte",
+    "prix": 85,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/armani-rose-d-alexandrie-100ml-eau-de-toilette-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Armani Sí 100ml Eau De Parfum Intense ( Format Testeur )",
@@ -370,16 +390,6 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Atelier Des Ors Bois Sikar 100ml Eau De Parfum ( Format Testeur )",
-    "genre": "Mixte",
-    "prix": 85,
-    "prix_boutique": 131.79,
-    "type": "testeur",
-    "image": "/images/parfums/atelier-des-ors-bois-sikar-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
     "nom": "Atelier Des Ors Cocoa Kimiya 100ml Extrait De Parfum",
     "genre": "Mixte",
     "prix": 133,
@@ -396,16 +406,6 @@
     "prix_boutique": 139.9,
     "type": "standard",
     "image": "/images/parfums/arte-profumi-sucre-noir-100ml-edp.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Atelier Des Ors Kawa Karda 100ml Extrait De Parfum",
-    "genre": "Mixte",
-    "prix": 133,
-    "prix_boutique": 282.95,
-    "type": "standard",
-    "image": "/images/parfums/atelier-des-ors-kawa-karda-100ml-extrait-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
   },
@@ -490,26 +490,6 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Atelier Des Ors Riviera Lazuli 100ml Eau De Parfum",
-    "genre": "Mixte",
-    "prix": 93,
-    "prix_boutique": 200.1,
-    "type": "standard",
-    "image": "/images/parfums/atelier-des-ors-riviera-lazuli-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Atelier Des Ors Rose Omeyyade 100ml Eau De Parfum",
-    "genre": "Mixte",
-    "prix": 98,
-    "prix_boutique": 207.35,
-    "type": "standard",
-    "image": "/images/parfums/atelier-des-ors-rose-omeyyade-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
     "nom": "Atelier Des Ors Rose Omeyyade 100ml Eau De Parfum Recharge (Sans Vaporisateur)",
     "genre": "Mixte",
     "prix": 73,
@@ -570,16 +550,6 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Azzaro Chrome Legend 75ml Eau De Toilette",
-    "genre": "Homme",
-    "prix": 29,
-    "prix_boutique": 48.15,
-    "type": "standard",
-    "image": "/images/parfums/azzaro-chrome-legend-125ml-eau-de-toilette.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
     "nom": "Azzaro Chrome United 100ml Eau De Toilette",
     "genre": "Homme",
     "prix": 37,
@@ -596,8 +566,8 @@
     "prix_boutique": 85.71,
     "type": "standard",
     "image": "/images/parfums/azzaro-classique-pour-homme-200ml-eau-de-toilette.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Azzaro Classique Pour Homme 200ml Eau De Toilette",
@@ -646,8 +616,8 @@
     "prix_boutique": 128.46,
     "type": "coffret",
     "image": "/images/parfums/azzaro-the-most-wanted-parfum-100ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Azzaro The Most Wanted Parfum 100ml Eau De Parfum",
@@ -676,16 +646,6 @@
     "prix_boutique": 96.82,
     "type": "standard",
     "image": "/images/parfums/azzaro-wanted-by-night-100ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
-  },
-  {
-    "nom": "Azzaro Wanted Forever Elixir 100ml Eau De Parfum + Miniature 2x10ml",
-    "genre": "Homme",
-    "prix": 79,
-    "prix_boutique": 161.3,
-    "type": "coffret",
-    "image": "/images/parfums/azzaro-wanted-forever-elixir-100ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
   },
@@ -766,8 +726,8 @@
     "prix_boutique": 74.16,
     "type": "standard",
     "image": "/images/parfums/boucheron-jaipur-bracelet-100ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Boucheron Place Vendôme 100ml Eau De Parfum",
@@ -838,26 +798,6 @@
     "image": "/images/parfums/burberry-classique-pour-femme-100ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
-  },
-  {
-    "nom": "Burberry Goddess 100ml Eau De Parfum ( Format Testeur )",
-    "genre": "Femme",
-    "prix": 75,
-    "prix_boutique": 123.66,
-    "type": "testeur",
-    "image": "/images/parfums/burberry-goddess-100ml-eau-de-parfum-format-testeur.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Burberry Goddess 100ml Eau De Parfum + Miniature 10ml",
-    "genre": "Femme",
-    "prix": 91,
-    "prix_boutique": 151.07,
-    "type": "coffret",
-    "image": "/images/parfums/burberry-goddess-100ml-eau-de-parfum-format-testeur.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
   },
   {
     "nom": "Burberry Goddess 100ml Eau De Parfum + Vapo 10ml Eau De Parfum",
@@ -986,8 +926,8 @@
     "prix_boutique": 86.83,
     "type": "standard",
     "image": "/images/parfums/burberry-touch-100ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Burberry Weekend 100ml Eau De Parfum",
@@ -996,16 +936,6 @@
     "prix_boutique": 86.83,
     "type": "standard",
     "image": "/images/parfums/burberry-weekend-100ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
-  },
-  {
-    "nom": "Bvlgari Man In Black 100ml Eau De Parfum",
-    "genre": "Homme",
-    "prix": 78,
-    "prix_boutique": 118.7,
-    "type": "standard",
-    "image": "/images/parfums/bvlgari-man-in-black-100ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
   },
@@ -1020,44 +950,14 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Byredo Alto Astral 100ml Eau De Parfum",
-    "genre": "Mixte",
-    "prix": 168,
-    "prix_boutique": 303.89,
-    "type": "standard",
-    "image": "/images/parfums/byredo-alto-astral-100ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
-  },
-  {
-    "nom": "Byredo Future Memories 50ml Eau De Parfum",
-    "genre": "Mixte",
-    "prix": 113,
-    "prix_boutique": 204.4,
-    "type": "standard",
-    "image": "/images/parfums/byredo-future-memories-50ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
-  },
-  {
-    "nom": "Byredo Gypsy Water 50ml Eau De Parfum",
-    "genre": "Mixte",
-    "prix": 113,
-    "prix_boutique": 204.4,
-    "type": "standard",
-    "image": "/images/parfums/byredo-gypsy-water-50ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
-  },
-  {
     "nom": "Byredo Inflorescence 50ml Eau De Parfum",
     "genre": "Mixte",
     "prix": 113,
     "prix_boutique": 204.4,
     "type": "standard",
     "image": "/images/parfums/byredo-inflorescence-50ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Cacharel Amor Amor 100ml Eau De Toilette",
@@ -1068,6 +968,16 @@
     "image": "/images/parfums/cacharel-amor-amor-100ml-eau-de-toilette.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Cacharel Amor Amor 100ml Eau De Toilette ( Format Testeur )",
+    "genre": "Femme",
+    "prix": 38,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/cacharel-amor-amor-100ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Cacharel Amor Amor 30ml Eau De Toilette",
@@ -1100,16 +1010,6 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Cacharel Eden 50ml Eau De Parfum",
-    "genre": "Femme",
-    "prix": 38,
-    "prix_boutique": 61.56,
-    "type": "standard",
-    "image": "/images/parfums/cacharel-eden-50ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
     "nom": "Cacharel Loulou 50ml Eau De Parfum",
     "genre": "Femme",
     "prix": 42,
@@ -1132,7 +1032,7 @@
   {
     "nom": "Cacharel Noa 50ml Eau De Toilette",
     "genre": "Femme",
-    "prix": 33,
+    "prix": 34,
     "prix_boutique": 52.78,
     "type": "standard",
     "image": "/images/parfums/cacharel-noa-100ml-eau-de-toilette.jpg",
@@ -1158,16 +1058,6 @@
     "image": "/images/parfums/cacharel-yes-i-am-delicious-75ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
-  },
-  {
-    "nom": "Calvin Klein Ck Obsession Night 125ml Eau De Toilette",
-    "genre": "Homme",
-    "prix": 34,
-    "prix_boutique": 71.3,
-    "type": "standard",
-    "image": "/images/parfums/calvin-klein-ck-obsession-night-125ml-eau-de-toilette.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
   },
   {
     "nom": "Calvin Klein Ck One 200ml Eau De Toilette",
@@ -1266,8 +1156,8 @@
     "prix_boutique": 91.11,
     "type": "standard",
     "image": "/images/parfums/calvin-klein-euphoria-100ml-eau-de-parfum-format-testeur.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Carolina Herrera Good Girl 50ml Eau De Parfum + Lotion Corps 100ml",
@@ -1276,8 +1166,8 @@
     "prix_boutique": 136.51,
     "type": "coffret",
     "image": "/images/parfums/carolina-herrera-good-girl-80ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Carolina Herrera Good Girl 80ml Eau De Parfum",
@@ -1300,14 +1190,34 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Carolina Herrera Good Girl 80ml Eau De Parfum + Miniature 10ml",
+    "genre": "Femme",
+    "prix": 93,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/carolina-herrera-good-girl-80ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Carolina Herrera La Bomba 80ml Eau De Parfum",
     "genre": "Femme",
     "prix": 88,
     "prix_boutique": 158.06,
     "type": "standard",
     "image": "/images/parfums/carolina-herrera-la-bomba-80ml-eau-de-parfum.jpg",
+    "nouveaute": false,
+    "moisNouveaute": null
+  },
+  {
+    "nom": "Carolina Herrera La Bomba 80ml Eau De Parfum + Miniature 10ml",
+    "genre": "Femme",
+    "prix": 93,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/carolina-herrera-la-bomba-80ml-eau-de-parfum.jpg",
     "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Cartier Déclaration 100ml Eau De Toilette",
@@ -1320,24 +1230,14 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Cartier Déclaration 100ml Eau De Toilette + Gel Douche 100ml",
-    "genre": "Homme",
-    "prix": 78,
-    "prix_boutique": 165.12,
-    "type": "coffret",
-    "image": "/images/parfums/cartier-declaration-100ml-eau-de-toilette.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
     "nom": "Cartier Déclaration Le Parfum 100ml Eau De Parfum",
     "genre": "Homme",
     "prix": 85,
     "prix_boutique": 178.13,
     "type": "standard",
     "image": "/images/parfums/cartier-declaration-le-parfum-100ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Cartier Heure Mystérieuse 75ml Eau De Parfum ( Format Testeur )",
@@ -1372,7 +1272,7 @@
   {
     "nom": "Cartier La Panthère Le Parfum 100ml",
     "genre": "Femme",
-    "prix": 95,
+    "prix": 97,
     "prix_boutique": 168.94,
     "type": "standard",
     "image": "/images/parfums/cartier-la-panthere-le-parfum-100ml.jpg",
@@ -1416,8 +1316,18 @@
     "prix_boutique": 148.5,
     "type": "standard",
     "image": "/images/parfums/cartier-pasha-100ml-eau-de-toilette-format-testeur.jpg",
+    "nouveaute": false,
+    "moisNouveaute": null
+  },
+  {
+    "nom": "Cartier So Pretty 30ml Eau De Parfum ( Format Testeur )",
+    "genre": "Femme",
+    "prix": 17,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/cartier-so-pretty-30ml-eau-de-parfum-format-testeur.jpg",
     "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Castel Délectation 100ml Extrait De Parfum",
@@ -1450,14 +1360,24 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Cerruti 1881 Femme 100ml Eau De Toilette ( Format Testeur )",
+    "genre": "Femme",
+    "prix": 33,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/cerruti-1881-femme-100ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Cerruti 1881 Femme 50ml Eau De Toilette",
     "genre": "Femme",
     "prix": 31,
     "prix_boutique": 66.8,
     "type": "standard",
     "image": "/images/parfums/cerruti-1881-femme-100ml-eau-de-toilette.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Cerruti 1881 Femme 50ml Eau De Toilette + Lait 75ml",
@@ -1500,34 +1420,34 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Chloé By Chloé 50ml Eau De Parfum + Lait 100ml",
+    "nom": "Chloé By Chloé (Classique) 50ml Eau De Parfum + Lait 100ml",
     "genre": "Femme",
     "prix": 61,
-    "prix_boutique": 109.97,
+    "prix_boutique": null,
     "type": "coffret",
     "image": "/images/parfums/chloe-by-chloe-50ml-eau-de-parfum.jpg",
     "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "moisNouveaute": "Septembre 2026"
   },
   {
-    "nom": "Chloé By Chloé 75ml Eau De Parfum ( Format Testeur )",
+    "nom": "Chloé By Chloé (Classique) 75ml Eau De Parfum ( Format Testeur )",
     "genre": "Femme",
     "prix": 57,
-    "prix_boutique": 103.59,
+    "prix_boutique": null,
     "type": "testeur",
     "image": "/images/parfums/chloe-by-chloe-50ml-eau-de-parfum.jpg",
     "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "moisNouveaute": "Septembre 2026"
   },
   {
-    "nom": "Chloé By Chloé Lumineuse 100ml Eau De Parfum ( Format Testeur )",
+    "nom": "Chloé By Chloé Lumineuse (Classique) 100ml Eau De Parfum ( Format Testeur )",
     "genre": "Femme",
     "prix": 57,
-    "prix_boutique": 103.59,
+    "prix_boutique": null,
     "type": "testeur",
     "image": "/images/parfums/chloe-by-chloe-lumineuse-100ml-eau-de-parfum-format-testeur.jpg",
     "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Chloé Nomade 75ml Eau De Parfum",
@@ -1560,6 +1480,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Chopard Black Incense Malaki 80ml Eau De Parfum",
+    "genre": "Mixte",
+    "prix": 53,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/chopard-black-incense-malaki-80ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Chopard Cedar Malaki 80ml Eau De Parfum",
     "genre": "Mixte",
     "prix": 53,
@@ -1590,6 +1520,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Chopard Miel D’Arabie 100ml Eau De Parfum",
+    "genre": "Mixte",
+    "prix": 113,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/chopard-miel-d-arabie-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Chopard Musc Malaki 80ml Eau De Parfum",
     "genre": "Mixte",
     "prix": 53,
@@ -1608,6 +1548,16 @@
     "image": "/images/parfums/chopard-musc-malaki-80ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Chopard Nuit Des Rois Eau De Parfum",
+    "genre": "Mixte",
+    "prix": 113,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/chopard-nuit-des-rois-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Chopard Oud Malaki 80ml Eau De Parfum",
@@ -1640,6 +1590,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Chopard Tobacco Malaki 80ml Eau De Parfum",
+    "genre": "Mixte",
+    "prix": 53,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/chopard-tobacco-malaki-80ml-eau-de-parfum.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Chopard Wish 75ml Eau De Parfum ( Format Testeur )",
     "genre": "Mixte",
     "prix": 23,
@@ -1670,6 +1630,26 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Creed Himalaya 100ml Eau De Parfum",
+    "genre": "Homme",
+    "prix": 157,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/placeholder-parfum.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Creed Himalaya 100ml Eau De Parfum ( Format Testeur )",
+    "genre": "Homme",
+    "prix": 137,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/placeholder-parfum.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Creed Love In White 50ml Eau De Parfum (Vaporisateur Rechargeable Avec Étui)",
     "genre": "Mixte",
     "prix": 123,
@@ -1678,6 +1658,16 @@
     "image": "/images/parfums/creed-love-in-white-50ml-eau-de-parfum-vaporisateur-rechargeable-avec-etui.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Creed Silver Mountain Water 100ml Eau De Parfum",
+    "genre": "Mixte",
+    "prix": 157,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/placeholder-parfum.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Creed Viking 50ml Eau De Parfum (Vaporisateur Rechargeable Avec Étui)",
@@ -1770,24 +1760,44 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Dior Diorella 100ml Eau De Toilette ( Format Testeur )",
+    "genre": "Femme",
+    "prix": 55,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/dior-diorella-100ml-eau-de-toilette-format-testeur.webp",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Dior J’adore 100ml Eau De Parfum ( Format Testeur )",
     "genre": "Femme",
     "prix": 85,
     "prix_boutique": 154.47,
     "type": "testeur",
     "image": "/images/parfums/dior-j-adore-100ml-eau-de-parfum-format-testeur.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
-  },
-  {
-    "nom": "Dior Sauvage Elixir 100ml Eau De Parfum",
-    "genre": "Homme",
-    "prix": 137,
-    "prix_boutique": 242.56,
-    "type": "standard",
-    "image": "/images/parfums/dior-sauvage-elixir-100ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Dior Sauvage Elixir 60ml Eau De Parfum",
+    "genre": "Homme",
+    "prix": 103,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/dior-sauvage-elixir-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Dior Sauvage Extrait De Parfum 50ml ( Format Testeur )",
+    "genre": "Homme",
+    "prix": 130,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/dior-sauvage-extrait-de-parfum-50ml-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Dolce & Gabbana \"K\" 100ml Eau De Parfum ( Format Testeur )",
@@ -1796,26 +1806,6 @@
     "prix_boutique": 106.77,
     "type": "testeur",
     "image": "/images/parfums/dolce-and-gabbana-k-100ml-eau-de-parfum-format-testeur.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
-  },
-  {
-    "nom": "Dolce & Gabbana Dévotion 100ml Eau De Parfum",
-    "genre": "Femme",
-    "prix": 68,
-    "prix_boutique": 109.23,
-    "type": "standard",
-    "image": "/images/parfums/dolce-and-gabbana-devotion-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Dolce & Gabbana Dévotion 100ml Eau De Parfum Intense",
-    "genre": "Femme",
-    "prix": 78,
-    "prix_boutique": 150.38,
-    "type": "standard",
-    "image": "/images/parfums/dolce-and-gabbana-devotion-100ml-eau-de-parfum-intense.jpg",
     "nouveaute": false,
     "moisNouveaute": null
   },
@@ -1836,8 +1826,8 @@
     "prix_boutique": 123.92,
     "type": "standard",
     "image": "/images/parfums/dolce-and-gabbana-devotion-100ml-edp.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Dolce & Gabbana Intenso 125ml Eau De Parfum ( Format Testeur )",
@@ -1860,14 +1850,14 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Dolce & Gabbana Light Blue Summer Vibes 100ml Eau De Toilette ( Format Testeur )",
-    "genre": "Femme",
-    "prix": 49,
-    "prix_boutique": 103.77,
+    "nom": "Dolce & Gabbana Light Blue 125ml Eau De Toilette ( Format Testeur )",
+    "genre": "Homme",
+    "prix": 45,
+    "prix_boutique": null,
     "type": "testeur",
-    "image": "/images/parfums/dolce-and-gabbana-light-blue-summer-vibes-100ml-eau-de-toilette-format-testeur.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
+    "image": "/images/parfums/dolce-and-gabbana-light-blue-125ml-eau-de-toilette-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Dolce & Gabbana The One 100ml Eau De Parfum + Miniature 10ml",
@@ -2040,16 +2030,6 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Elizabeth Arden 5th Avenue 125ml Eau De Parfum + Lait 100ml",
-    "genre": "Femme",
-    "prix": 38,
-    "prix_boutique": 69.88,
-    "type": "coffret",
-    "image": "/images/parfums/elizabeth-arden-5th-avenue-125ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
     "nom": "Emanuel Ungaro Diva 100ml Eau De Parfum",
     "genre": "Femme",
     "prix": 43,
@@ -2070,16 +2050,6 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Estee Lauder Beautiful 75ml Eau De Parfum",
-    "genre": "Femme",
-    "prix": 55,
-    "prix_boutique": 86.87,
-    "type": "standard",
-    "image": "/images/parfums/estee-lauder-beautiful-75ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
     "nom": "Estée Lauder Pleasures 100ml Eau De Parfum",
     "genre": "Femme",
     "prix": 48,
@@ -2096,8 +2066,8 @@
     "prix_boutique": 92.28,
     "type": "standard",
     "image": "/images/parfums/estee-lauder-pleasures-intense-100ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Franck Boclet Tobacco 100ml Eau De Parfum",
@@ -2106,16 +2076,6 @@
     "prix_boutique": 137.81,
     "type": "standard",
     "image": "/images/parfums/franck-boclet-tobacco-100ml-eau-de-parfum.webp",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Frédéric Malle French Lover 100ml Eau De Parfum ( Format Testeur )",
-    "genre": "Mixte",
-    "prix": 143,
-    "prix_boutique": 285.6,
-    "type": "testeur",
-    "image": "/images/parfums/frederic-malle-french-lover-100ml-eau-de-parfum-format-testeur.jpg",
     "nouveaute": false,
     "moisNouveaute": null
   },
@@ -2136,8 +2096,18 @@
     "prix_boutique": 86.39,
     "type": "standard",
     "image": "/images/parfums/givenchy-amarige-50ml-eau-de-toilette.jpg",
+    "nouveaute": false,
+    "moisNouveaute": null
+  },
+  {
+    "nom": "Givenchy Amarige 100ml Eau De Toilette ( Format Testeur )",
+    "genre": "Femme",
+    "prix": 55,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/givenchy-amarige-50ml-eau-de-toilette.jpg",
     "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Givenchy Amarige 50ml Eau De Toilette",
@@ -2150,16 +2120,6 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Givenchy Ange Ou Démon ( Format Testeur ) 100ml Eau De Parfum",
-    "genre": "Femme",
-    "prix": 59,
-    "prix_boutique": 122.42,
-    "type": "testeur",
-    "image": "/images/parfums/givenchy-ange-ou-demon-100ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
-  },
-  {
     "nom": "Givenchy Ange Ou Démon 100ml Eau De Parfum",
     "genre": "Femme",
     "prix": 72,
@@ -2168,6 +2128,26 @@
     "image": "/images/parfums/givenchy-ange-ou-demon-100ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Givenchy Ange Ou Démon 100ml Eau De Parfum ( Format Testeur )",
+    "genre": "Femme",
+    "prix": 55,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/givenchy-ange-ou-demon-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Givenchy Gentleman 100ml Eau De Parfum",
+    "genre": "Homme",
+    "prix": 68,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/givenchy-gentleman-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Givenchy Gentleman 100ml Eau De Toilette ( Format Testeur )",
@@ -2200,6 +2180,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Givenchy Gentleman Society 100ml Eau De Parfum + Gel Douche 75ml + Miniature 12,5ml",
+    "genre": "Homme",
+    "prix": 73,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/givenchy-gentleman-society-100ml-eau-de-parfum-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Givenchy Gentleman Society 100ml Eau De Parfum Extrême",
     "genre": "Homme",
     "prix": 72,
@@ -2208,6 +2198,16 @@
     "image": "/images/parfums/givenchy-gentleman-society-100ml-eau-de-parfum-extreme.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Givenchy Gentleman Society Sport 100ml Eau De Parfum (Format Testeur )",
+    "genre": "Homme",
+    "prix": 67,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/givenchy-gentleman-society-sport-100ml-eau-de-parfum-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Givenchy Iii 100ml Eau De Toilette ( Format Testeur )",
@@ -2230,14 +2230,24 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Givenchy Irrésistible 80ml Eau De Parfum ( Format Testeur )",
+    "nom": "Givenchy Irrésistible 50ml Eau De Parfum +Lait Corps 75ml + Rose Perfecto 1,5g",
     "genre": "Femme",
-    "prix": 58,
-    "prix_boutique": 110.48,
-    "type": "testeur",
+    "prix": 65,
+    "prix_boutique": null,
+    "type": "coffret",
     "image": "/images/parfums/givenchy-irresistible-80ml-eau-de-parfum-format-testeur.png",
-    "nouveaute": false,
-    "moisNouveaute": null
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Givenchy Irrésistible 80ml Eau De Parfum",
+    "genre": "Femme",
+    "prix": 72,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/givenchy-irresistible-80ml-eau-de-parfum-format-testeur.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Givenchy Irrésistible 80ml Eau De Parfum + Miniature 12,5ml",
@@ -2246,8 +2256,8 @@
     "prix_boutique": 179.15,
     "type": "coffret",
     "image": "/images/parfums/givenchy-irresistible-80ml-eau-de-parfum-format-testeur.png",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Givenchy Irrésistible Rose Velvet 80ml Eau De Parfum",
@@ -2320,14 +2330,14 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Givenchy Very Irrésistible 75ml Eau De Parfum ( Format Testeur )",
+    "nom": "Gucci Bamboo 75ml Eau De Parfum ( Format Testeur )",
     "genre": "Femme",
-    "prix": 58,
-    "prix_boutique": 125.46,
+    "prix": 52,
+    "prix_boutique": null,
     "type": "testeur",
-    "image": "/images/parfums/givenchy-very-irresistible-75ml-eau-de-parfum-format-testeur.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
+    "image": "/images/parfums/gucci-bamboo-75ml-eau-de-parfum-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Gucci Bloom 100ml Eau De Parfum",
@@ -2360,32 +2370,22 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Gucci Bloom Acqua Di Fiori 100ml Eau De Toilette ( Format Testeur )",
+    "genre": "Femme",
+    "prix": 48,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/gucci-bloom-acqua-di-fiori-100ml-eau-de-toilette-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Gucci Bloom Profumo Di Fiori 100ml Eau De Parfum",
     "genre": "Femme",
     "prix": 70,
     "prix_boutique": 121.98,
     "type": "standard",
     "image": "/images/parfums/gucci-bloom-profumo-di-fiori-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Gucci Flora Gorgeous Gardenia 50ml Eau De Parfum + Lait 50ml",
-    "genre": "Femme",
-    "prix": 65,
-    "prix_boutique": 141.11,
-    "type": "coffret",
-    "image": "/images/parfums/gucci-flora-gorgeous-gardenia-50ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Gucci Flora Gorgeous Magnolia 100ml Eau De Parfum ( Format Testeur )",
-    "genre": "Femme",
-    "prix": 58,
-    "prix_boutique": 120.78,
-    "type": "testeur",
-    "image": "/images/parfums/gucci-flora-gorgeous-magnolia-100ml-eau-de-parfum-format-testeur.jpg",
     "nouveaute": false,
     "moisNouveaute": null
   },
@@ -2406,8 +2406,8 @@
     "prix_boutique": 99.49,
     "type": "standard",
     "image": "/images/parfums/gucci-rush-75ml-eau-de-toilette.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Guerlain Aqua Allegoria Forte Nerolia Vetiver 125ml Eau De Parfum ( Format Testeur )",
@@ -2446,18 +2446,18 @@
     "prix_boutique": 98.77,
     "type": "standard",
     "image": "/images/parfums/guerlain-aqua-allegoria-nerolia-vetiver-125ml-eau-de-toilette.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
-  },
-  {
-    "nom": "Guerlain Aqua Allegoria Pampelune 125ml Eau De Toilette ( Format Testeur )",
-    "genre": "Mixte",
-    "prix": 53,
-    "prix_boutique": 98.77,
-    "type": "testeur",
-    "image": "/images/parfums/guerlain-aqua-allegoria-pampelune-125ml-eau-de-toilette-format-testeur.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Guerlain Aqua Allegoria Pamplelune 125ml Eau De Toilette ( Format Testeur )",
+    "genre": "Mixte",
+    "prix": 55,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/guerlain-aqua-allegoria-pamplelune-125ml-eau-de-toilette-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Guerlain Eau De Cologne Du Coq 100ml Eau De Cologne",
@@ -2480,6 +2480,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Guerlain Épices Exquises (Dernière Édition) 125ml Eau De Parfum ( Format Testeur )",
+    "genre": "Mixte",
+    "prix": 73,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/guerlain-epices-exquises-125ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Guerlain Épices Exquises 125ml Eau De Parfum",
     "genre": "Mixte",
     "prix": 91,
@@ -2496,8 +2506,8 @@
     "prix_boutique": 148.33,
     "type": "standard",
     "image": "/images/parfums/guerlain-habit-rouge-100ml-eau-de-toilette.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Guerlain Habit Rouge 100ml Eau De Toilette + Gel Douche 75ml + Vapo 10ml Eau De Toilette",
@@ -2542,7 +2552,7 @@
   {
     "nom": "Guerlain La Petite Robe Noire – (Le Flacon Cœur) 20ml Eau De Parfum Intense",
     "genre": "Femme",
-    "prix": 27,
+    "prix": 19,
     "prix_boutique": 59.19,
     "type": "standard",
     "image": "/images/parfums/guerlain-la-petite-robe-noire-le-flacon-c-ur-20ml-eau-de-parfum-intense.jpg",
@@ -2550,22 +2560,32 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Guerlain La Petite Robe Noire 100ml Eau De Parfum ( Format Testeur )",
+    "genre": "Femme",
+    "prix": 58,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/guerlain-la-petite-robe-noire-100ml-eau-de-parfum-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Guerlain La Petite Robe Noire Absolue 100ml Eau De Parfum",
+    "genre": "Femme",
+    "prix": 68,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/guerlain-la-petite-robe-noire-absolue-100ml-eau-de-parfum-format-testeur.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Guerlain La Petite Robe Noire Absolue 100ml Eau De Parfum ( Format Testeur )",
     "genre": "Femme",
-    "prix": 60,
+    "prix": 58,
     "prix_boutique": 90.72,
     "type": "testeur",
     "image": "/images/parfums/guerlain-la-petite-robe-noire-absolue-100ml-eau-de-parfum-format-testeur.png",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Guerlain La Petite Robe Noire Absolue 100ml Eau De Parfum Absolue",
-    "genre": "Femme",
-    "prix": 68,
-    "prix_boutique": 123.4,
-    "type": "standard",
-    "image": "/images/parfums/guerlain-la-petite-robe-noire-absolue-100ml-eau-de-parfum-absolue.jpg",
     "nouveaute": false,
     "moisNouveaute": null
   },
@@ -2575,16 +2595,6 @@
     "prix": 55,
     "prix_boutique": 115.6,
     "type": "standard",
-    "image": "/images/parfums/guerlain-la-petite-robe-noire-intense-75ml-eau-de-parfum-intense.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Guerlain La Petite Robe Noire Intense 75ml Eau De Parfum Intense ( Format Testeur )",
-    "genre": "Femme",
-    "prix": 45,
-    "prix_boutique": 83.7,
-    "type": "testeur",
     "image": "/images/parfums/guerlain-la-petite-robe-noire-intense-75ml-eau-de-parfum-intense.jpg",
     "nouveaute": false,
     "moisNouveaute": null
@@ -2606,8 +2616,18 @@
     "prix_boutique": 166.59,
     "type": "standard",
     "image": "/images/parfums/guerlain-mon-guerlain-100ml-eau-de-parfum-intense.jpg",
+    "nouveaute": false,
+    "moisNouveaute": null
+  },
+  {
+    "nom": "Guerlain Mon Guerlain 50ml Eau De Parfum + Lait Corps 75ml",
+    "genre": "Femme",
+    "prix": 78,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/guerlain-mon-guerlain-50ml-eau-de-parfum.jpg",
     "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Guerlain Samsara 75ml Eau De Parfum",
@@ -2630,24 +2650,24 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Guerlain Terracotta 03 Light – Moyen Doré (Recharge)",
+    "nom": "Guerlain Shalimar 50ml Eau De Parfum + Lait Corps Divine 75ml + Miniature 5ml",
     "genre": "Femme",
-    "prix": 29,
-    "prix_boutique": 59.39,
-    "type": "standard",
-    "image": "/images/parfums/guerlain-terracotta-03-light-moyen-dore-recharge.png",
-    "nouveaute": false,
-    "moisNouveaute": null
+    "prix": 78,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/guerlain-shalimar-50ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
-    "nom": "Guerlain Terracotta 04 – Foncé Rosé",
-    "genre": "Femme",
-    "prix": 33,
-    "prix_boutique": 69.09,
-    "type": "standard",
-    "image": "/images/parfums/guerlain-terracotta-04-fonce-rose.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
+    "nom": "Guerlain Vétiver 100ml Parfum ( Format Testeur )",
+    "genre": "Homme",
+    "prix": 62,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/guerlain-vetiver-150ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Guerlain Vetiver 150ml Eau De Toilette",
@@ -2660,6 +2680,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Guess Girl Belle 100ml Eau De Toilette",
+    "genre": "Femme",
+    "prix": 28,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/placeholder-parfum.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Guess Marciano 100ml Eau De Parfum",
     "genre": "Femme",
     "prix": 34,
@@ -2670,24 +2700,34 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Guess Seductive 75ml Eau De Toilette",
+    "nom": "Guess Marciano 100ml Eau De Parfum (Sans Film)",
     "genre": "Femme",
-    "prix": 34,
-    "prix_boutique": 69.31,
+    "prix": 29,
+    "prix_boutique": null,
     "type": "standard",
-    "image": "/images/parfums/guess-seductive-75ml-eau-de-toilette.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
+    "image": "/images/parfums/guess-marciano-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
-    "nom": "Guess Seductive Noir 75ml Eau De Toilette ( Format Testeur )",
+    "nom": "Guess Seductive I'm Yours 75ml Eau De Toilette ( Format Testeur )",
     "genre": "Femme",
     "prix": 24,
-    "prix_boutique": 47.08,
+    "prix_boutique": null,
     "type": "testeur",
-    "image": "/images/parfums/guess-seductive-noir-75ml-eau-de-toilette-format-testeur.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
+    "image": "/images/parfums/guess-seductive-i-m-yours-75ml-eau-de-toilette-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Guy Laroche Drakkar Noir 100ml Eau De Toilette + Deo Fraicheur Intense 150ml",
+    "genre": "Homme",
+    "prix": 38,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/guy-laroche-drakkar-noir-100ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Guy Laroche Drakkar Noir 200ml Eau De Toilette",
@@ -2700,6 +2740,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Hermes 24 Faubourg 100ml Eau De Parfum",
+    "genre": "Femme",
+    "prix": 117,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/hermes-24-faubourg-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Hermes Barenia 100ml Eau De Parfum",
     "genre": "Femme",
     "prix": 88,
@@ -2710,24 +2760,44 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Hermes Barenia 100ml Eau De Parfum Intense",
+    "nom": "Hermès Barenia 100ml Eau De Parfum Intense",
     "genre": "Femme",
-    "prix": 90,
+    "prix": 83,
     "prix_boutique": 162.8,
     "type": "standard",
     "image": "/images/parfums/hermes-barenia-intense-100ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Hermès Collection Hermessence Osmanthe Yunnan 100ml Eau De Toilette ( Format Testeur )",
-    "genre": "Mixte",
+    "genre": "Homme",
     "prix": 78,
     "prix_boutique": 141.75,
     "type": "testeur",
     "image": "/images/parfums/hermes-collection-hermessence-osmanthe-yunnan-100ml-eau-de-toilette-sans-boite.jpg",
+    "nouveaute": false,
+    "moisNouveaute": null
+  },
+  {
+    "nom": "Hermes Découverte 4x7,5ml (Twilly Eau De Parfum- Eau Des Merveilles Eau De Toilette- Un Jardin Sur Le Nil Eau De Toilette- Rhubarbe Écarlate Cologne)",
+    "genre": "Femme",
+    "prix": 58,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/hermes-decouverte-4x7-5ml-twilly-eau-de-parfum-eau-des-merveilles-eau-de-toilette-un-jardin-sur-le-nil-eau-de-toilette-r.jpg",
     "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Hermès Eau Des Merveilles Bleue 15ml Eau De Toilette ( Format Testeur )",
+    "genre": "Femme",
+    "prix": 9,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/hermes-eau-des-merveilles-bleue-15ml-eau-de-toilette-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Hermes Élixir Des Merveilles 100ml Eau De Parfum",
@@ -2760,6 +2830,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Hermès H24 – 100ml Eau De Toilette ( Format Testeur )",
+    "genre": "Homme",
+    "prix": 43,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/hermes-h24-100ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Hermès Terre D'hermès 100ml Eau De Toilette",
     "genre": "Homme",
     "prix": 68,
@@ -2772,12 +2852,52 @@
   {
     "nom": "Hermès Terre D'hermès 100ml Eau De Toilette ( Format Testeur )",
     "genre": "Homme",
-    "prix": 60,
+    "prix": 55,
     "prix_boutique": 110.04,
     "type": "testeur",
     "image": "/images/parfums/hermes-terre-d-hermes-100ml-eau-de-toilette.jpg",
+    "nouveaute": false,
+    "moisNouveaute": null
+  },
+  {
+    "nom": "Hermès Terre D'hermès 100ml Eau De Toilette + Gel Douche 40ml + Miniature 15ml",
+    "genre": "Homme",
+    "prix": 76,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/hermes-terre-d-hermes-100ml-eau-de-toilette.jpg",
     "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Hermes Terre D’hermès 100ml Eau De Toilette + Gel Douche 80ml",
+    "genre": "Homme",
+    "prix": 78,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/hermes-terre-d-hermes-100ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Hermès Terre D'hermès 15ml Eau De Toilette ( Format Testeur )",
+    "genre": "Homme",
+    "prix": 9,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/hermes-terre-d-hermes-100ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Hermès Terre D'hermès 200ml Eau De Toilette",
+    "genre": "Homme",
+    "prix": 97,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/hermes-terre-d-hermes-100ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Hermès Terre D'hermès 50ml Eau De Toilette",
@@ -2790,6 +2910,26 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Hermès Terre D'hermès Eau Intense Vétiver  100ml Eau De Toilette ( Format Testeur )",
+    "genre": "Homme",
+    "prix": 58,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/hermes-terre-d-hermes-eau-intense-vetiver-100ml-eau-de-toilette-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Hermès Terre D'hermès Pur Parfum 15ml Parfum ( Format Testeur )",
+    "genre": "Homme",
+    "prix": 9,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/hermes-terre-d-hermes-pur-parfum-75ml-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Hermès Terre D'hermès Pur Parfum 75ml Parfum",
     "genre": "Homme",
     "prix": 78,
@@ -2798,6 +2938,26 @@
     "image": "/images/parfums/hermes-terre-d-hermes-pur-parfum-75ml-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Hermès Terre D'hermès Pur Parfum 75ml Parfum ( Format Testeur )",
+    "genre": "Homme",
+    "prix": 65,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/hermes-terre-d-hermes-pur-parfum-75ml-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Hermès Terre D'hermès Pur Parfum Vaporisateur De Voyage 30ml + Recharge 125ml",
+    "genre": "Homme",
+    "prix": 88,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/hermes-terre-d-hermes-pur-parfum-vaporisateur-de-voyage-30ml.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Hermes Twilly D'hermès 85ml Eau De Parfum",
@@ -2840,6 +3000,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Hugo Boss Bottled 100ml Eau De Parfum + Gel Douche 100ml + Déo Stick 75ml",
+    "genre": "Homme",
+    "prix": 66,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/hugo-boss-bottled-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Hugo Boss Bottled 100ml Eau De Toilette",
     "genre": "Homme",
     "prix": 59,
@@ -2848,6 +3018,16 @@
     "image": "/images/parfums/hugo-boss-bottled-100ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Hugo Boss Bottled 50ml Eau De Toilette + Deo 100ml",
+    "genre": "Homme",
+    "prix": 41,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/hugo-boss-bottled-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Hugo Boss Bottled Night 100ml Eau De Toilette ( Format Testeur )",
@@ -2880,14 +3060,14 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Hugo Boss Bottled Unlimited 100ml Eau De Toilette",
+    "nom": "Hugo Boss Bottled Parfum 100ml Eau De Parfum + Gel Douche 100ml + Miniature 10ml",
     "genre": "Homme",
-    "prix": 53,
-    "prix_boutique": 76.39,
-    "type": "standard",
-    "image": "/images/parfums/hugo-boss-bottled-unlimited-100ml-eau-de-toilette.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
+    "prix": 71,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/hugo-boss-bottled-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Hugo Boss Hugo Extrême 75ml Eau De Parfum",
@@ -2950,6 +3130,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Hugo Boss Number One 100ml Eau De Toilette + Trousse",
+    "genre": "Homme",
+    "prix": 44,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/hugo-boss-number-one-100ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Hugo Boss Orange Man 100ml Eau De Toilette (New Packaging)",
     "genre": "Homme",
     "prix": 43,
@@ -2958,6 +3148,16 @@
     "image": "/images/parfums/hugo-boss-orange-man-100ml-eau-de-toilette-new-packaging.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Hugo Boss Orange Woman 75ml Eau De Toilette ( Format Testeur )",
+    "genre": "Femme",
+    "prix": 33,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/hugo-boss-orange-woman-75ml-eau-de-toilette-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Hugo Boss The Scent 100ml Eau De Toilette",
@@ -2970,14 +3170,24 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Hugo Boss The Scent 100ml Eau De Toilette + Gel Douche 100ml + Miniature 10ml",
+    "genre": "Homme",
+    "prix": 66,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/hugo-boss-the-scent-100ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Hugo Boss The Scent 200ml Eau De Toilette Recharge Sans Vaporisateur",
     "genre": "Homme",
     "prix": 61,
     "prix_boutique": 110.74,
     "type": "standard",
     "image": "/images/parfums/hugo-boss-the-scent-200ml-eau-de-toilette-recharge-sans-vaporisateur.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Hugo Boss The Scent Absolute 100ml Eau De Parfum",
@@ -3050,6 +3260,36 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Issey Miyake L'eau D'issey 100ml Eau De Toilette + Crème 75ml",
+    "genre": "Femme",
+    "prix": 58,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/issey-miyake-l-eau-d-issey-100ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Issey Miyake L'eau D'issey 100ml Eau De Toilette + Miniature 25ml Eau De Toilette",
+    "genre": "Femme",
+    "prix": 58,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/issey-miyake-l-eau-d-issey-100ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Issey Miyake L'eau D'issey Eau&Cèdre 100ml Eau De Toilette Intense ( Format Testeur )",
+    "genre": "Homme",
+    "prix": 35,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/issey-miyake-l-eau-d-issey-eauandcedre-100ml-eau-de-toilette-intense-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Issey Miyake L'eau D'issey Intense 125ml Eau De Toilette",
     "genre": "Homme",
     "prix": 45,
@@ -3058,6 +3298,16 @@
     "image": "/images/parfums/issey-miyake-l-eau-d-issey-intense-125ml-eau-de-toilette.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Issey Miyake L'eau D'issey Intense 125ml Eau De Toilette ( Format Testeur )",
+    "genre": "Homme",
+    "prix": 38,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/issey-miyake-l-eau-d-issey-intense-125ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Issey Miyake L'eau D'issey Solar Lavender 100ml Eau De Toilette Intense",
@@ -3082,12 +3332,32 @@
   {
     "nom": "Issey Miyake L'eau D'issey Sport 100ml Eau De Toilette",
     "genre": "Homme",
-    "prix": 43,
+    "prix": 40,
     "prix_boutique": 74.7,
     "type": "standard",
     "image": "/images/parfums/issey-miyake-l-eau-d-issey-sport-100ml-eau-de-toilette.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Issey Miyake L'eau D'issey Sport 100ml Eau De Toilette ( Format Testeur )",
+    "genre": "Homme",
+    "prix": 33,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/issey-miyake-l-eau-d-issey-sport-100ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Issey Miyake Nectar D'issey Pétale De Nectar 90ml Eau De Toilette ( Format Testeur )",
+    "genre": "Femme",
+    "prix": 38,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/placeholder-parfum.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Jean Couturier Collection Aromatique Ginger 100ml Eau De Parfum",
@@ -3110,6 +3380,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Jean Couturier Collection Aromatique Divin Jasmin 100ml Eau De Parfum",
+    "genre": "Mixte",
+    "prix": 38,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/jean-couturier-collection-aromatique-divin-jasmin-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Jean Couturier Collection Aromatique Rose Khayali 100ml Eau De Parfum",
     "genre": "Mixte",
     "prix": 35,
@@ -3130,14 +3410,44 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Jean Paul Gaultier Divine 100ml Eau De Parfum + Lotion Corps 75ml + Miniature 10ml",
-    "genre": "Femme",
-    "prix": 88,
-    "prix_boutique": 156.21,
+    "nom": "Jean Paul Gaultier Le Mâle 125ml Eau De Toilette +  Gel Douche 75ml",
+    "genre": "Homme",
+    "prix": 78,
+    "prix_boutique": null,
     "type": "coffret",
-    "image": "/images/parfums/jean-paul-gaultier-divine-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
+    "image": "/images/parfums/jean-paul-gaultier-le-male-125ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Jean Paul Gaultier Le Mâle Elixir 125ml Parfum ( Format Testeur )",
+    "genre": "Homme",
+    "prix": 60,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/jean-paul-gaultier-le-male-elixir-125ml-parfum-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Jean Paul Gaultier Le Mâle Le Parfum 125ml Parfum Intense ( Format Testeur)",
+    "genre": "Homme",
+    "prix": 60,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/jean-paul-gaultier-le-male-le-parfum-125ml-parfum-intense-format-testeur.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Jean Paul Gaultier Scandal 100ml Eau De Toilette",
+    "genre": "Homme",
+    "prix": 65,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/jean-paul-gaultier-scandal-80ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Jean Paul Gaultier Scandal 80ml Eau De Parfum + Lotion Corps 75ml + Miniature 10ml",
@@ -3150,34 +3460,14 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Jean Paul Gaultier Scandal Le Parfum 100ml Eau De Parfum Intense + Gel Douche 75ml",
-    "genre": "Homme",
-    "prix": 82,
-    "prix_boutique": 132.75,
-    "type": "coffret",
-    "image": "/images/parfums/jean-paul-gaultier-scandal-le-parfum-100ml-eau-de-parfum-intense.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
-  },
-  {
-    "nom": "Jimmy Choo I Want Choo 100ml Eau De Parfum",
-    "genre": "Femme",
-    "prix": 60,
-    "prix_boutique": 84.69,
-    "type": "standard",
-    "image": "/images/parfums/jimmy-choo-i-want-choo-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
     "nom": "Jimmy Choo I Want Choo 125ml Eau De Parfum ( Format Testeur )",
     "genre": "Femme",
     "prix": 52,
     "prix_boutique": 77.9,
     "type": "testeur",
     "image": "/images/parfums/jimmy-choo-i-want-choo-100ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Jimmy Choo I Want Choo Forever 100ml Eau De Parfum",
@@ -3226,16 +3516,6 @@
     "prix_boutique": 198.09,
     "type": "standard",
     "image": "/images/parfums/jimmy-choo-seduction-collection-vanilla-love-125ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Jo Malone Scarlet Poppy 100ml Cologne Intense (Format Testeur )",
-    "genre": "Mixte",
-    "prix": 98,
-    "prix_boutique": 177.27,
-    "type": "testeur",
-    "image": "/images/parfums/jo-malone-scarlet-poppy-100ml-cologne-intense-format-testeur.jpg",
     "nouveaute": false,
     "moisNouveaute": null
   },
@@ -3316,8 +3596,8 @@
     "prix_boutique": 138.5,
     "type": "coffret",
     "image": "/images/parfums/kenzo-flower-poppy-bouquet-100ml-eau-de-parfum-florale.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Kenzo Homme 110ml Eau De Parfum",
@@ -3336,8 +3616,8 @@
     "prix_boutique": 113.96,
     "type": "standard",
     "image": "/images/parfums/kenzo-jungle-100ml-eau-de-parfum-format-testeur.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Kenzo Jungle 100ml Eau De Parfum ( Format Testeur )",
@@ -3376,16 +3656,6 @@
     "prix_boutique": 168.34,
     "type": "coffret",
     "image": "/images/parfums/kilian-don-t-be-shy-4x-7-5ml-eau-de-parfum-30ml-set-travel.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Kilian Forbidden Games 50ml Eau De Parfum",
-    "genre": "Mixte",
-    "prix": 133,
-    "prix_boutique": 193.71,
-    "type": "standard",
-    "image": "/images/parfums/kilian-forbidden-games-50ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
   },
@@ -3550,6 +3820,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Lacoste Original 60ml Eau De Parfum + Gel Douche 100ml",
+    "genre": "Homme",
+    "prix": 42,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/lacoste-original-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Lacoste Pour Femme 90ml Eau De Parfum",
     "genre": "Femme",
     "prix": 45,
@@ -3646,8 +3926,8 @@
     "prix_boutique": 167.28,
     "type": "standard",
     "image": "/images/parfums/lancome-idole-power-100ml-eau-de-parfum-intense.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Lancôme La Nuit Trésor 100ml Eau De Parfum",
@@ -3656,8 +3936,8 @@
     "prix_boutique": 118.67,
     "type": "standard",
     "image": "/images/parfums/lancome-la-nuit-tresor-100ml-eau-de-toilette.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Lancôme La Nuit Trésor 100ml Eau De Toilette",
@@ -3690,26 +3970,6 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Lancome La Vie Est Belle L’élixir 50ml Eau De Parfum ( Format Testeur )",
-    "genre": "Femme",
-    "prix": 60,
-    "prix_boutique": 122.72,
-    "type": "testeur",
-    "image": "/images/parfums/lancome-la-vie-est-belle-l-elixir-50ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Lancome La Vie Est Belle 50ml Eau De Parfum + Lait Corps 50ml + Gel Douche 50ml",
-    "genre": "Femme",
-    "prix": 73,
-    "prix_boutique": 160.02,
-    "type": "coffret",
-    "image": "/images/parfums/lancome-la-vie-est-belle-50ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
     "nom": "Lancôme La Vie Est Belle 50ml Eau De Parfum + Lait Corps 50ml + Miniature 10ml",
     "genre": "Femme",
     "prix": 72,
@@ -3730,7 +3990,17 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Lancome Mascara Hypnose Grandiose – 10g (Avec Boite)",
+    "nom": "Lancôme La Vie Est Belle L’élixir 50ml Eau De Parfum ( Format Testeur )",
+    "genre": "Femme",
+    "prix": 60,
+    "prix_boutique": 122.72,
+    "type": "testeur",
+    "image": "/images/parfums/lancome-la-vie-est-belle-l-elixir-50ml-eau-de-parfum.jpg",
+    "nouveaute": false,
+    "moisNouveaute": null
+  },
+  {
+    "nom": "Lancôme Mascara Hypnose Grandiose – 10g (Avec Boite)",
     "genre": "Femme",
     "prix": 19,
     "prix_boutique": 38.4,
@@ -3750,24 +4020,14 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Lancôme Trésor 100ml Eau De Parfum",
-    "genre": "Femme",
-    "prix": 85,
-    "prix_boutique": 182.29,
-    "type": "standard",
-    "image": "/images/parfums/lancome-tresor-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
     "nom": "Lancôme Trésor 100ml Eau De Parfum ( Format Testeur )",
     "genre": "Femme",
-    "prix": 70,
+    "prix": 68,
     "prix_boutique": 148.1,
     "type": "testeur",
     "image": "/images/parfums/lancome-tresor-100ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Lancôme Trésor Midnight Rose 50ml Eau De Parfum",
@@ -3780,6 +4040,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Lanvin Éclat D'arpège Mon Éclat 100ml Eau De Parfum",
+    "genre": "Femme",
+    "prix": 35,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/lanvin-eclat-d-arpege-mon-eclat-100ml-eau-de-parfum.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Lanvin Jeanne 100ml Eau De Parfum",
     "genre": "Femme",
     "prix": 41,
@@ -3788,6 +4058,16 @@
     "image": "/images/parfums/lanvin-jeanne-100ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Lanvin Jeanne Blossom 100ml Eau De Parfum",
+    "genre": "Femme",
+    "prix": 38,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/lanvin-jeanne-blossom-100ml-eau-de-parfum.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Lanvin L'homme 100ml Eau De Toilette",
@@ -3820,16 +4100,6 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Lanvin Rumeur 100ml Eau De Parfum",
-    "genre": "Femme",
-    "prix": 38,
-    "prix_boutique": 68.56,
-    "type": "standard",
-    "image": "/images/parfums/lanvin-rumeur-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
     "nom": "Lanvin Rumeur 2 Rose 100ml Eau De Parfum",
     "genre": "Femme",
     "prix": 38,
@@ -3838,6 +4108,56 @@
     "image": "/images/parfums/lanvin-rumeur-2-rose-100ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Les Liquides Imaginaires Abyssis 100ml Eau De Parfum",
+    "genre": "Mixte",
+    "prix": 78,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/les-liquides-imaginaires-abyssis-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Les Liquides Imaginaires Blanche Bête 100ml Eau De Parfum",
+    "genre": "Mixte",
+    "prix": 189,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/les-liquides-imaginaires-blanche-bete-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Les Liquides Imaginaires Lacrima 100ml Eau De Parfum",
+    "genre": "Mixte",
+    "prix": 78,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/les-liquides-imaginaires-lacrima-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Les Liquides Imaginaires Navis 100ml Eau De Parfum",
+    "genre": "Mixte",
+    "prix": 78,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/les-liquides-imaginaires-navis-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Les Liquides Imaginaires Sirenis 100ml Eau De Parfum",
+    "genre": "Mixte",
+    "prix": 78,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/les-liquides-imaginaires-sirenis-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Lolita Lempicka Green Lover 100ml Eau De Toilette + Gel Après Rasage 75ml + Trousse",
@@ -3918,6 +4238,16 @@
     "image": "/images/parfums/lolita-lempicka-mon-premier-100ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Lolita Lempicka So Sweet 50ml Eau De Parfum ( Format Testeur )",
+    "genre": "Femme",
+    "prix": 28,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/lolita-lempicka-so-sweet-50ml-eau-de-parfum-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Maissa 10x2ml (Ville Lumière- Île De Beauté- Magic Moment- Signature Diplomate- Voyage Nocturne- Cataliya- Destin Des Anges- Musc Rebelle- Oud Sakura- Avenue De La Soie)",
@@ -4860,22 +5190,22 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Mancera Aoud Black Candy 120ml Eau De Parfum",
+    "genre": "Mixte",
+    "prix": 71,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/mancera-aoud-black-candy-120ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Mancera Aoud Café 120ml Eau De Parfum",
     "genre": "Mixte",
     "prix": 74,
     "prix_boutique": 121.92,
     "type": "standard",
     "image": "/images/parfums/mancera-aoud-cafe-120ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Mancera Aoud Violet 60ml Eau De Parfum",
-    "genre": "Mixte",
-    "prix": 48,
-    "prix_boutique": 98.45,
-    "type": "standard",
-    "image": "/images/parfums/mancera-aoud-violet-60ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
   },
@@ -4930,6 +5260,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Mancera Eternal Wood 120ml Eau De Parfum",
+    "genre": "Mixte",
+    "prix": 78,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/placeholder-parfum.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Mancera Gold Incense 60ml Eau De Parfum",
     "genre": "Mixte",
     "prix": 48,
@@ -4946,16 +5286,6 @@
     "prix_boutique": 134.24,
     "type": "standard",
     "image": "/images/parfums/mancera-gold-prestigium-120ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Mancera Instant Crush 120ml Eau De Parfum",
-    "genre": "Mixte",
-    "prix": 78,
-    "prix_boutique": 135.3,
-    "type": "standard",
-    "image": "/images/parfums/mancera-instant-crush-120ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
   },
@@ -4990,32 +5320,22 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Mancera Pink Roses 120ml Eau De Parfum",
+    "genre": "Mixte",
+    "prix": 71,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/mancera-pink-roses-120ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Mancera Precious Oud 60ml Eau De Parfum",
     "genre": "Mixte",
     "prix": 48,
     "prix_boutique": 81.66,
     "type": "standard",
     "image": "/images/parfums/mancera-precious-oud-60ml-eau-de-parfum.webp",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Mancera Red Tobacco 120ml Eau De Parfum",
-    "genre": "Mixte",
-    "prix": 78,
-    "prix_boutique": 159.78,
-    "type": "standard",
-    "image": "/images/parfums/mancera-red-tobacco-120ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Mancera Red Tobacco 120ml Eau De Parfum",
-    "genre": "Mixte",
-    "prix": 78,
-    "prix_boutique": 159.78,
-    "type": "standard",
-    "image": "/images/parfums/mancera-red-tobacco-120ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
   },
@@ -5038,16 +5358,6 @@
     "image": "/images/parfums/mancera-roses-greedy-120ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
-  },
-  {
-    "nom": "Mancera Roses Vanille 120ml Eau De Parfum",
-    "genre": "Mixte",
-    "prix": 72,
-    "prix_boutique": 130.24,
-    "type": "standard",
-    "image": "/images/parfums/mancera-roses-vanille-120ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
   },
   {
     "nom": "Mancera So Blue 60ml Eau De Parfum",
@@ -5080,6 +5390,26 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Mancera Tonka Kola 120ml Eau De Parfum ( Format Testeur )",
+    "genre": "Mixte",
+    "prix": 68,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/mancera-tonka-kola-120ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Mancera Velvet Vanilla 120ml Eau De Parfum",
+    "genre": "Mixte",
+    "prix": 75,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/mancera-velvet-vanilla-120ml-eau-de-parfum.webp",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Mancera Wave Musk 120ml Eau De Parfum",
     "genre": "Mixte",
     "prix": 71,
@@ -5098,6 +5428,16 @@
     "image": "/images/parfums/mancera-choco-violette-60ml-edp.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Mancera Wild Python 60ml Eau De Parfum",
+    "genre": "Mixte",
+    "prix": 51,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/mancera-wild-python-60ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Mancera Wind Wood 60ml Eau De Parfum",
@@ -5176,8 +5516,8 @@
     "prix_boutique": 75.45,
     "type": "coffret",
     "image": "/images/parfums/mancera-pink-prestigium-120ml-edp.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Mauboussin Classique 100ml Eau De Parfum + Miniature 20ml",
@@ -5186,8 +5526,8 @@
     "prix_boutique": 75.45,
     "type": "coffret",
     "image": "/images/parfums/mancera-pink-prestigium-120ml-edp.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Mauboussin Cristal Oud 100ml Eau De Parfum",
@@ -5226,16 +5566,6 @@
     "prix_boutique": 52.62,
     "type": "coffret",
     "image": "/images/parfums/mauboussin-in-red-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Mauboussin My Twist 90ml Eau De Parfum",
-    "genre": "Femme",
-    "prix": 33,
-    "prix_boutique": 71.39,
-    "type": "standard",
-    "image": "/images/parfums/mancera-soleil-d-italie-120ml-edp.jpg",
     "nouveaute": false,
     "moisNouveaute": null
   },
@@ -5300,16 +5630,6 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Mauboussin Private Club 100ml Eau De Parfum + Gel 75ml + Miniature 20ml + Sac Bandoulière",
-    "genre": "Homme",
-    "prix": 38,
-    "prix_boutique": 69.01,
-    "type": "coffret",
-    "image": "/images/parfums/mauboussin-private-club-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
     "nom": "Mauboussin Private Club 100ml Eau De Parfum + Miniature 20ml",
     "genre": "Homme",
     "prix": 35,
@@ -5334,16 +5654,6 @@
     "genre": "Homme",
     "prix": 35,
     "prix_boutique": 49.81,
-    "type": "coffret",
-    "image": "/images/parfums/mauboussin-star-100ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
-  },
-  {
-    "nom": "Mauboussin Star 90ml Eau De Parfum + Lait 75ml + Miniature 20ml + Sac Bandoulière",
-    "genre": "Homme",
-    "prix": 38,
-    "prix_boutique": 57.27,
     "type": "coffret",
     "image": "/images/parfums/mauboussin-star-100ml-eau-de-parfum.jpg",
     "nouveaute": false,
@@ -5422,7 +5732,7 @@
   {
     "nom": "Mont Blanc Explorer 200ml Eau De Parfum",
     "genre": "Homme",
-    "prix": 62,
+    "prix": 65,
     "prix_boutique": 95.63,
     "type": "standard",
     "image": "/images/parfums/mont-blanc-explorer-100ml-eau-de-parfum.jpg",
@@ -5430,14 +5740,14 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Mont Blanc Explorer Platinium 100ml Eau De Parfum",
+    "nom": "Mont Blanc Explorer Extrême 100ml Parfum",
     "genre": "Homme",
-    "prix": 52,
-    "prix_boutique": 73.41,
+    "prix": 58,
+    "prix_boutique": null,
     "type": "standard",
-    "image": "/images/parfums/mont-blanc-explorer-platinium-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
+    "image": "/images/parfums/mont-blanc-explorer-extreme-100ml-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Mont Blanc Explorer Ultra Blue 100ml Eau De Parfum",
@@ -5500,6 +5810,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Mont Blanc Legend 200ml Eau De Toilette",
+    "genre": "Homme",
+    "prix": 61,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/mont-blanc-legend-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Mont Blanc Legend Red 100ml Eau De Parfum",
     "genre": "Homme",
     "prix": 48,
@@ -5550,6 +5870,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Mont Blanc Signature 90ml Eau De Parfum",
+    "genre": "Femme",
+    "prix": 51,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/mont-blanc-signature-50ml-eau-de-parfum.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Mont Blanc Signature Absolu 50ml Eau De Parfum + Lait 100ml",
     "genre": "Femme",
     "prix": 45,
@@ -5570,6 +5900,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Mont Blanc Signature Absolu 90ml Eau De Parfum ( Format Testeur )",
+    "genre": "Femme",
+    "prix": 41,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/mont-blanc-signature-absolu-50ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Mont Blanc Signature Absolu 90ml Eau De Parfum + Lait 100ml + Miniature 7,5ml",
     "genre": "Femme",
     "prix": 56,
@@ -5580,24 +5920,14 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Montale Aoud Damascus 100ml Eau De Parfum",
-    "genre": "Mixte",
-    "prix": 64,
-    "prix_boutique": 113.11,
+    "nom": "Mont Blanc Signature Élixir 90ml Eau De Parfum",
+    "genre": "Femme",
+    "prix": 58,
+    "prix_boutique": null,
     "type": "standard",
-    "image": "/images/parfums/montale-aoud-damascus-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Montale Aoud Queen Roses 100ml Eau De Parfum",
-    "genre": "Mixte",
-    "prix": 67,
-    "prix_boutique": 146.33,
-    "type": "standard",
-    "image": "/images/parfums/montale-aoud-queen-roses-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
+    "image": "/images/parfums/mont-blanc-signature-elixir-90ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Montale Aqua Gold 100ml Eau De Parfum ( Format Testeur )",
@@ -5606,16 +5936,6 @@
     "prix_boutique": 100.47,
     "type": "testeur",
     "image": "/images/parfums/montale-aqua-gold-100ml-eau-de-parfum-format-testeur.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Montale Fantastic Oud 100ml Eau De Parfum ( Format Testeur )",
-    "genre": "Mixte",
-    "prix": 56,
-    "prix_boutique": 93.13,
-    "type": "testeur",
-    "image": "/images/parfums/montale-fantastic-oud-100ml-eau-de-parfum-format-testeur.jpg",
     "nouveaute": false,
     "moisNouveaute": null
   },
@@ -5668,26 +5988,6 @@
     "image": "/images/parfums/montale-rendez-vous-a-milan-100ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
-  },
-  {
-    "nom": "Montale Rendez-Vous À Paris 100ml Eau De Parfum",
-    "genre": "Mixte",
-    "prix": 78,
-    "prix_boutique": 156.8,
-    "type": "standard",
-    "image": "/images/parfums/montale-rendez-vous-a-paris-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Montale Roses Musk 100ml Eau De Parfum",
-    "genre": "Mixte",
-    "prix": 68,
-    "prix_boutique": 123,
-    "type": "standard",
-    "image": "/images/parfums/montale-roses-musk-100ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
   },
   {
     "nom": "Montale Starry Night 100ml Eau De Parfum",
@@ -5760,16 +6060,6 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Narciso Rodriguez Amber Musc 100ml Eau De Parfum Intense",
-    "genre": "Femme",
-    "prix": 98,
-    "prix_boutique": 154.25,
-    "type": "standard",
-    "image": "/images/parfums/narciso-rodriguez-amber-musc-100ml-eau-de-parfum-intense.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
-  },
-  {
     "nom": "Narciso Rodriguez For Her 100ml Eau De Parfum",
     "genre": "Femme",
     "prix": 78,
@@ -5830,24 +6120,14 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Narciso Rodriguez For Her Musc Noir 100ml Eau De Parfum",
-    "genre": "Femme",
-    "prix": 78,
-    "prix_boutique": 122.08,
-    "type": "standard",
-    "image": "/images/parfums/narciso-rodriguez-for-her-musc-noir-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
     "nom": "Narciso Rodriguez For Her Musc Nude 100ml Eau De Parfum",
     "genre": "Femme",
     "prix": 73,
     "prix_boutique": 122.08,
     "type": "standard",
     "image": "/images/parfums/narciso-rodriguez-for-her-musc-nude-50ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Narciso Rodriguez For Her Pure Musc 100ml Eau De Parfum",
@@ -5910,16 +6190,6 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Nina Ricci Ricci Ricci 50ml Eau De Parfum",
-    "genre": "Femme",
-    "prix": 48,
-    "prix_boutique": 100.94,
-    "type": "standard",
-    "image": "/images/parfums/nina-ricci-ricci-ricci-50ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
-  },
-  {
     "nom": "Nina Ricci Luna 80ml Eau De Toilette + Lotion Corps 100ml",
     "genre": "Femme",
     "prix": 56,
@@ -5930,39 +6200,29 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Nishane Ani 100ml Extrait De Parfum",
-    "genre": "Mixte",
-    "prix": 145,
-    "prix_boutique": 224.4,
+    "nom": "Nina Ricci Premier Jour 100ml Eau De Parfum",
+    "genre": "Femme",
+    "prix": 55,
+    "prix_boutique": null,
     "type": "standard",
-    "image": "/images/parfums/nishane-ani-100ml-extrait-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
+    "image": "/images/parfums/nina-ricci-premier-jour-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
-    "nom": "Nishane Ani X 100ml Extrait De Parfum",
-    "genre": "Mixte",
-    "prix": 155,
-    "prix_boutique": 242.96,
+    "nom": "Nina Ricci Ricci Ricci 50ml Eau De Parfum",
+    "genre": "Femme",
+    "prix": 48,
+    "prix_boutique": 100.94,
     "type": "standard",
-    "image": "/images/parfums/nishane-ani-x-100ml-extrait-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Nishane Hacivat 100ml Extrait De Parfum",
-    "genre": "Mixte",
-    "prix": 145,
-    "prix_boutique": 245.97,
-    "type": "standard",
-    "image": "/images/parfums/nishane-hacivat-100ml-extrait-de-parfum.jpg",
+    "image": "/images/parfums/nina-ricci-ricci-ricci-50ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
   },
   {
     "nom": "Nishane Hacivat 50ml Extrait De Parfum",
     "genre": "Mixte",
-    "prix": 105,
+    "prix": 103,
     "prix_boutique": 187.7,
     "type": "standard",
     "image": "/images/parfums/nishane-hacivat-100ml-extrait-de-parfum.jpg",
@@ -5972,7 +6232,7 @@
   {
     "nom": "Nishane Hacivat X 100ml Extrait De Parfum",
     "genre": "Mixte",
-    "prix": 155,
+    "prix": 153,
     "prix_boutique": 293.66,
     "type": "standard",
     "image": "/images/parfums/nishane-hacivat-x-100ml-extrait-de-parfum.jpg",
@@ -5982,7 +6242,7 @@
   {
     "nom": "Nishane Hundred Silent Ways 50ml Extrait De Parfum",
     "genre": "Mixte",
-    "prix": 105,
+    "prix": 103,
     "prix_boutique": 185.85,
     "type": "standard",
     "image": "/images/parfums/nishane-hundred-silent-ways-50ml-extrait-de-parfum.jpg",
@@ -5992,7 +6252,7 @@
   {
     "nom": "Nishane Hundred Silent Ways X 100ml Extrait De Parfum",
     "genre": "Mixte",
-    "prix": 145,
+    "prix": 143,
     "prix_boutique": 289.71,
     "type": "standard",
     "image": "/images/parfums/nishane-hundred-silent-ways-x-100ml-extrait-de-parfum.png",
@@ -6002,7 +6262,7 @@
   {
     "nom": "Nishane Karagoz 50ml Extrait De Parfum",
     "genre": "Mixte",
-    "prix": 105,
+    "prix": 103,
     "prix_boutique": 150.08,
     "type": "standard",
     "image": "/images/parfums/nishane-karagoz-50ml-extrait-de-parfum.webp",
@@ -6012,7 +6272,7 @@
   {
     "nom": "Nishane Nanshe 100ml Extrait De Parfum",
     "genre": "Mixte",
-    "prix": 145,
+    "prix": 143,
     "prix_boutique": 232.28,
     "type": "standard",
     "image": "/images/parfums/nishane-nanshe-100ml-extrait-de-parfum.jpg",
@@ -6022,7 +6282,7 @@
   {
     "nom": "Nishane Sultan Vetiver 50ml Extrait De Parfum",
     "genre": "Mixte",
-    "prix": 100,
+    "prix": 98,
     "prix_boutique": 197.07,
     "type": "standard",
     "image": "/images/parfums/nishane-sultan-vetiver-50ml-extrait-de-parfum.webp",
@@ -6030,24 +6290,14 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Nishane Tero 50ml Extrait De Parfum",
+    "nom": "Oud Élite Mashaer Gold 100ml Eau De Parfum",
     "genre": "Mixte",
-    "prix": 105,
-    "prix_boutique": 222.2,
+    "prix": 63,
+    "prix_boutique": null,
     "type": "standard",
-    "image": "/images/parfums/nishane-tero-50ml-extrait-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Paco Rabanne Black Xs 100ml Eau De Toilette",
-    "genre": "Homme",
-    "prix": 58,
-    "prix_boutique": 96.2,
-    "type": "standard",
-    "image": "/images/parfums/paco-rabanne-black-xs-100ml-eau-de-toilette.jpg",
+    "image": "/images/parfums/oud-elite-mashaer-gold-100ml-eau-de-parfum.jpg",
     "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Paco Rabanne Black Xs 80ml Eau De Parfum ( Format Testeur )",
@@ -6056,8 +6306,8 @@
     "prix_boutique": 102.83,
     "type": "testeur",
     "image": "/images/parfums/paco-rabanne-black-xs-100ml-eau-de-toilette.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Paco Rabanne Black Xs Potion 80ml Eau De Toilette ( Format Testeur )",
@@ -6082,12 +6332,12 @@
   {
     "nom": "Paco Rabanne Lady Million 80ml Eau De Parfum ( Format Testeur )",
     "genre": "Femme",
-    "prix": 62,
+    "prix": 55,
     "prix_boutique": 102.83,
     "type": "testeur",
     "image": "/images/parfums/paco-rabanne-lady-million-80ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Paco Rabanne Lady Million 80ml Eau De Parfum + Lait 100ml + Miniature 5ml",
@@ -6156,8 +6406,8 @@
     "prix_boutique": 126.05,
     "type": "coffret",
     "image": "/images/parfums/paco-rabanne-one-million-100ml-eau-de-toilette.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Paco Rabanne One Million 100ml Eau De Toilette + Miniature 20ml",
@@ -6170,14 +6420,24 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Paco Rabanne One Million 200ml Eau De Toilette",
+    "genre": "Homme",
+    "prix": 92,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/paco-rabanne-one-million-100ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Paco Rabanne One Million Golden Oud Parfum Intense 100ml Parfum Intense",
     "genre": "Homme",
     "prix": 76,
     "prix_boutique": 126.05,
     "type": "standard",
     "image": "/images/parfums/paco-rabanne-one-million-golden-oud-parfum-intense-100ml-parfum-intense.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Paco Rabanne One Million Royal 100ml Parfum",
@@ -6186,18 +6446,28 @@
     "prix_boutique": 126.05,
     "type": "standard",
     "image": "/images/parfums/paco-rabanne-one-million-royal-100ml-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
-  },
-  {
-    "nom": "Paco Rabanne Phantom 100ml Eau De Toilette + 20ml",
-    "genre": "Homme",
-    "prix": 73,
-    "prix_boutique": 158.02,
-    "type": "coffret",
-    "image": "/images/parfums/paco-rabanne-phantom-100ml-eau-de-toilette.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Paco Rabanne One Million Royal 200ml Parfum",
+    "genre": "Homme",
+    "prix": 98,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/paco-rabanne-one-million-royal-100ml-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Paco Rabanne Phantom 100ml Eau De Toilette + Vapo 20ml",
+    "genre": "Homme",
+    "prix": 73,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/paco-rabanne-phantom-100ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Paco Rabanne Pour Homme 100ml Eau De Toilette",
@@ -6250,16 +6520,6 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Paco Rabanne Xs 100ml Eau De Toilette",
-    "genre": "Homme",
-    "prix": 48,
-    "prix_boutique": 87.82,
-    "type": "standard",
-    "image": "/images/parfums/paco-rabanne-xs-100ml-eau-de-toilette.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
     "nom": "Paul Smith Rose 100ml Eau De Parfum",
     "genre": "Femme",
     "prix": 37,
@@ -6290,24 +6550,14 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Prada Paradigme 100ml Eau De Parfum ( Format Testeur )",
-    "genre": "Homme",
-    "prix": 85,
-    "prix_boutique": 124.49,
-    "type": "testeur",
-    "image": "/images/parfums/prada-paradigme-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Prada Paradoxe 90ml Eau De Parfum",
+    "nom": "Rochas Byzance  90ml Eau De Parfum ( Format Testeur )",
     "genre": "Femme",
-    "prix": 101,
-    "prix_boutique": 182.7,
-    "type": "standard",
-    "image": "/images/parfums/prada-paradoxe-90ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
+    "prix": 41,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/placeholder-parfum.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Rochas Byzance Gold 90ml Eau De Parfum",
@@ -6406,8 +6656,18 @@
     "prix_boutique": 81.4,
     "type": "standard",
     "image": "/images/parfums/placeholder-parfum.png",
+    "nouveaute": false,
+    "moisNouveaute": null
+  },
+  {
+    "nom": "Rosendo Mateu N°5 100ml Eau De Parfum",
+    "genre": "Mixte",
+    "prix": 93,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/rosendo-mateu-n-5-100ml-eau-de-parfum.jpg",
     "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Rosendo Mateu N°6 100ml Eau De Parfum",
@@ -6420,14 +6680,14 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Serge Lutens Chergui 50ml Eau De Parfum",
-    "genre": "Femme",
-    "prix": 75,
-    "prix_boutique": 116.19,
-    "type": "standard",
-    "image": "/images/parfums/serge-lutens-chergui-50ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
+    "nom": "Signature By Sillage D'orient Rose 100ml Eau De Parfum + Miniature 15ml",
+    "genre": "Mixte",
+    "prix": 53,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/signature-by-sillage-d-orient-rose-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Ted Lapidus Pour Homme 200ml Eau De Toilette ( Format Testeur )",
@@ -6436,16 +6696,6 @@
     "prix_boutique": 47.21,
     "type": "testeur",
     "image": "/images/parfums/ted-lapidus-pour-homme-200ml-eau-de-toilette-format-testeur.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Ted Lapidus Rumba 100ml Eau De Toilette",
-    "genre": "Femme",
-    "prix": 28,
-    "prix_boutique": 43.08,
-    "type": "standard",
-    "image": "/images/parfums/ted-lapidus-rumba-100ml-eau-de-toilette.jpg",
     "nouveaute": false,
     "moisNouveaute": null
   },
@@ -6520,6 +6770,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Thierry Mugler Angel Fantasm Sensuelle 100ml Eau De Parfum",
+    "genre": "Femme",
+    "prix": 85,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/thierry-mugler-angel-fantasm-sensuelle-100ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Tiziana Terenzi Kirké 100ml Extrait De Parfum",
     "genre": "Mixte",
     "prix": 98,
@@ -6528,6 +6788,16 @@
     "image": "/images/parfums/tiziana-terenzi-kirke-100ml-extrait-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Tiziana White Fire 100ml Extrait De Parfum",
+    "genre": "Mixte",
+    "prix": 98,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/placeholder-parfum.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Tom Ford Black Orchid 30ml Eau De Toilette",
@@ -6540,9 +6810,19 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Tom Ford Bois Marocain 50ml Eau De Parfum",
+    "genre": "Mixte",
+    "prix": 153,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/tom-ford-bois-marocain-50ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Tom Ford Café Rose 50ml Eau De Parfum",
     "genre": "Mixte",
-    "prix": 98,
+    "prix": 93,
     "prix_boutique": 189.62,
     "type": "standard",
     "image": "/images/parfums/tom-ford-cafe-rose-50ml-eau-de-parfum.jpg",
@@ -6552,7 +6832,7 @@
   {
     "nom": "Tom Ford Grey Vetiver 50ml Eau De Parfum",
     "genre": "Mixte",
-    "prix": 88,
+    "prix": 83,
     "prix_boutique": 188.63,
     "type": "standard",
     "image": "/images/parfums/tom-ford-grey-vetiver-50ml-eau-de-parfum.jpg",
@@ -6570,7 +6850,7 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Tom Ford Ombré Leather 100ml Eau De Parfum + Vaporisateur Pour Le Corps 150ml",
+    "nom": "Tom Ford Ombre Leather 100ml Eau De Parfum + Vaporisateur Pour Le Corps 150ml",
     "genre": "Mixte",
     "prix": 153,
     "prix_boutique": 270.56,
@@ -6580,9 +6860,19 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Tom Ford Oud Voyager 50ml Eau De Parfum (Sans Film)",
+    "nom": "Tom Ford Ombre Leather Réserve 100ml Parfum",
     "genre": "Mixte",
     "prix": 153,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/tom-ford-ombre-leather-reserve-100ml-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Tom Ford Oud Voyager 50ml Eau De Parfum (Sans Film)",
+    "genre": "Mixte",
+    "prix": 143,
     "prix_boutique": 284.17,
     "type": "standard",
     "image": "/images/parfums/tom-ford-oud-voyager-50ml-eau-de-parfum.jpg",
@@ -6592,12 +6882,22 @@
   {
     "nom": "Tom Ford Rose D'amalfi 50ml Eau De Parfum (Sans Film)",
     "genre": "Mixte",
-    "prix": 153,
+    "prix": 143,
     "prix_boutique": 248.47,
     "type": "standard",
     "image": "/images/parfums/tom-ford-rose-d-amalfi-50ml-eau-de-parfum.png",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Tom Ford Soleil De Feu 50ml Eau De Parfum",
+    "genre": "Mixte",
+    "prix": 153,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/placeholder-parfum.png",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Tom Ford Velvet Orchid 100ml Eau De Parfum",
@@ -6620,6 +6920,26 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Van Cleef & Arpels First 100ml Eau De Toilette",
+    "genre": "Femme",
+    "prix": 57,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/van-cleef-and-arpels-first-100ml-eau-de-toilette.webp",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Van Cleef & Arpels First 100ml Eau De Toilette ( Format Testeur )",
+    "genre": "Femme",
+    "prix": 45,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/van-cleef-and-arpels-first-100ml-eau-de-toilette.webp",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Versace Dylan Blue 100ml Eau De Parfum + Gel 100ml + Lait 100ml + Miniature 5ml",
     "genre": "Femme",
     "prix": 78,
@@ -6640,16 +6960,6 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Versace Eros 100ml Eau De Parfum",
-    "genre": "Homme",
-    "prix": 62,
-    "prix_boutique": 92.5,
-    "type": "standard",
-    "image": "/images/parfums/versace-eros-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
     "nom": "Versace Eros Flame 100ml Eau De Parfum + Gel 150ml + Miniature 10ml",
     "genre": "Homme",
     "prix": 73,
@@ -6658,6 +6968,16 @@
     "image": "/images/parfums/versace-eros-flame-100ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Versace L'homme 100ml Eau De Toilette",
+    "genre": "Homme",
+    "prix": 38,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/versace-l-homme-100ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Versace Pour Homme 100ml Eau De Toilette + Trousse + Miniature 10ml",
@@ -6700,6 +7020,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Viktor & Rolf Bonbon 50ml Eau De Parfum (Sans Film)",
+    "genre": "Femme",
+    "prix": 48,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/viktor-and-rolf-bonbon-50ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Viktor & Rolf Bonbon Spring Summer 50ml Eau De Toilette (Sans Film)",
     "genre": "Femme",
     "prix": 43,
@@ -6740,6 +7070,16 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Viktor & Rolf Spicebomb 50ml Eau De Toilette ( Format Testeur )",
+    "genre": "Homme",
+    "prix": 43,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/viktor-and-rolf-spicebomb-50ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Viktor & Rolf Spicebomb 50ml Eau De Toilette + Miniature 10ml",
     "genre": "Homme",
     "prix": 60,
@@ -6760,6 +7100,26 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Viktor & Rolf Spicebomb Extrême 90ml Eau De Parfum",
+    "genre": "Homme",
+    "prix": 71,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/viktor-and-rolf-spicebomb-extreme-90ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Viktor & Rolf Spicebomb Extrême 90ml Eau De Parfum (Sans Film)",
+    "genre": "Homme",
+    "prix": 65,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/viktor-and-rolf-spicebomb-extreme-90ml-eau-de-parfum.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Viktor & Rolf Spicebomb Extrême 90ml Eau De Parfum + Miniature 20ml Eau De Toilette",
     "genre": "Homme",
     "prix": 78,
@@ -6770,24 +7130,14 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Xerjoff Alexandria Ii 100ml Eau De Parfum",
+    "nom": "Xerjoff Alexandria Ii 50ml Eau De Parfum",
     "genre": "Mixte",
-    "prix": 238,
-    "prix_boutique": 487.4,
+    "prix": 153,
+    "prix_boutique": null,
     "type": "standard",
     "image": "/images/parfums/xerjoff-alexandria-ii-100ml-eau-de-parfum.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Xerjoff Coffret Découverte 3x 15ml (Muse + Apollonia + Accento Overdose)",
-    "genre": "Mixte",
-    "prix": 142,
-    "prix_boutique": 255.99,
-    "type": "coffret",
-    "image": "/images/parfums/xerjoff-coffret-decouverte-3x-15ml-muse.jpg",
     "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Xerjoff Coffret Découverte 3x 15ml (Naxos + Alexandria 2 + Golden Dallah)",
@@ -6796,8 +7146,8 @@
     "prix_boutique": 255.99,
     "type": "coffret",
     "image": "/images/parfums/xerjoff-coffret-decouverte-3x-15ml-naxos.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Xerjoff Don 50ml Eau De Parfum",
@@ -6850,22 +7200,22 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Xerjoff Muse 15ml + Apollonia 15ml + Accento Overdose 15ml",
+    "genre": "Mixte",
+    "prix": 143,
+    "prix_boutique": null,
+    "type": "coffret",
+    "image": "/images/parfums/xerjoff-muse-15ml.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Xerjoff Naxos 100ml Eau De Parfum",
     "genre": "Mixte",
     "prix": 143,
     "prix_boutique": 258.67,
     "type": "standard",
     "image": "/images/parfums/xerjoff-3x-15ml-naxos.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
-  },
-  {
-    "nom": "Xerjoff Purple Accento Crystal Édition 100ml Eau De Parfum",
-    "genre": "Mixte",
-    "prix": 293,
-    "prix_boutique": 588.41,
-    "type": "standard",
-    "image": "/images/parfums/xerjoff-purple-accento-crystal-edition-100ml-eau-de-parfum.jpg",
     "nouveaute": false,
     "moisNouveaute": null
   },
@@ -6882,7 +7232,7 @@
   {
     "nom": "Yves Saint Laurent Black Opium 50ml Eau De Parfum ( Format Testeur )",
     "genre": "Femme",
-    "prix": 45,
+    "prix": 42,
     "prix_boutique": 97.03,
     "type": "testeur",
     "image": "/images/parfums/yves-saint-laurent-black-opium-50ml-eau-de-parfum-format-testeur.jpg",
@@ -6902,7 +7252,7 @@
   {
     "nom": "Yves Saint Laurent Black Opium 90ml Eau De Parfum ( Format Testeur )",
     "genre": "Femme",
-    "prix": 77,
+    "prix": 75,
     "prix_boutique": 169.42,
     "type": "testeur",
     "image": "/images/parfums/yves-saint-laurent-black-opium-50ml-eau-de-parfum-format-testeur.jpg",
@@ -6910,14 +7260,14 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Yves Saint Laurent Black Opium 90ml Eau De Parfum + Vapo 10ml Eau De Parfum",
+    "nom": "Yves Saint Laurent Black Opium 90ml Eau De Parfum + Miniature 10ml",
     "genre": "Femme",
-    "prix": 93,
-    "prix_boutique": 139.45,
+    "prix": 95,
+    "prix_boutique": null,
     "type": "coffret",
     "image": "/images/parfums/yves-saint-laurent-black-opium-50ml-eau-de-parfum-format-testeur.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Yves Saint Laurent Black Opium Over Red 90ml Eau De Parfum ( Format Testeur )",
@@ -6936,8 +7286,8 @@
     "prix_boutique": 165.41,
     "type": "standard",
     "image": "/images/parfums/yves-saint-laurent-cinema-80ml-eau-de-parfum.jpg",
-    "nouveaute": true,
-    "moisNouveaute": "Juillet 2026"
+    "nouveaute": false,
+    "moisNouveaute": null
   },
   {
     "nom": "Yves Saint Laurent Elle 80ml Eau De Parfum ( Sans Blister )",
@@ -6948,6 +7298,16 @@
     "image": "/images/parfums/yves-saint-laurent-elle-80ml-eau-de-parfum-sans-blister.jpg",
     "nouveaute": false,
     "moisNouveaute": null
+  },
+  {
+    "nom": "Yves Saint Laurent Jazz 80ml Eau De Toilette ( Format Testeur )",
+    "genre": "Homme",
+    "prix": 37,
+    "prix_boutique": null,
+    "type": "testeur",
+    "image": "/images/parfums/yves-saint-laurent-jazz-80ml-eau-de-toilette-format-testeur.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
   },
   {
     "nom": "Yves Saint Laurent Kouros 100ml Eau De Toilette",
@@ -7010,16 +7370,6 @@
     "moisNouveaute": null
   },
   {
-    "nom": "Yves Saint Laurent Mon Paris Intensément 90ml Eau De Parfum Intense",
-    "genre": "Femme",
-    "prix": 85,
-    "prix_boutique": 173.08,
-    "type": "standard",
-    "image": "/images/parfums/yves-saint-laurent-mon-paris-intensement-90ml-eau-de-parfum-intense.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
     "nom": "Yves Saint Laurent Myslf 100ml Eau De Parfum",
     "genre": "Homme",
     "prix": 87,
@@ -7040,22 +7390,42 @@
     "moisNouveaute": null
   },
   {
+    "nom": "Yves Saint Laurent Y 80ml Eau De Toilette",
+    "genre": "Femme",
+    "prix": 62,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/yves-saint-laurent-y-80ml-eau-de-toilette.webp",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Yves Saint Laurent Yvresse 80ml Eau De Toilette",
+    "genre": "Femme",
+    "prix": 72,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/yves-saint-laurent-yvresse-80ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
+    "nom": "Yves Saint Laurent Yvresse 80ml Eau De Toilette (Sans Film)",
+    "genre": "Femme",
+    "prix": 62,
+    "prix_boutique": null,
+    "type": "standard",
+    "image": "/images/parfums/yves-saint-laurent-yvresse-80ml-eau-de-toilette.jpg",
+    "nouveaute": true,
+    "moisNouveaute": "Septembre 2026"
+  },
+  {
     "nom": "Zadig & Voltaire This Is Him 100ml Eau De Toilette ( Format Testeur )",
     "genre": "Homme",
     "prix": 52,
     "prix_boutique": 79.63,
     "type": "testeur",
     "image": "/images/parfums/zadig-and-voltaire-this-is-him-100ml-eau-de-toilette-format-testeur.jpg",
-    "nouveaute": false,
-    "moisNouveaute": null
-  },
-  {
-    "nom": "Zadig & Voltaire This Is Him Undressed 100ml Eau De Toilette ( Format Testeur )",
-    "genre": "Homme",
-    "prix": 45,
-    "prix_boutique": 92.32,
-    "type": "testeur",
-    "image": "/images/parfums/zadig-and-voltaire-this-is-him-undressed-100ml-eau-de-toilette-format-testeur.jpg",
     "nouveaute": false,
     "moisNouveaute": null
   }
