@@ -34,6 +34,14 @@ function getExtensionFromUrl(url) {
   return '.jpg';
 }
 
+function publicPathToLocalPath(publicPath) {
+  if (!publicPath || !String(publicPath).startsWith('/images/parfums/')) {
+    return null;
+  }
+
+  return path.join(imagesDir, path.basename(publicPath));
+}
+
 async function downloadImage(url, outputPath) {
   const response = await fetch(url, {
     headers: {
@@ -67,6 +75,7 @@ async function main() {
 
   let downloaded = 0;
   let reused = 0;
+  let forced = 0;
   let failed = 0;
   let skipped = 0;
 
@@ -82,25 +91,68 @@ async function main() {
     const fileName = `${slugify(group.representativeName)}${ext}`;
     const localPath = path.join(imagesDir, fileName);
     const publicPath = `/images/parfums/${fileName}`;
+    const forceDownload = group.forceDownload === true;
+    const previousLocalPath = publicPathToLocalPath(group.localImage);
 
     try {
-      if (fs.existsSync(localPath)) {
+      if (fs.existsSync(localPath) && !forceDownload) {
         group.localImage = publicPath;
+        delete group.downloadError;
         reused++;
         console.log(`♻️ ${i + 1}/${groups.length} déjà présente : ${fileName}`);
         continue;
       }
 
-      console.log(`⬇️ ${i + 1}/${groups.length} ${group.representativeName}`);
-      await downloadImage(group.imageUrl, localPath);
+      if (forceDownload) {
+        console.log(`🔄 ${i + 1}/${groups.length} remplacement : ${group.representativeName}`);
+      } else {
+        console.log(`⬇️ ${i + 1}/${groups.length} ${group.representativeName}`);
+      }
+
+      // On télécharge d'abord dans un fichier temporaire.
+      // Ainsi, si le téléchargement échoue, l'ancienne image locale reste intacte.
+      const tempPath = `${localPath}.tmp`;
+
+      if (fs.existsSync(tempPath)) {
+        fs.unlinkSync(tempPath);
+      }
+
+      await downloadImage(group.imageUrl, tempPath);
+
+      // Remplacement atomique du fichier cible.
+      if (fs.existsSync(localPath)) {
+        fs.unlinkSync(localPath);
+      }
+
+      fs.renameSync(tempPath, localPath);
+
+      // Si l'extension / le nom local a changé, supprimer l'ancien fichier
+      // seulement après que la nouvelle image a été téléchargée avec succès.
+      if (
+        previousLocalPath &&
+        previousLocalPath !== localPath &&
+        fs.existsSync(previousLocalPath)
+      ) {
+        fs.unlinkSync(previousLocalPath);
+      }
 
       group.localImage = publicPath;
-      downloaded++;
+      delete group.downloadError;
 
-      console.log(`✅ Téléchargée : ${fileName}`);
+      if (forceDownload) {
+        delete group.forceDownload;
+        forced++;
+        console.log(`✅ Remplacée : ${fileName}`);
+      } else {
+        downloaded++;
+        console.log(`✅ Téléchargée : ${fileName}`);
+      }
     } catch (error) {
       failed++;
       group.downloadError = error.message;
+
+      // On garde forceDownload=true en cas d'échec :
+      // un prochain clic sur "Finaliser" retentera automatiquement.
       console.log(`❌ Échec : ${group.representativeName} — ${error.message}`);
     }
 
@@ -111,6 +163,7 @@ async function main() {
 
   console.log('\n🎉 Téléchargement terminé');
   console.log(`✅ Téléchargées : ${downloaded}`);
+  console.log(`🔄 Remplacées    : ${forced}`);
   console.log(`♻️ Réutilisées   : ${reused}`);
   console.log(`⚠️ Ignorées      : ${skipped}`);
   console.log(`❌ Échecs        : ${failed}`);
