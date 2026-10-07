@@ -90,7 +90,17 @@ function getBestImageForGroup(group) {
 const catalog = readJson(catalogPath, 'Catalogue source');
 const groups = readJson(groupsPath, 'Groupes images');
 
-const imageByProductIndex = new Map();
+const normalizeName = (value) =>
+  String(value || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[’']/g, "'")
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+
+const imageByProductName = new Map();
+
 let groupsWithImage = 0;
 let groupsWithoutImage = 0;
 
@@ -104,14 +114,20 @@ for (const group of groups) {
   }
 
   for (const product of group.products || []) {
-    if (typeof product.index === 'number') {
-      imageByProductIndex.set(product.index, image);
+    if (product.nom) {
+      imageByProductName.set(
+        normalizeName(product.nom),
+        image
+      );
     }
   }
 }
 
-const finalCatalog = catalog.map((parfum, index) => {
-  const imageFromGroup = imageByProductIndex.get(index);
+const finalCatalog = catalog.map((parfum) => {
+  const imageFromGroup = imageByProductName.get(
+    normalizeName(parfum.nom)
+  );
+
   const currentImage = parfum.image;
 
   let image = placeholder;
