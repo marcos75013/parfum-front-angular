@@ -10,6 +10,30 @@ const groupsPath = path.join(__dirname, '../public/data/product-image-groups.jso
 const publicDir = path.join(__dirname, '../public');
 const finalizeScript = path.join(__dirname, 'finalize-catalog.cjs');
 const projectRoot = path.join(__dirname, '..');
+const catalogPath = path.join(publicDir, 'data/parfums_source.json');
+const finalCatalogPath = path.join(publicDir, 'data/parfums.json');
+const overridesPath = path.join(publicDir, 'data/product-image-overrides.json');
+const imageDir = path.join(publicDir, 'images/parfums');
+const buildScript = path.join(__dirname, 'build-final-catalog.cjs');
+const crypto = require('crypto');
+const dns = require('dns').promises;
+const net = require('net');
+
+function readCatalog() { return JSON.parse(fs.readFileSync(catalogPath, 'utf8')); }
+function readOverrides() { return fs.existsSync(overridesPath) ? JSON.parse(fs.readFileSync(overridesPath, 'utf8')) : {}; }
+function normalizeProductPart(v) { return String(v || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[’']/g, "'").replace(/\s+/g, ' ').trim().toLowerCase(); }
+function productKey(p) { return normalizeProductPart(p.nom) + '|' + normalizeProductPart(p.genre); }
+function currentProductImage(p) {
+  const key = productKey(p);
+  const override = readOverrides()[key];
+  if (override && (typeof override === 'string' ? override : override.image)) return typeof override === 'string' ? override : override.image;
+  if (fs.existsSync(finalCatalogPath)) {
+    const match = JSON.parse(fs.readFileSync(finalCatalogPath, 'utf8')).find(x => productKey(x) === key);
+    if (match?.image) return match.image;
+  }
+  return p.image || '/images/parfums/placeholder-parfum.png';
+}
+
 
 app.use(express.json({ limit: '2mb' }));
 app.use('/images', express.static(path.join(publicDir, 'images')));
@@ -123,33 +147,21 @@ app.get('/', (req, res) => {
   const query = String(req.query.q || '').trim();
   const normalizedQuery = normalizeSearch(query);
 
+  const catalog = readCatalog();
   const results = normalizedQuery
-    ? groups
-        .map((group, index) => ({ group, index }))
-        .filter(({ group }) => getSearchText(group).includes(normalizedQuery))
+    ? catalog.map((product, index) => ({ product, index }))
+        .filter(({ product }) => normalizeSearch(product.nom + ' ' + product.genre).includes(normalizedQuery))
         .slice(0, 50)
     : [];
-
-  const resultsHtml = normalizedQuery
-    ? `
-      <div class="search-results">
-        <h2>Résultats (${results.length}${results.length === 50 ? '+' : ''})</h2>
-        ${
-          results.length === 0
-            ? '<p class="muted">Aucun parfum trouvé.</p>'
-            : results.map(({ group, index }) => `
-              <div class="result">
-                <div>
-                  <strong>${escapeHtml(group.representativeName)}</strong>
-                  <div class="muted">${escapeHtml(statusLabel(group))} · ${group.products?.length || 0} produit(s)</div>
-                </div>
-                <a class="edit" href="/review/${index}?edit=1">Modifier l'image</a>
-              </div>
-            `).join('')
-        }
-      </div>
-    `
-    : '';
+  const resultsHtml = normalizedQuery ? `
+    <div class="search-results"><h2>Résultats (${results.length}${results.length === 50 ? '+' : ''})</h2>
+    ${results.length ? results.map(({product, index}) => `
+      <div class="result">
+        <img src="${escapeHtml(currentProductImage(product))}" style="width:65px;height:65px;object-fit:contain" alt="" />
+        <div style="flex:1"><strong>${escapeHtml(product.nom)}</strong><div class="muted">${escapeHtml(product.genre)}</div></div>
+        <a class="edit" href="/product/${index}">Modifier l'image</a>
+      </div>`).join('') : '<p>Aucun parfum trouvé.</p>'}
+    </div>` : '';
 
   res.send(`
 <!doctype html>
@@ -205,7 +217,7 @@ app.get('/', (req, res) => {
 
     <div class="search">
       <h2>🔎 Corriger l'image d'un parfum</h2>
-      <p class="muted">Recherche dans tous les groupes, y compris ceux déjà validés.</p>
+      <p class="muted">Recherche dans tous les parfums, sans modifier les groupes.</p>
       <form method="get" action="/">
         <input name="q" value="${escapeHtml(query)}" placeholder="Ex. Tom Ford Ombre Leather, H24, Guerlain..." autofocus />
         <button type="submit">Rechercher</button>
@@ -471,6 +483,101 @@ app.get('/review/:index', (req, res) => {
 </body>
 </html>
   `);
+});
+
+// Correction individuelle : indépendante de la validation mensuelle des groupes.
+app.get('/product/:index', (req, res) => {
+  const index = Number(req.params.index);
+  const product = readCatalog()[index];
+  if (!Number.isInteger(index) || !product) return res.status(404).send('Parfum introuvable');
+  const img = currentProductImage(product);
+  res.send(`<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Corriger une image</title>
+<style>body{font-family:Arial,sans-serif;background:#f8f8f8;padding:24px;color:#111}.card{max-width:1050px;margin:auto;background:white;border-radius:16px;padding:24px}button,a{padding:10px 14px;border:0;border-radius:9px;background:#1f2937;color:white;cursor:pointer;text-decoration:none;display:inline-block;margin:5px}input{width:100%;box-sizing:border-box;padding:12px;margin:14px 0}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}.candidate{border:1px solid #ddd;padding:12px;border-radius:12px}.candidate img{width:100%;height:160px;object-fit:contain}.current{height:240px;max-width:100%;object-fit:contain}#message{white-space:pre-wrap}</style></head><body><div class="card">
+<a href="/">← Retour</a><h1>${escapeHtml(product.nom)}</h1><p>${escapeHtml(product.genre)}</p>
+<h2>Image actuelle</h2><img class="current" src="${escapeHtml(img)}" alt="Image actuelle"><p>${escapeHtml(img)}</p>
+<button onclick="loadCandidates()">🔎 Rechercher des images</button>
+<a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=${encodeURIComponent(product.nom + ' parfum flacon')}">Google Images</a>
+<h3>Ou coller une URL directe d'image</h3><input id="url" placeholder="https://exemple.com/flacon.jpg"><button onclick="save(document.getElementById('url').value)">Remplacer l'image</button>
+<p id="message"></p><div id="candidates" class="grid"></div></div>
+<script>
+async function loadCandidates(){const c=document.getElementById('candidates');c.textContent='Recherche en cours...';try{const r=await fetch('/api/product-candidates/${index}');const d=await r.json();c.innerHTML='';if(!d.candidates?.length){c.textContent='Aucune image trouvée. Utilise une URL directe.';return;}for(const item of d.candidates){const card=document.createElement('div');card.className='candidate';const img=document.createElement('img');img.src=item.thumbnail||item.imageUrl;card.append(img);const title=document.createElement('p');title.textContent=item.title||'';card.append(title);const b=document.createElement('button');b.textContent='Choisir cette image';b.onclick=()=>save(item.imageUrl);card.append(b);c.append(card);}}catch(e){c.textContent='Erreur de recherche';}}
+async function save(imageUrl){const m=document.getElementById('message');if(!imageUrl.trim()){m.textContent='Saisis une URL.';return;}if(!confirm('Remplacer uniquement l’image de ce parfum ?'))return;m.textContent='Téléchargement et mise à jour...';try{const r=await fetch('/api/product-image/${index}',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({imageUrl})});const d=await r.json();if(!r.ok)throw Error(d.error||'Erreur');m.textContent='✅ Image enregistrée et catalogue reconstruit.';setTimeout(()=>location.reload(),700);}catch(e){m.textContent='❌ '+e.message;}}
+</script></body></html>`);
+});
+
+function isPrivateIp(ip) {
+  if (net.isIP(ip) === 6) return ip === '::1' || ip.startsWith('fc') || ip.startsWith('fd') || ip.startsWith('fe80') || ip.startsWith('::ffff:');
+  const p = ip.split('.').map(Number);
+  return p[0] === 0 || p[0] === 10 || p[0] === 127 || p[0] >= 224 || (p[0] === 169 && p[1] === 254) || (p[0] === 172 && p[1] >= 16 && p[1] <= 31) || (p[0] === 192 && p[1] === 168) || (p[0] === 100 && p[1] >= 64 && p[1] <= 127);
+}
+async function downloadImage(urlString) {
+  const url = new URL(urlString);
+  if (url.protocol !== 'https:' && url.protocol !== 'http:') throw Error('URL HTTP(S) obligatoire');
+  const addresses = await dns.lookup(url.hostname, { all: true });
+  if (!addresses.length || addresses.some(x => isPrivateIp(x.address))) throw Error('Adresse réseau non autorisée');
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 15000);
+  try {
+    const response = await fetch(url, { signal: controller.signal, redirect: 'error', headers: { 'User-Agent': 'Mozilla/5.0' } });
+    if (!response.ok) throw Error('Téléchargement refusé (HTTP ' + response.status + ')');
+    const mime = (response.headers.get('content-type') || '').split(';')[0].trim().toLowerCase();
+    const ext = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp', 'image/gif': 'gif' }[mime];
+    if (!ext) throw Error('Le lien ne renvoie pas une image JPEG, PNG, WebP ou GIF');
+    if (Number(response.headers.get('content-length')) > 8 * 1024 * 1024) throw Error('Image trop volumineuse');
+    const chunks = []; let size = 0;
+    for await (const chunk of response.body) { size += chunk.length; if (size > 8 * 1024 * 1024) throw Error('Image trop volumineuse'); chunks.push(chunk); }
+    const buffer = Buffer.concat(chunks);
+    const signature = ext === 'jpg' ? buffer[0] === 0xff && buffer[1] === 0xd8 : ext === 'png' ? buffer.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])) : ext === 'webp' ? buffer.toString('ascii',0,4) === 'RIFF' && buffer.toString('ascii',8,12) === 'WEBP' : buffer.toString('ascii',0,3) === 'GIF';
+    if (!signature) throw Error('Fichier image invalide');
+    return { buffer, ext };
+  } finally { clearTimeout(timeout); }
+}
+
+app.get('/api/product-candidates/:index', async (req,res) => {
+  const product = readCatalog()[Number(req.params.index)];
+  if (!product) return res.status(404).json({error:'Parfum introuvable'});
+  try {
+    const group = { representativeName: product.nom, products: [product] };
+    const query = safeQuery(group);
+    const vqd = await getDuckDuckGoVqd(query);
+    if (!vqd) return res.json({ candidates: [] });
+    const url = `https://duckduckgo.com/i.js?l=fr-fr&o=json&q=${encodeURIComponent(query)}&vqd=${encodeURIComponent(vqd)}&f=,,,&p=1`;
+    const response = await fetch(url,{headers:{'User-Agent':'Mozilla/5.0',Referer:'https://duckduckgo.com/'}});
+    const data = await response.json();
+    const candidates = (data.results||[]).map(item=>({title:item.title||'',imageUrl:item.image||'',thumbnail:item.thumbnail||item.image||'',score:scoreCandidate(item,group)})).filter(x=>x.imageUrl&&x.score>0).sort((a,b)=>b.score-a.score).slice(0,8);
+    res.json({candidates});
+  } catch(err) { console.error(err); res.json({candidates:[]}); }
+});
+
+app.post('/api/product-image/:index', async (req,res) => {
+  const index = Number(req.params.index);
+  const product = readCatalog()[index];
+  if (!Number.isInteger(index) || !product) return res.status(404).json({error:'Parfum introuvable'});
+  try {
+    const imageUrl = String(req.body?.imageUrl||'').trim();
+    if (!imageUrl) return res.status(400).json({error:'URL manquante'});
+    const {buffer,ext} = await downloadImage(imageUrl);
+    const key = productKey(product);
+    const filename = 'manual-' + crypto.createHash('sha256').update(key).digest('hex').slice(0,20) + '-' + Date.now() + '.' + ext;
+    fs.mkdirSync(imageDir,{recursive:true});
+    const target = path.join(imageDir,filename);
+    fs.writeFileSync(target,buffer);
+    const overrides = readOverrides();
+    const old = overrides[key];
+    overrides[key] = '/images/parfums/' + filename;
+    const tmp = overridesPath + '.tmp';
+    fs.writeFileSync(tmp,JSON.stringify(overrides,null,2));
+    fs.renameSync(tmp,overridesPath);
+    try {
+      await new Promise((resolve,reject)=>execFile(process.execPath,[buildScript],{cwd:projectRoot,maxBuffer:10*1024*1024},(err)=>err?reject(err):resolve()));
+    } catch(err) {
+      if (old === undefined) delete overrides[key]; else overrides[key] = old;
+      fs.writeFileSync(overridesPath,JSON.stringify(overrides,null,2));
+      fs.unlinkSync(target);
+      throw Error('Génération du catalogue impossible : ' + err.message);
+    }
+    res.json({ok:true,image:overrides[key]});
+  } catch(err) { console.error(err); res.status(400).json({error:err.message}); }
 });
 
 async function getDuckDuckGoVqd(query) {
