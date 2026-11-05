@@ -3,7 +3,7 @@ const path = require('path');
 
 const inputPath = path.join(
   __dirname,
-  '../public/data/parfums.json'
+  '../public/data/parfums_source.json'
 );
 
 const outputPath = path.join(
@@ -28,11 +28,11 @@ const parfums = JSON.parse(
   fs.readFileSync(inputPath, 'utf8')
 );
 
-// OCTOBRE 2026 : uniquement les vraies nouveautés
+// NOVEMBRE 2026 : nouveautés à valider
 const nouveautes = parfums.filter(
   (parfum) =>
     parfum.nouveaute === true &&
-    parfum.moisNouveaute === 'Octobre 2026'
+    parfum.moisNouveaute === 'Novembre 2026'
 );
 
 const worklist = nouveautes.map((parfum, index) => {
@@ -60,5 +60,5 @@ fs.writeFileSync(
 
 console.log(`✅ Worklist générée : ${outputPath}`);
 console.log(`📦 Catalogue complet : ${parfums.length} produits`);
-console.log(`✨ Nouveautés Octobre 2026 : ${nouveautes.length}`);
+console.log(`✨ Nouveautés Novembre 2026 : ${nouveautes.length}`);
 console.log(`🔎 Produits à rechercher : ${worklist.length}`);

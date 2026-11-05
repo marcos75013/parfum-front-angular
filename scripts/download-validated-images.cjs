@@ -128,13 +128,7 @@ async function main() {
 
       // Si l'extension / le nom local a changé, supprimer l'ancien fichier
       // seulement après que la nouvelle image a été téléchargée avec succès.
-      if (
-        previousLocalPath &&
-        previousLocalPath !== localPath &&
-        fs.existsSync(previousLocalPath)
-      ) {
-        fs.unlinkSync(previousLocalPath);
-      }
+
 
       group.localImage = publicPath;
       delete group.downloadError;

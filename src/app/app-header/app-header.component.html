@@ -33,6 +33,15 @@
       >
         Marques
       </a>
+      <a
+        href="/catalogues/novembre_2026.xlsx"
+        download="Catalogue_Escale_Olfactive_Novembre_2026.xlsx"
+        class="nav-download"
+        aria-label="Télécharger le catalogue Excel de novembre 2026"
+      >
+        <span>⬇️</span>
+        <span>Catalogue Excel Novembre 2026</span>
+      </a>
     </nav>
 
     <div class="actions actions--desktop">
@@ -101,6 +110,14 @@
       <a routerLink="/marques" (click)="closeMenu()">
         <span class="nav-mobile__icon">💎</span>
         <span>Marques</span>
+      </a>
+      <a
+        href="/catalogues/novembre_2026.xlsx"
+        download="Catalogue_Escale_Olfactive_Novembre_2026.xlsx"
+        (click)="closeMenu()"
+      >
+        <span class="nav-mobile__icon">⬇️</span>
+        <span>Télécharger le catalogue Excel</span>
       </a>
     </nav>
 

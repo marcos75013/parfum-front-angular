@@ -433,7 +433,7 @@ app.get('/review/:index', (req, res) => {
         return;
       }
 
-      window.location.href = editMode ? '/?q=${encodeURIComponent(group.representativeName)}' : '/next?from=${index}';
+      window.location.href = editMode ? '/?q=' + encodeURIComponent(${JSON.stringify(group.representativeName)}) : '/next?from=${index}';
     }
 
     async function validateManual() {
@@ -458,7 +458,7 @@ app.get('/review/:index', (req, res) => {
         return;
       }
 
-      window.location.href = editMode ? '/?q=${encodeURIComponent(group.representativeName)}' : '/next?from=${index}';
+      window.location.href = editMode ? '/?q=' + encodeURIComponent(${JSON.stringify(group.representativeName)}) : '/next?from=${index}';
     }
 
     async function skip() {
