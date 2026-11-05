@@ -159,11 +159,11 @@ h1 {
   min-height: 34px;
   padding: 0 12px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+  background: linear-gradient(135deg, #15803d 0%, #15803d 100%);
   color: #fff;
   font-size: 0.82rem;
   font-weight: 800;
-  box-shadow: 0 10px 18px rgba(220, 38, 38, 0.24);
+  box-shadow: 0 10px 18px rgba(76, 29, 149, 0.24);
 }
 
 .card-type-badge {
@@ -432,4 +432,9 @@ h1 {
   font-weight: 900;
   letter-spacing: 0.03em;
   box-shadow: 0 10px 18px rgba(236, 72, 153, 0.24);
+}
+
+.card__discount {
+  background: #15803d;
+  color: #ffffff;
 }

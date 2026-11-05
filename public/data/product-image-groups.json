@@ -1,528 +1,1265 @@
 [
   {
-    "groupKey": "cartier baiser vole le",
-    "representativeName": "Cartier Baiser Volé Le Parfum 100ml Eau De Parfum",
-    "searchQuery": "Cartier Baiser Volé Le Parfum 100ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://fimgs.net/mdimg/perfume/social.32896.jpg",
-    "sourceUrl": "https://www.fragrantica.fr/parfum/Cartier/Baiser-Vole-Eau-de-Parfum-Fraiche-32896.html",
-    "localImage": "/images/parfums/cartier-baiser-vole-le-parfum-100ml-eau-de-parfum.jpg",
+    "groupKey": "paco rabanne million gold",
+    "representativeName": "Paco Rabanne Million Gold 100ml Eau De Parfum",
+    "searchQuery": "Paco Rabanne Million Gold 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_hq/paco-rabanne/3349668630356_08/million-gold___240726.jpg",
+    "sourceUrl": "https://www.notino.fr/rabanne/million-gold-eau-de-parfum-pour-homme/",
+    "localImage": "/images/parfums/paco-rabanne-million-gold-100ml-eau-de-parfum.jpg",
     "status": "validated",
     "products": [
       {
-        "index": 0,
-        "nom": "Cartier Baiser Volé Le Parfum 100ml Eau De Parfum",
-        "type": "standard",
-        "genre": "Femme"
-      }
-    ]
-  },
-  {
-    "groupKey": "dolce gabbana dolce",
-    "representativeName": "Dolce & Gabbana Dolce 75ml Eau De Parfum",
-    "searchQuery": "Dolce & Gabbana Dolce 75ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://cdn.notinoimg.com/detail_main_mq/dolcegabbana/8057971186921_01-o/dolce___250725.jpg",
-    "sourceUrl": "",
-    "localImage": "/images/parfums/dolce-and-gabbana-dolce-75ml-eau-de-parfum.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 1,
-        "nom": "Dolce & Gabbana Dolce 75ml Eau De Parfum (Format Testeur)",
-        "type": "testeur",
-        "genre": "Femme"
-      }
-    ]
-  },
-  {
-    "groupKey": "dolce gabbana dolce rose",
-    "representativeName": "Dolce & Gabbana Dolce Rose 75ml Eau De Toilette",
-    "searchQuery": "Dolce & Gabbana Dolce Rose 75ml Eau De Toilette perfume bottle",
-    "imageUrl": "https://cdn.notinoimg.com/detail_main_mq/dolcegabbana/8057971182060_01/dolce-rose___250725.jpg",
-    "sourceUrl": "",
-    "localImage": "/images/parfums/dolce-and-gabbana-dolce-rose-75ml-eau-de-toilette.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 2,
-        "nom": "Dolce & Gabbana Dolce Rose 75ml Eau De Toilette (Format Testeur)",
-        "type": "testeur",
-        "genre": "Femme"
-      }
-    ]
-  },
-  {
-    "groupKey": "dolce gabbana pour femme",
-    "representativeName": "Dolce & Gabbana Pour Femme 100ml Eau De Parfum",
-    "searchQuery": "Dolce & Gabbana Pour Femme 100ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://fimgs.net/photogram/p1200/wa/wz/SnDZl3VBKI8slptp.jpg",
-    "sourceUrl": "https://www.fragrantica.com.br/perfume/Dolce-Gabbana/Dolce-Gabbana-Pour-Femme-15335.html",
-    "localImage": "/images/parfums/dolce-and-gabbana-pour-femme-100ml-eau-de-parfum.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 4,
-        "nom": "Dolce & Gabbana Pour Femme 100ml Eau De Parfum (Format Testeur)",
-        "type": "testeur",
-        "genre": "Femme"
-      }
-    ]
-  },
-  {
-    "groupKey": "frederic malle carnal flower",
-    "representativeName": "Frédéric Malle Carnal Flower 100ml Eau De Parfum",
-    "searchQuery": "Frédéric Malle Carnal Flower 100ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://catalog.cdn.bixoto.com/assets/fr/B1H8MHFQ9A/images/bf3a2772ba5c/16a7ba7f-frederic-malle-carnal-flower-eau-de-parfum-unisex-100-ml-1775202097.jpg?class=s700",
-    "sourceUrl": "https://bixoto.com/fr/p/frederic-malle-carnal-flower-eau-de-parfum-unisex-flacon-100-ml-b1h8mhfq9a",
-    "localImage": "/images/parfums/frederic-malle-carnal-flower-100ml-eau-de-parfum.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 5,
-        "nom": "Frédéric Malle Carnal Flower 100ml Eau De Parfum (Format Testeur)",
-        "type": "testeur",
-        "genre": "Mixte"
-      }
-    ]
-  },
-  {
-    "groupKey": "frederic malle french lover",
-    "representativeName": "Frédéric Malle French Lover 100ml Eau De Parfum",
-    "searchQuery": "Frédéric Malle French Lover 100ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://hrd-live.cdn.scayle.cloud/images/936fd3855a5b2fdf561a4daf622f1884.jpg?brightness=1&width=922&height=1230&quality=75&bg=ffffff",
-    "sourceUrl": "https://www.harrods.com/en-gb/p/editions-de-parfums-frederic-malle-french-lover-eau-de-parfum-100ml-000000000005489250",
-    "localImage": "/images/parfums/frederic-malle-french-lover-100ml-eau-de-parfum.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 6,
-        "nom": "Frédéric Malle French Lover 100ml Eau De Parfum (Format Testeur)",
-        "type": "testeur",
-        "genre": "Mixte"
-      }
-    ]
-  },
-  {
-    "groupKey": "frederic malle rose cuir",
-    "representativeName": "Frédéric Malle Rose Cuir 100ml Eau De Parfum",
-    "searchQuery": "Frédéric Malle Rose Cuir 100ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://s.cdnsbn.com/images/products/l/25265183306.jpg",
-    "sourceUrl": "https://www.strawberrynet.com/he-IL/frederic-malle-rose-cuir-eau-de-parfum-spray-100ml-3-4oz/252651",
-    "localImage": "/images/parfums/frederic-malle-rose-cuir-100ml-eau-de-parfum.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 7,
-        "nom": "Frédéric Malle Rose Cuir 100ml Eau De Parfum (Format Testeur)",
-        "type": "testeur",
-        "genre": "Mixte"
-      }
-    ]
-  },
-  {
-    "groupKey": "guerlain la petite robe noire absolue absolue",
-    "representativeName": "Guerlain La Petite Robe Noire Absolue 100ml Eau De Parfum Absolue",
-    "searchQuery": "Guerlain La Petite Robe Noire Absolue 100ml Eau De Parfum Absolue perfume bottle",
-    "imageUrl": "https://fraguru.com/himg/o.3vhqSJoov9d.jpg",
-    "sourceUrl": "https://www.fragrantica.es/noticia/GUERLAIN-La-Petite-Robe-Noire-Eau-de-Parfum-Absolue-6943.html",
-    "localImage": "/images/parfums/guerlain-la-petite-robe-noire-absolue-100ml-eau-de-parfum-absolue.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 9,
-        "nom": "Guerlain La Petite Robe Noire Absolue 100ml Eau De Parfum Absolue",
-        "type": "standard",
-        "genre": "Femme"
-      }
-    ]
-  },
-  {
-    "groupKey": "kilian black phantom memento mori",
-    "representativeName": "Kilian Black Phantom Memento Mori 50ml Eau De Parfum",
-    "searchQuery": "Kilian Black Phantom Memento Mori 50ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://www.eshtir.com/wp-content/uploads/2023/10/KILIAN-BLACK-PHANTOM-EDP-50ML.jpg",
-    "sourceUrl": "https://www.eshtir.com/shop/unisex/eau-de-parfum-unisex/kilian-black-phantom-memento-mori-edp-50ml/",
-    "localImage": "/images/parfums/kilian-black-phantom-memento-mori-50ml-eau-de-parfum.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 15,
-        "nom": "Kilian Black Phantom Memento Mori 50ml Eau De Parfum (Sans Blister)",
-        "type": "standard",
-        "genre": "Mixte"
-      }
-    ]
-  },
-  {
-    "groupKey": "kilian her majesty",
-    "representativeName": "Kilian Her Majesty 50ml Eau De Parfum",
-    "searchQuery": "Kilian Her Majesty 50ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://fimgs.net/mdimg/perfume-thumbs/375x500.121840.jpg",
-    "sourceUrl": "https://www.fragrantica.nl/parfum/By-Kilian/Her-Majesty-121840.html",
-    "localImage": "/images/parfums/kilian-her-majesty-50ml-eau-de-parfum.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 16,
-        "nom": "Kilian Her Majesty 50ml Eau De Parfum (Sans Blister)",
-        "type": "standard",
-        "genre": "Mixte"
-      }
-    ]
-  },
-  {
-    "groupKey": "kilian moonlight in heaven",
-    "representativeName": "Kilian Moonlight In Heaven 50ml Eau De Parfum",
-    "searchQuery": "Kilian Moonlight In Heaven 50ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://www.scentsational.com/images/kilian-moonlight-in-heaven-50ml-eau-de-parfum-refillable-spray-p46030-81463_medium.jpg",
-    "sourceUrl": "https://www.scentsational.com/women-c2/kilian-moonlight-in-heaven-50ml-eau-de-parfum-refillable-spray-p46030",
-    "localImage": "/images/parfums/kilian-moonlight-in-heaven-50ml-eau-de-parfum.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 17,
-        "nom": "Kilian Moonlight In Heaven 50ml Eau De Parfum (Sans Blister)",
-        "type": "standard",
-        "genre": "Mixte"
-      }
-    ]
-  },
-  {
-    "groupKey": "kilian smoking hot",
-    "representativeName": "Kilian Smoking Hot 50ml Eau De Parfum",
-    "searchQuery": "Kilian Smoking Hot 50ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://fraguru.com/mdimg/perfume/social.84413.jpg",
-    "sourceUrl": "https://www.fragrantica.de/Parfum/By-Kilian/Smoking-Hot-84413.html",
-    "localImage": "/images/parfums/kilian-smoking-hot-50ml-eau-de-parfum.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 18,
-        "nom": "Kilian Smoking Hot 50ml Eau De Parfum (Sans Blister)",
-        "type": "standard",
-        "genre": "Mixte"
-      }
-    ]
-  },
-  {
-    "groupKey": "kilian straight to heaven",
-    "representativeName": "Kilian Straight To Heaven 50ml Eau De Parfum",
-    "searchQuery": "Kilian Straight To Heaven 50ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://fraguru.com/mdimg/perfume/social.43811.jpg",
-    "sourceUrl": "https://www.fragrantica.nl/parfum/By-Kilian/Straight-to-Heaven-Extreme-43811.html",
-    "localImage": "/images/parfums/kilian-straight-to-heaven-50ml-eau-de-parfum.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 19,
-        "nom": "Kilian Straight To Heaven 50ml Eau De Parfum (Sans Blister)",
-        "type": "standard",
-        "genre": "Mixte"
-      }
-    ]
-  },
-  {
-    "groupKey": "maissa maissa",
-    "representativeName": "Maissa Maïssa 50ml Eau De Parfum",
-    "searchQuery": "Maissa Maïssa 50ml Eau De Parfum perfume bottle",
-    "imageUrl": "",
-    "sourceUrl": "",
-    "localImage": "",
-    "status": "skipped",
-    "products": [
-      {
-        "index": 20,
-        "nom": "Maissa Maïssa 50ml Eau De Parfum",
-        "type": "standard",
-        "genre": "Mixte"
-      }
-    ]
-  },
-  {
-    "groupKey": "memo darling point",
-    "representativeName": "Memo Darling Point 75ml Eau De Parfum ( Format Testeur )",
-    "searchQuery": "Memo Darling Point 75ml Eau De Parfum ( Format Testeur ) perfume bottle",
-    "imageUrl": "https://cdn.notinoimg.com/detail_main_mq/memo/3700458609059_01-o/darling-point___260729.jpg",
-    "sourceUrl": "",
-    "localImage": "/images/parfums/memo-darling-point-75ml-eau-de-parfum-format-testeur.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 21,
-        "nom": "Memo Darling Point 75ml Eau De Parfum ( Format Testeur ) (Sans Bouchon)",
-        "type": "testeur",
-        "genre": "Mixte"
-      }
-    ]
-  },
-  {
-    "groupKey": "memo french leather",
-    "representativeName": "Memo French Leather 75ml Eau De Parfum",
-    "searchQuery": "Memo French Leather 75ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://fimgs.net/mdimg/perfume-thumbs/375x500.37186.jpg",
-    "sourceUrl": "",
-    "localImage": "/images/parfums/memo-french-leather-75ml-eau-de-parfum.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 22,
-        "nom": "Memo French Leather 75ml Eau De Parfum (Format Testeur) (Sans Bouchon)",
-        "type": "testeur",
-        "genre": "Mixte"
-      }
-    ]
-  },
-  {
-    "groupKey": "memo irish leather",
-    "representativeName": "Memo Irish Leather 75ml Eau De Parfum",
-    "searchQuery": "Memo Irish Leather 75ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://cdn.notinoimg.com/social/memo/3700458612226_01-o/memo-irish-oud-eau-de-parfum-mixte_.jpg",
-    "sourceUrl": "https://www.notino.fr/memo/irish-oud-eau-de-parfum-mixte/",
-    "localImage": "/images/parfums/memo-irish-leather-75ml-eau-de-parfum.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 23,
-        "nom": "Memo Irish Leather 75ml Eau De Parfum (Format Testeur) (Sans Bouchon)",
-        "type": "testeur",
-        "genre": "Mixte"
-      }
-    ]
-  },
-  {
-    "groupKey": "memo ocean leather",
-    "representativeName": "Memo Ocean Leather 75ml Eau De Parfum",
-    "searchQuery": "Memo Ocean Leather 75ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://shoperfumes.ca/wp-content/uploads/2022/10/memo-ocean-leather-scaled.jpg",
-    "sourceUrl": "https://storage.googleapis.com/deyezozvzksgme/memo-ocean-leather-parfumo.html",
-    "localImage": "/images/parfums/memo-ocean-leather-75ml-eau-de-parfum.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 24,
-        "nom": "Memo Ocean Leather 75ml Eau De Parfum (Format Testeur) (Sans Bouchon)",
-        "type": "testeur",
-        "genre": "Mixte"
-      }
-    ]
-  },
-  {
-    "groupKey": "prada paradoxe",
-    "representativeName": "Prada Paradoxe 90ml Eau De Parfum",
-    "searchQuery": "Prada Paradoxe 90ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/000000000494397415/lHBVc33Gt-000000000494397415_5.jpg",
-    "sourceUrl": "https://sephora.in/product/prada-paradoxe-intense-eau-de-parfum-v-90ml",
-    "localImage": "/images/parfums/prada-paradoxe-90ml-eau-de-parfum.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 26,
-        "nom": "Prada Paradoxe 90ml Eau De Parfum",
-        "type": "standard",
-        "genre": "Femme"
-      }
-    ]
-  },
-  {
-    "groupKey": "tom ford jasmin rouge",
-    "representativeName": "Tom Ford Jasmin Rouge 50ml Eau De Parfum",
-    "searchQuery": "Tom Ford Jasmin Rouge 50ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/tom-ford-beauty/0L2O9HZ5XOS-1/1/Dba0_BJt-q-2.jpg",
-    "sourceUrl": "https://sephora.in/product/tom-ford-beauty-jasmin-rouge-eau-de-parfum-v-50ml",
-    "localImage": "/images/parfums/tom-ford-jasmin-rouge-50ml-eau-de-parfum.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 27,
-        "nom": "Tom Ford Jasmin Rouge 50ml Eau De Parfum",
-        "type": "standard",
-        "genre": "Mixte"
-      }
-    ]
-  },
-  {
-    "groupKey": "tom ford taormina orange",
-    "representativeName": "Tom Ford Taormina Orange 50ml Eau De Parfum",
-    "searchQuery": "Tom Ford Taormina Orange 50ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://fimgs.net/mdimg/perfume-thumbs/375x500.125742.2x.jpg",
-    "sourceUrl": "https://www.fragrantica.fr/parfum/Tom-Ford/Taormina-Orange-125742.html",
-    "localImage": "/images/parfums/tom-ford-taormina-orange-50ml-eau-de-parfum.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 29,
-        "nom": "Tom Ford Taormina Orange 50ml Eau De Parfum",
-        "type": "standard",
-        "genre": "Mixte"
-      }
-    ]
-  },
-  {
-    "groupKey": "tom ford tobacco chocolat",
-    "representativeName": "Tom Ford Tobacco Chocolat 50ml Eau De Parfum",
-    "searchQuery": "Tom Ford Tobacco Chocolat 50ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://cdn.notinoimg.com/detail_main_mq/tom-ford/888066187091_01-o/private-blend-tobacco-chocolat___260805.jpg",
-    "sourceUrl": "",
-    "localImage": "/images/parfums/tom-ford-tobacco-chocolat-50ml-eau-de-parfum.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 30,
-        "nom": "Tom Ford Tobacco Chocolat 50ml Eau De Parfum",
-        "type": "standard",
-        "genre": "Mixte"
-      }
-    ]
-  },
-  {
-    "groupKey": "dolce gabbana light blue",
-    "representativeName": "Dolce & Gabbana Light Blue 125ml Eau De Toilette ( Format Testeur )",
-    "searchQuery": "Dolce & Gabbana Light Blue 125ml Eau De Toilette ( Format Testeur ) perfume bottle",
-    "imageUrl": "https://cdn.notinoimg.com/detail_main_hq/dolcegabbana/8056669925705_02/light-blue-pour-homme-eau-de-parfum___260310.jpg",
-    "sourceUrl": "https://www.notino.co.uk/dolce-gabbana/light-blue-pour-homme-eau-de-parfum-eau-de-parfum-for-men/",
-    "localImage": "/images/parfums/dolce-and-gabbana-light-blue-125ml-eau-de-toilette-format-testeur.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 3,
-        "nom": "Dolce & Gabbana Light Blue 100ml Eau De Toilette (Format Testeur)",
-        "type": "testeur",
-        "genre": "Femme"
-      }
-    ]
-  },
-  {
-    "groupKey": "frederic malle rose tonnerre",
-    "representativeName": "Frédéric Malle Rose Tonnerre 50ml Parfum",
-    "searchQuery": "Frédéric Malle Rose Tonnerre 50ml Parfum perfume bottle",
-    "imageUrl": "https://fraguru.com/mdimg/perfume/social.2851.jpg",
-    "sourceUrl": "https://www.fragrantica.fr/parfum/Frederic-Malle/Rose-Tonnerre-2851.html",
-    "localImage": "/images/parfums/frederic-malle-rose-tonnerre-50ml-parfum.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 8,
-        "nom": "Frédéric Malle Rose Tonnerre 100ml Parfum (Format Testeur)",
-        "type": "testeur",
-        "genre": "Mixte"
-      }
-    ]
-  },
-  {
-    "groupKey": "hermes eau des merveilles bleue",
-    "representativeName": "Hermès Eau Des Merveilles Bleue 15ml Eau De Toilette ( Format Testeur )",
-    "searchQuery": "Hermès Eau Des Merveilles Bleue 15ml Eau De Toilette ( Format Testeur ) perfume bottle",
-    "imageUrl": "https://fimgs.net/images/perfume/social.42747.jpg",
-    "sourceUrl": "https://www.fragrantica.it/perfume/Hermes/Eau-des-Merveilles-Bleue-42747.html",
-    "localImage": "/images/parfums/hermes-eau-des-merveilles-bleue-15ml-eau-de-toilette-format-testeur.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 10,
-        "nom": "Hermès Eau Des Merveilles Bleue 15ml Eau De Toilette (Sans Boîte)",
-        "type": "standard",
-        "genre": "Femme"
-      }
-    ]
-  },
-  {
-    "groupKey": "hermes terre d hermes",
-    "representativeName": "Hermès Terre D'hermès 100ml Eau De Toilette",
-    "searchQuery": "Hermès Terre D'hermès 100ml Eau De Toilette perfume bottle",
-    "imageUrl": "https://www.sephora.com.br/dw/image/v2/BFJC_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/pt_BR/dw5b0bf162/images/hi-res-BR/3346131400003_1500px.jpg?sw=1200&sh=1200&sm=fit",
-    "sourceUrl": "https://www.sephora.com.br/perfume-terre-d-hermes-masculino-eau-de-toilette-prd04056-PRD04056.html",
-    "localImage": "/images/parfums/hermes-terre-d-hermes-100ml-eau-de-toilette.jpg",
-    "status": "validated",
-    "products": [
-      {
-        "index": 11,
-        "nom": "Hermès Terre D'hermès 15ml Eau De Toilette (Sans Boîte)",
-        "type": "standard",
+        "index": 64,
+        "nom": "Paco Rabanne Million Gold 100ml Eau De Parfum + Deodorant 150ml + Mini 10ml Eau De Parfum",
+        "type": "coffret",
         "genre": "Homme"
-      }
-    ]
-  },
-  {
-    "groupKey": "hermes terre d hermes eau intense vetiver",
-    "representativeName": "Hermès Terre D'hermès Eau Intense Vétiver 100ml Eau De Toilette ( Format Testeur )",
-    "searchQuery": "Hermès Terre D'hermès Eau Intense Vétiver 100ml Eau De Toilette ( Format Testeur ) perfume bottle",
-    "imageUrl": "https://fimgs.net/mdimg/secundar/o.56818.jpg",
-    "sourceUrl": "https://www.fragrantica.com/perfume/Herm-s/Terre-D-Hermes-Eau-Intense-Vetiver-50672.html",
-    "localImage": "/images/parfums/hermes-terre-d-hermes-eau-intense-vetiver-100ml-eau-de-toilette-format-testeur.jpg",
-    "status": "validated",
-    "products": [
+      },
       {
-        "index": 12,
-        "nom": "Hermès Terre D'hermès Eau Intense Vétiver 100ml Eau De Parfum (Format Testeur)",
-        "type": "testeur",
-        "genre": "Homme"
-      }
-    ]
-  },
-  {
-    "groupKey": "hermes terre d hermes pur",
-    "representativeName": "Hermès Terre D'hermès Pur Parfum 75ml Parfum",
-    "searchQuery": "Hermès Terre D'hermès Pur Parfum 75ml Parfum perfume bottle",
-    "imageUrl": "https://fraguru.com/mdimg/secundar/o.78867.jpg",
-    "sourceUrl": "https://www.fragrantica.nl/parfum/Hermes/Terre-d-Hermes-Flacon-H-2021-Parfum-65397.html",
-    "localImage": "/images/parfums/hermes-terre-d-hermes-pur-parfum-75ml-parfum.jpg",
-    "status": "validated",
-    "products": [
+        "index": 65,
+        "nom": "Paco Rabanne Million Gold 50ml Eau De Parfum + Mascara Famous Deep Black 8ml",
+        "type": "coffret",
+        "genre": "Femme"
+      },
       {
-        "index": 13,
-        "nom": "Hermès Terre D'hermès Pur Parfum 15ml Parfum (Sans Boîte)",
-        "type": "standard",
-        "genre": "Homme"
+        "index": 66,
+        "nom": "Paco Rabanne Million Gold 90ml Eau De Parfum + Lait Corps 100ml + Miniature 10ml",
+        "type": "coffret",
+        "genre": "Femme"
+      },
+      {
+        "index": 67,
+        "nom": "Paco Rabanne Million Gold 90ml Eau De Parfum + Mascara Eyephoria Rockstar 8ml",
+        "type": "coffret",
+        "genre": "Femme"
       }
     ]
   },
   {
-    "groupKey": "hugo boss hugo man",
-    "representativeName": "Hugo Boss Hugo Man 125ml Eau De Toilette",
-    "searchQuery": "Hugo Boss Hugo Man 125ml Eau De Toilette perfume bottle",
-    "imageUrl": "https://fimgs.net/mdimg/perfume-thumbs/dark-375x500.64606.2x.avif",
-    "sourceUrl": "",
-    "localImage": "/images/parfums/hugo-boss-hugo-man-125ml-eau-de-toilette.jpg",
+    "groupKey": "elie saab essence no 1 rose essence de",
+    "representativeName": "Elie Saab Essence No.1 Rose 100ml Essence De Parfum",
+    "searchQuery": "Elie Saab Essence No.1 Rose 100ml Essence De Parfum perfume bottle",
+    "imageUrl": "https://fimgs.net/photogram/p1200/x7/ut/XAvvdb137JBD0f6z.jpg",
+    "sourceUrl": "https://www.fragrantica.de/Parfum/Elie-Saab/Essence-No-1-Rose-25914.html",
+    "localImage": "/images/parfums/elie-saab-essence-no-1-rose-100ml-essence-de-parfum.jpg",
     "status": "validated",
     "products": [
       {
         "index": 14,
-        "nom": "Hugo Boss Hugo Man 40ml Eau De Toilette",
+        "nom": "Elie Saab Essence No.1 Rose 100ml Essence De Parfum",
+        "type": "standard",
+        "genre": "Homme"
+      },
+      {
+        "index": 15,
+        "nom": "Elie Saab Essence No.1 Rose 100ml Essence De Parfum",
+        "type": "standard",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "elie saab essence no 4 oud essence de",
+    "representativeName": "Elie Saab Essence No.4 Oud 100ml Essence De Parfum",
+    "searchQuery": "Elie Saab Essence No.4 Oud 100ml Essence De Parfum perfume bottle",
+    "imageUrl": "https://fimgs.net/photogram/p1200/pl/xm/FuDT2EypgRnye0fy.jpg",
+    "sourceUrl": "https://www.fragrantica.fr/parfum/Elie-Saab/Essence-No-4-Oud-25917.html",
+    "localImage": "/images/parfums/elie-saab-essence-no-4-oud-100ml-essence-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 16,
+        "nom": "Elie Saab Essence No.4 Oud 100ml Essence De Parfum",
+        "type": "standard",
+        "genre": "Homme"
+      },
+      {
+        "index": 17,
+        "nom": "Elie Saab Essence No.4 Oud 100ml Essence De Parfum",
+        "type": "standard",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "parfums de marly pegasus exclusif",
+    "representativeName": "Parfums De Marly Pegasus Exclusif 125ml Eau De Parfum ( format testeur )",
+    "searchQuery": "Parfums De Marly Pegasus Exclusif 125ml Eau De Parfum ( format testeur ) perfume bottle",
+    "imageUrl": "https://i.otto.de/i/otto/dcfe7bde-6b97-5921-975b-d90441fed662/parfums-de-marly-eau-de-parfum-parfums-de-marly-pegasus-exclusif-eau-de-parfum-125ml-1-tlg-edp.jpg?$formatz$",
+    "sourceUrl": "https://www.otto.de/p/parfums-de-marly-eau-de-parfum-parfums-de-marly-pegasus-exclusif-eau-de-parfum-125ml-1-tlg-edp-S0MGD090/",
+    "localImage": "/images/parfums/parfums-de-marly-pegasus-exclusif-125ml-eau-de-parfum-format-testeur.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 72,
+        "nom": "Parfums De Marly Pegasus Exclusif 125ml Eau De Parfum ( format testeur )",
+        "type": "testeur",
+        "genre": "Mixte"
+      },
+      {
+        "index": 73,
+        "nom": "Parfums De Marly Pegasus Exclusif 75ml Eau De Parfum ( format testeur )",
+        "type": "testeur",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "armani i will",
+    "representativeName": "Armani I Will 90ml Eau De Parfum ( Format Testeur )",
+    "searchQuery": "Armani I Will 90ml Eau De Parfum ( Format Testeur ) perfume bottle",
+    "imageUrl": "https://cdn-reviews.notinoimg.com/cdn-cgi/image/width=796,height=986,fit=scale-down/images/2938ae9e-c67a-4ceb-8ef0-6ed8b9fe71d5.jpg",
+    "sourceUrl": "",
+    "localImage": "/images/parfums/armani-i-will-90ml-eau-de-parfum-format-testeur.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 0,
+        "nom": "Armani I Will 90ml Eau De Parfum ( Format Testeur )",
+        "type": "testeur",
+        "genre": "Homme"
+      }
+    ]
+  },
+  {
+    "groupKey": "armani si intense",
+    "representativeName": "Armani Si Intense 100ml Eau De Parfum ( Format Testeur )",
+    "searchQuery": "Armani Si Intense 100ml Eau De Parfum ( Format Testeur ) perfume bottle",
+    "imageUrl": "https://fraguru.com/himg/o.X3NLqTxwFjB.jpg",
+    "sourceUrl": "https://www.fragrantica.it/news/Si-Eau-de-Parfum-Intense-di-Giorgio-Armani-5414.html",
+    "localImage": "/images/parfums/armani-si-intense-100ml-eau-de-parfum-format-testeur.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 1,
+        "nom": "Armani Si Intense 100ml Eau De Parfum ( Format Testeur )",
+        "type": "testeur",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "atelier des ors bois sikar",
+    "representativeName": "Atelier Des Ors Bois Sikar 100ml Eau De Parfum",
+    "searchQuery": "Atelier Des Ors Bois Sikar 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_lq/atelier_des_ors/3760027140314_01-o/bois-sikar___240430.jpg",
+    "sourceUrl": "https://www.notino.at/atelier-des-ors/bois-sikar-eau-de-parfum-unisex/",
+    "localImage": "/images/parfums/atelier-des-ors-bois-sikar-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 2,
+        "nom": "Atelier Des Ors Bois Sikar 100ml Eau De Parfum (Format Testeur)",
+        "type": "testeur",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "calvin klein ck one",
+    "representativeName": "Calvin Klein Ck One 100ml Eau De Toilette ( Format Testeur )",
+    "searchQuery": "Calvin Klein Ck One 100ml Eau De Toilette ( Format Testeur ) perfume bottle",
+    "imageUrl": "https://i.notino.com/view/calvin-klein/cakoneu_aedt45_02__6.jpg",
+    "sourceUrl": "https://www.notino.fr/calvin-klein/ck-one-eau-de-toilette-mixte/",
+    "localImage": "/images/parfums/calvin-klein-ck-one-100ml-eau-de-toilette-format-testeur.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 3,
+        "nom": "Calvin Klein Ck One 100ml Eau De Toilette ( Format Testeur )",
+        "type": "testeur",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "carolina herrera good girl",
+    "representativeName": "Carolina Herrera Good Girl 80ml Eau De Parfum",
+    "searchQuery": "Carolina Herrera Good Girl 80ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://www.oksouq.com/web/image/product.product/7585/image_1024/Carolina%20Herrera%20Good%20Girl%20Eau%20De%20Parfum%2080Ml%20(0)?unique=24f3378",
+    "sourceUrl": "https://www.oksouq.com/shop/carolina-herrera-good-girl-eau-de-parfum-80ml-3332",
+    "localImage": "/images/parfums/carolina-herrera-good-girl-80ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 4,
+        "nom": "Carolina Herrera Good Girl 80ml Eau De Parfum + Lait Corps 100ml",
+        "type": "coffret",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "carolina herrera good girl blush",
+    "representativeName": "Carolina Herrera Good Girl Blush 80ml Eau De Parfum",
+    "searchQuery": "Carolina Herrera Good Girl Blush 80ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_hq/carolina-herrera/8411061056769_03-o/good-girl-blush___231107.jpg",
+    "sourceUrl": "https://www.notino.fr/carolina-herrera/good-girl-blush-eau-de-parfum-pour-femme/",
+    "localImage": "/images/parfums/carolina-herrera-good-girl-blush-80ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 5,
+        "nom": "Carolina Herrera Good Girl Blush 80ml Eau De Parfum+ Mini 10ml Eau De Parfum",
+        "type": "coffret",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "carolina herrera la bomba",
+    "representativeName": "Carolina Herrera La Bomba 80ml Eau De Parfum",
+    "searchQuery": "Carolina Herrera La Bomba 80ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_hq/carolina-herrera/8411061077160_02-o/la-bomba___250707.jpg",
+    "sourceUrl": "https://www.notino.fr/carolina-herrera/la-bomba-eau-de-parfum-rechargeable-pour-femme/",
+    "localImage": "/images/parfums/carolina-herrera-la-bomba-80ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 6,
+        "nom": "Carolina Herrera La Bomba  80ml Eau De Parfum + Lait Corps 100ml",
+        "type": "coffret",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "caron pour un homme de caron",
+    "representativeName": "Caron Pour Un Homme De Caron 125ml Eau De Toilette",
+    "searchQuery": "Caron Pour Un Homme De Caron 125ml Eau De Toilette perfume bottle",
+    "imageUrl": "https://www.parfumdo.com/68262-thickbox_default/pour-un-homme-flacon-eau-de-toilette.jpg",
+    "sourceUrl": "https://www.parfumdo.com/16743-pour-un-homme-flacon-eau-de-toilette.html",
+    "localImage": "",
+    "status": "validated",
+    "products": [
+      {
+        "index": 7,
+        "nom": "Caron Pour Un Homme De Caron 125ml Eau De Toilette + Gel Douche 75ml + Le Soir 5ml Eau De Toilette + Le Soir 5ml Eau De Parfum",
+        "type": "coffret",
+        "genre": "Homme"
+      }
+    ],
+    "forceDownload": true,
+    "downloadError": "HTTP 404"
+  },
+  {
+    "groupKey": "chanel allure homme sport",
+    "representativeName": "Chanel Allure Homme Sport 3x 20ml (= 60ml) Eau De Toilette (Travel)",
+    "searchQuery": "Chanel Allure Homme Sport 3x 20ml (= 60ml) Eau De Toilette (Travel) perfume bottle",
+    "imageUrl": "https://www.chanel.com/images/t_one/t_fragrance/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_1920/allure-homme-sport-eau-de-parfum-twist-and-spray-3x0-7fl-oz--packshot-default-123500-9565569777694.jpg",
+    "sourceUrl": "https://www.chanel.com/il-en/fragrance/p/123500/allure-homme-sport-eau-extreme-twist-and-spray-refillable-bottle-eau-de-parfum/",
+    "localImage": "/images/parfums/chanel-allure-homme-sport-3x-20ml-60ml-eau-de-toilette-travel.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 8,
+        "nom": "Chanel Allure Homme Sport 3x 20ml (= 60ml) Eau De Toilette (Travel)",
         "type": "standard",
         "genre": "Homme"
       }
     ]
   },
   {
-    "groupKey": "paco rabanne phantom",
-    "representativeName": "Paco Rabanne Phantom 100ml Eau De Toilette",
-    "searchQuery": "Paco Rabanne Phantom 100ml Eau De Toilette perfume bottle",
-    "imageUrl": "https://cdn.notinoimg.com/detail_main_lq/paco-rabanne/3349668644049_02-o/phantom-elixir___241212.jpg",
-    "sourceUrl": "https://www.notino.be/rabanne/phantom-elixir-parfum-pour-homme-7052631/",
-    "localImage": "/images/parfums/paco-rabanne-phantom-100ml-eau-de-toilette.jpg",
+    "groupKey": "chopard collection agar royal",
+    "representativeName": "Chopard Collection Agar Royal 100ml Eau De Parfum",
+    "searchQuery": "Chopard Collection Agar Royal 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://fr.vesira.net/media/catalog/product/cache/8/image/650x/040ec09b1e35df139433887a97daa66f/c/h/chopard-agar-royal-eau-de-parfum-100-ml.jpg",
+    "sourceUrl": "https://fr.vesira.net/chopard-agar-royal-eau-de-parfum-100-ml-57145",
+    "localImage": "/images/parfums/chopard-collection-agar-royal-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 9,
+        "nom": "Chopard Collection Agar Royal 100ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "chopard collection nuit des rois",
+    "representativeName": "Chopard Collection Nuit Des Rois 100ml Eau De Parfum",
+    "searchQuery": "Chopard Collection Nuit Des Rois 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://fraguru.com/mdimg/secundar/o.63777.jpg",
+    "sourceUrl": "https://www.fragrantica.fr/parfum/Chopard/Nuit-des-Rois-55854.html",
+    "localImage": "/images/parfums/chopard-collection-nuit-des-rois-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 10,
+        "nom": "Chopard Collection Nuit Des Rois 100ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "chopard collection rose seljuke",
+    "representativeName": "Chopard Collection Rose Seljuke 100ml Eau De Parfum",
+    "searchQuery": "Chopard Collection Rose Seljuke 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_hq/chopard/7640177367471_02-o/gardens-of-paradise-rose-seljuke___200331.jpg",
+    "sourceUrl": "https://www.notino.be/chopard/gardens-of-paradise-rose-seljuke-eau-de-parfum-mixte/",
+    "localImage": "/images/parfums/chopard-collection-rose-seljuke-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 11,
+        "nom": "Chopard Collection Rose Seljuke 100ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "dior hypnotic poison",
+    "representativeName": "Dior Hypnotic Poison 100ml Eau De Toilette",
+    "searchQuery": "Dior Hypnotic Poison 100ml Eau De Toilette perfume bottle",
+    "imageUrl": "https://image-optimizer-reg.production.sephora-asia.net/images/product_images/zoom_1_Product_182826-Dior-Hypnotic-Poison-Eau-De-Toilette-100ml_b8d2e2ad2e50d6036f6d600a20bda689862016ab_1555309247.png",
+    "sourceUrl": "https://www.sephora.com.au/products/dior-hypnotic-poison-eau-de-toilette",
+    "localImage": "/images/parfums/dior-hypnotic-poison-100ml-eau-de-toilette.png",
+    "status": "validated",
+    "products": [
+      {
+        "index": 12,
+        "nom": "Dior Hypnotic Poison 100ml Eau De Toilette",
+        "type": "standard",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "dolce gabbana the one",
+    "representativeName": "Dolce & Gabbana The One 75ml Eau De Parfum",
+    "searchQuery": "Dolce & Gabbana The One 75ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://cosmechic.fr/36663-large_default/eau-de-parfum-intense-the-one-gold-75-ml.jpg",
+    "sourceUrl": "",
+    "localImage": "/images/parfums/dolce-and-gabbana-the-one-75ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 13,
+        "nom": "Dolce & Gabbana The One 75ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "elizabeth arden 5th avenue",
+    "representativeName": "Elizabeth Arden 5th Avenue 125ml Eau De Parfum",
+    "searchQuery": "Elizabeth Arden 5th Avenue 125ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://i.notino.com/view/elizabeth-arden/85805390600_02-o__28.jpg",
+    "sourceUrl": "https://www.notino.co.uk/elizabeth-arden/5th-avenue-eau-de-parfum-for-women/",
+    "localImage": "/images/parfums/elizabeth-arden-5th-avenue-125ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 18,
+        "nom": "Elizabeth Arden 5th Avenue 125ml Eau De Parfum + Lait Corps 100ml",
+        "type": "coffret",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "essential parfums the musc",
+    "representativeName": "Essential Parfums The Musc 100ml Eau De Parfum",
+    "searchQuery": "Essential Parfums The Musc 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://www.bloomingcorner.gr/wp-content/uploads/2024/11/essentialparfumsthemuscedp100ml.jpg",
+    "sourceUrl": "https://www.bloomingcorner.gr/shop/%CE%B1%CF%81%CF%8E%CE%BC%CE%B1%CF%84%CE%B1/unisex-%CE%B1%CF%81%CF%8E%CE%BC%CE%B1%CF%84%CE%B1/essential-parfums-the-musc-eau-de-parfum-100-ml/",
+    "localImage": "/images/parfums/essential-parfums-the-musc-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 19,
+        "nom": "Essential Parfums The Musc 100ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "etat libre d orange experimentum crucis",
+    "representativeName": "État Libre D'orange Experimentum Crucis 100ml Eau De Parfum ( Format Testeur )",
+    "searchQuery": "État Libre D'orange Experimentum Crucis 100ml Eau De Parfum ( Format Testeur ) perfume bottle",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_lq/etat-libre-dorange/3760168592249_01-o/experimentum-crucis___220711.jpg",
+    "sourceUrl": "https://www.notino.be/etat-libre-dorange/experimentum-crucis-eau-de-parfum-mixte/",
+    "localImage": "/images/parfums/etat-libre-d-orange-experimentum-crucis-100ml-eau-de-parfum-format-testeur.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 20,
+        "nom": "État Libre D'orange Experimentum Crucis 100ml Eau De Parfum ( Format Testeur )",
+        "type": "testeur",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "ex nihilo cuir celeste",
+    "representativeName": "Ex Nihilo Cuir Céleste 100ml Eau De Parfum",
+    "searchQuery": "Ex Nihilo Cuir Céleste 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://fimgs.net/mdimg/perfume-thumbs/375x500.50755.jpg",
+    "sourceUrl": "https://www.fragrantica.de/Parfum/Ex-Nihilo/Cuir-Celeste-Par-Mathieu-Cesar-50755.html",
+    "localImage": "/images/parfums/ex-nihilo-cuir-celeste-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 21,
+        "nom": "Ex Nihilo Cuir Céleste 100ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "ex nihilo vetiver moloko",
+    "representativeName": "Ex Nihilo Vetiver Moloko 50ml Eau De Parfum",
+    "searchQuery": "Ex Nihilo Vetiver Moloko 50ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://mazzolari.com/cdn/shop/files/3770004085057.jpg?v=1696603476&width=1500",
+    "sourceUrl": "https://mazzolari.com/en/products/vetiver-moloko",
+    "localImage": "/images/parfums/ex-nihilo-vetiver-moloko-50ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 22,
+        "nom": "Ex Nihilo Vetiver Moloko 50ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "ex nihilo viper green",
+    "representativeName": "Ex Nihilo Viper Green 50ml Eau De Parfum",
+    "searchQuery": "Ex Nihilo Viper Green 50ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://isolee.com/9053-large_default/viper-green-50ml.jpg",
+    "sourceUrl": "https://isolee.com/en/ex-nihilo/viper-green-50ml",
+    "localImage": "/images/parfums/ex-nihilo-viper-green-50ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 23,
+        "nom": "Ex Nihilo Viper Green 50ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "givenchy ange ou demon le secret",
+    "representativeName": "Givenchy Ange Ou Démon Le Secret 100ml Eau De Parfum",
+    "searchQuery": "Givenchy Ange Ou Démon Le Secret 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_lq/givenchy/3274870373268_02/ange-ou-demon___220712.jpg",
+    "sourceUrl": "",
+    "localImage": "/images/parfums/givenchy-ange-ou-demon-le-secret-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 24,
+        "nom": "Givenchy Ange Ou Démon Le Secret 100ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "givenchy l interdit rouge",
+    "representativeName": "Givenchy L'interdit Rouge 80ml Eau De Parfum",
+    "searchQuery": "Givenchy L'interdit Rouge 80ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://marionnaud.ma/cdn/shop/products/Captured_ecran2022-11-28a11.29.03_400x.png?v=1669631418",
+    "sourceUrl": "https://marionnaud.ma/products/givenchy-linterdit-edp-rouge",
+    "localImage": "/images/parfums/givenchy-l-interdit-rouge-80ml-eau-de-parfum.png",
     "status": "validated",
     "products": [
       {
         "index": 25,
-        "nom": "Paco Rabanne Phantom Parfum 100ml Parfum + Déodorant 150ml + Miniature 10ml",
+        "nom": "Givenchy L'interdit Rouge 80ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "gucci intense oud",
+    "representativeName": "Gucci Intense Oud 90ml Eau De Parfum",
+    "searchQuery": "Gucci Intense Oud 90ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://fimgs.net/photogram/p1200/ti/q4/MKNImaguNa4TmnRa.jpg",
+    "sourceUrl": "https://www.fragrantica.jp/perfume/Gucci/Intense-Oud-32743.html",
+    "localImage": "/images/parfums/gucci-intense-oud-90ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 26,
+        "nom": "Gucci Intense Oud 90ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "guerlain aqua allegoria mandarine basilic",
+    "representativeName": "Guerlain Aqua Allegoria Mandarine Basilic 125ml Eau De Toilette ( Format Testeur )",
+    "searchQuery": "Guerlain Aqua Allegoria Mandarine Basilic 125ml Eau De Toilette ( Format Testeur ) perfume bottle",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_lq/guerlain/3346470106130xx_01/guerlain-aqua-allegoria-mandarine-basilic-eau-de-toilette-unisex___15.jpg",
+    "sourceUrl": "https://www.notino.co.uk/guerlain/aqua-allegoria-mandarine-basilic-eau-de-toilette-unisex/",
+    "localImage": "/images/parfums/guerlain-aqua-allegoria-mandarine-basilic-125ml-eau-de-toilette-format-testeur.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 27,
+        "nom": "Guerlain Aqua Allegoria Mandarine Basilic 125ml Eau De Toilette ( Format Testeur )",
+        "type": "testeur",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "guerlain aqua allegoria nerolia vetiver",
+    "representativeName": "Guerlain Aqua Allegoria Nerolia Vetiver 125ml Eau De Toilette",
+    "searchQuery": "Guerlain Aqua Allegoria Nerolia Vetiver 125ml Eau De Toilette perfume bottle",
+    "imageUrl": "https://ideaprofumi.it/47342-thickbox_default/guerlain-aqua-allegoria-nerolia-vetiver-eau-de-toilette-125-ml-unisex.jpg",
+    "sourceUrl": "https://ideaprofumi.it/en/perfumes/39406-guerlain-aqua-allegoria-nerolia-vetiver-eau-de-toilette-125-ml-unisex-3346470144132.html",
+    "localImage": "/images/parfums/guerlain-aqua-allegoria-nerolia-vetiver-125ml-eau-de-toilette.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 28,
+        "nom": "Guerlain Aqua Allegoria Nerolia Vetiver 125ml Eau De Toilette",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "guerlain shalimar",
+    "representativeName": "Guerlain Shalimar 50ml Eau De Parfum",
+    "searchQuery": "Guerlain Shalimar 50ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://e7.pngegg.com/pngimages/452/928/png-clipart-perfume-guerlain-shalimar-eau-de-parfum-spray-guerlain-womens-shalimar-souffle-edp-most-unique-perfume-bottles-distilled-beverage-cosmetics.png",
+    "sourceUrl": "https://www.pngegg.com/fr/png-wdmas",
+    "localImage": "/images/parfums/guerlain-shalimar-50ml-eau-de-parfum.png",
+    "status": "validated",
+    "products": [
+      {
+        "index": 29,
+        "nom": "Guerlain Shalimar 50ml Eau De Parfum + Lait Corps + Mini",
+        "type": "coffret",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "guess 1981",
+    "representativeName": "Guess 1981 100ml Eau De Toilette",
+    "searchQuery": "Guess 1981 100ml Eau De Toilette perfume bottle",
+    "imageUrl": "https://frenchfragrance.com/images/detailed/23/guess_1981_for_women_for_women_eau_de_toilette_100ml1.jpg",
+    "sourceUrl": "https://frenchfragrance.com/perfumes/guess-1981-for-women-eau-de-toilette-100ml/",
+    "localImage": "",
+    "status": "validated",
+    "products": [
+      {
+        "index": 30,
+        "nom": "Guess 1981 100ml Eau De Toilette",
+        "type": "standard",
+        "genre": "Femme"
+      }
+    ],
+    "forceDownload": true,
+    "downloadError": "HTTP 403"
+  },
+  {
+    "groupKey": "hermes collection hermessence osmanthe yunnan",
+    "representativeName": "Hermès Collection Hermessence Osmanthe Yunnan 100ml Eau De Toilette ( format testeur )",
+    "searchQuery": "Hermès Collection Hermessence Osmanthe Yunnan 100ml Eau De Toilette ( format testeur ) perfume bottle",
+    "imageUrl": "https://fimgs.net/mdimg/secundar/o.10673.jpg",
+    "sourceUrl": "https://www.fragrantica.com/perfume/Hermes/Hermessence-Osmanthe-Yunnan-2674.html",
+    "localImage": "/images/parfums/hermes-collection-hermessence-osmanthe-yunnan-100ml-eau-de-toilette-format-testeur.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 31,
+        "nom": "Hermès Collection Hermessence Osmanthe Yunnan 100ml Eau De Toilette ( format testeur )",
+        "type": "testeur",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "hugo boss the scent for her intense",
+    "representativeName": "Hugo Boss The Scent For Her 50ml Eau De Parfum Intense",
+    "searchQuery": "Hugo Boss The Scent For Her 50ml Eau De Parfum Intense perfume bottle",
+    "imageUrl": "https://fimgs.net/images/secundar/o.48391.jpg",
+    "sourceUrl": "https://www.fragrantica.com/perfume/Hugo-Boss/Boss-The-Scent-For-Her-Intense-45397.html",
+    "localImage": "/images/parfums/hugo-boss-the-scent-for-her-50ml-eau-de-parfum-intense.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 32,
+        "nom": "Hugo Boss The Scent For Her 50ml Eau De Parfum Intense",
+        "type": "standard",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "issey miyake l eau d issey",
+    "representativeName": "Issey Miyake L'eau D'issey 100ml Eau De Toilette ( format testeur )",
+    "searchQuery": "Issey Miyake L'eau D'issey 100ml Eau De Toilette ( format testeur ) perfume bottle",
+    "imageUrl": "https://i1.perfumesclub.com/grande/23912-3.jpg",
+    "sourceUrl": "",
+    "localImage": "/images/parfums/issey-miyake-l-eau-d-issey-100ml-eau-de-toilette-format-testeur.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 33,
+        "nom": "Issey Miyake L'eau D'issey 100ml Eau De Toilette ( format testeur )",
+        "type": "testeur",
+        "genre": "Homme"
+      }
+    ]
+  },
+  {
+    "groupKey": "jean couturier collection aromatique patchouli",
+    "representativeName": "Jean Couturier Collection Aromatique Patchouli 100ml Eau De Parfum",
+    "searchQuery": "Jean Couturier Collection Aromatique Patchouli 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://media.parfumo.com/perfume_social/7d/7d7699-patchouli-jean-couturier_1200.jpg?format=jpg&quality=90",
+    "sourceUrl": "https://www.parfumo.de/Parfums/Jean_Couturier/patchouli",
+    "localImage": "/images/parfums/jean-couturier-collection-aromatique-patchouli-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 34,
+        "nom": "Jean Couturier Collection Aromatique Patchouli 100ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "jean paul gaultier la belle flower new",
+    "representativeName": "Jean Paul Gaultier La Belle Flower 100ml Eau De Parfum ( Format Testeur ) New",
+    "searchQuery": "Jean Paul Gaultier La Belle Flower 100ml Eau De Parfum ( Format Testeur ) New perfume bottle",
+    "imageUrl": "https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_8435415102483-J-P-GAULTIER-La-Belle-Eau-De-Parfum-_c8cd2f02d94c5794637086aa5ea67538e51be6a2_1742472129.png",
+    "sourceUrl": "https://www.sephora.my/products/jean-paul-gaultier-la-belle-eau-de-parfum-flower-limited-edition",
+    "localImage": "/images/parfums/jean-paul-gaultier-la-belle-flower-100ml-eau-de-parfum-format-testeur-new.png",
+    "status": "validated",
+    "products": [
+      {
+        "index": 35,
+        "nom": "Jean Paul Gaultier La Belle Flower 100ml Eau De Parfum ( Format Testeur ) New",
+        "type": "testeur",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "jean paul gaultier la belle rosea",
+    "representativeName": "Jean Paul Gaultier La Belle Rosea 100ml Eau De Parfum ( Format Testeur )",
+    "searchQuery": "Jean Paul Gaultier La Belle Rosea 100ml Eau De Parfum ( Format Testeur ) perfume bottle",
+    "imageUrl": "https://fimgs.net/mdimg/perfume/o.122214.jpg",
+    "sourceUrl": "https://www.fragrantica.ro/parfum/Jean-Paul-Gaultier/La-Belle-Rosea-122214.html",
+    "localImage": "/images/parfums/jean-paul-gaultier-la-belle-rosea-100ml-eau-de-parfum-format-testeur.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 36,
+        "nom": "Jean Paul Gaultier La Belle Rosea 100ml Eau De Parfum ( Format Testeur )",
+        "type": "testeur",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "jean paul gaultier le male elixir",
+    "representativeName": "Jean Paul Gaultier Le Mâle Elixir 75ml Parfum",
+    "searchQuery": "Jean Paul Gaultier Le Mâle Elixir 75ml Parfum perfume bottle",
+    "imageUrl": "https://fimgs.net/mdimg/perfume-thumbs/375x500.81642.2x.jpg",
+    "sourceUrl": "https://www.fragrantica.fr/parfum/Jean-Paul-Gaultier/Le-Male-Elixir-81642.html",
+    "localImage": "/images/parfums/jean-paul-gaultier-le-male-elixir-75ml-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 37,
+        "nom": "Jean Paul Gaultier Le Mâle Elixir 75ml Parfum + Gel Douche 75ml",
         "type": "coffret",
         "genre": "Homme"
       }
     ]
   },
   {
-    "groupKey": "tom ford ombre leather",
-    "representativeName": "Tom Ford Ombré Leather 100ml Eau De Parfum",
-    "searchQuery": "Tom Ford Ombré Leather 100ml Eau De Parfum perfume bottle",
-    "imageUrl": "https://fraguru.com/mdimg/perfume/375x500.95389.jpg",
-    "sourceUrl": "https://www.fragrantica.fr/parfum/Tom-Ford/Eau-d-Ombre-Leather-95389.html",
-    "localImage": "/images/parfums/tom-ford-ombre-leather-100ml-eau-de-parfum.jpg",
+    "groupKey": "jean paul gaultier scandal le intense",
+    "representativeName": "Jean Paul Gaultier Scandal Le Parfum 100ml Eau De Parfum Intense",
+    "searchQuery": "Jean Paul Gaultier Scandal Le Parfum 100ml Eau De Parfum Intense perfume bottle",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_mq/jean-paul-gaultier/8435415102728_02-o/scandal-pour-homme-intense___250304.jpg",
+    "sourceUrl": "https://www.notino.fr/jean-paul-gaultier/scandal-pour-homme-intense-eau-de-parfum-pour-homme/",
+    "localImage": "/images/parfums/jean-paul-gaultier-scandal-le-parfum-100ml-eau-de-parfum-intense.jpg",
     "status": "validated",
     "products": [
       {
-        "index": 28,
-        "nom": "Tom Ford Ombré Leather 50ml Eau De Parfum",
+        "index": 38,
+        "nom": "Jean Paul Gaultier Scandal Le Parfum 100ml Eau De Parfum Intense + Gel Douche 75ml",
+        "type": "coffret",
+        "genre": "Homme"
+      }
+    ]
+  },
+  {
+    "groupKey": "kilian angel s share",
+    "representativeName": "Kilian Angel’s Share 50ml Eau De Parfum",
+    "searchQuery": "Kilian Angel’s Share 50ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://media.parfumo.com/perfumes/98/98e964-angels-share-kilian_1200.jpg?width=720&aspect_ratio=1:1",
+    "sourceUrl": "https://www.parfumo.com/Perfumes/Kilian/angels-share-eau-de-parfum",
+    "localImage": "/images/parfums/kilian-angel-s-share-50ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 39,
+        "nom": "Kilian Angel’s Share 50ml Eau De Parfum",
         "type": "standard",
         "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "korloff royal oud intense",
+    "representativeName": "Korloff Royal Oud Intense 88ml Parfum",
+    "searchQuery": "Korloff Royal Oud Intense 88ml Parfum perfume bottle",
+    "imageUrl": "https://essenzi.com/images/detailed/22/korloff_paris_royal_oud_intense_unisex_le_parfum_88ml1.jpg",
+    "sourceUrl": "https://essenzi.com/perfumes/korloff-paris-royal-oud-intense-le-parfum-88ml/",
+    "localImage": "/images/parfums/korloff-royal-oud-intense-88ml-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 40,
+        "nom": "Korloff Royal Oud Intense 88ml Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "lancome la vie est belle cherry new",
+    "representativeName": "Lancome La Vie Est Belle Cherry 100ml Eau De Parfum ( Format Testeur ) New",
+    "searchQuery": "Lancome La Vie Est Belle Cherry 100ml Eau De Parfum ( Format Testeur ) New perfume bottle",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_lq/lancome/3614274169713_02-o/la-vie-est-belle-lelixir___240730.jpg",
+    "sourceUrl": "https://www.notino.co.uk/lancome/la-vie-est-belle-lelixir-eau-de-parfum-for-women/",
+    "localImage": "/images/parfums/lancome-la-vie-est-belle-cherry-100ml-eau-de-parfum-format-testeur-new.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 41,
+        "nom": "Lancome La Vie Est Belle Cherry 100ml Eau De Parfum ( Format Testeur ) New",
+        "type": "testeur",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "lancome lancome la vie est belle",
+    "representativeName": "Lancome Lancome La Vie Est Belle 100ml Eau De Parfum ( Format Testeur )",
+    "searchQuery": "Lancome Lancome La Vie Est Belle 100ml Eau De Parfum ( Format Testeur ) perfume bottle",
+    "imageUrl": "https://www.myperfumeshop.co.za/wp-content/uploads/2023/07/eau-de-parfum-lancome-la-vie-est-belle-100ml-d7d.jpg",
+    "sourceUrl": "https://www.myperfumeshop.co.za/product/lancome-la-vie-est-belle-100ml-edp-refillable/",
+    "localImage": "/images/parfums/lancome-lancome-la-vie-est-belle-100ml-eau-de-parfum-format-testeur.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 42,
+        "nom": "Lancome Lancome La Vie Est Belle 100ml Eau De Parfum ( Format Testeur )",
+        "type": "testeur",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "mancera amber roses",
+    "representativeName": "Mancera Amber & Roses 60ml Eau De Parfum",
+    "searchQuery": "Mancera Amber & Roses 60ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://cdn11.bigcommerce.com/s-5cd76qe6s3/images/stencil/1280x1280/products/15102/13173/MANC190003__29873.1695178185.jpg?c=1",
+    "sourceUrl": "https://www.scentsworld.com/manc190003/",
+    "localImage": "/images/parfums/mancera-amber-and-roses-60ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 43,
+        "nom": "Mancera Amber & Roses 60ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "mancera aoud black candy",
+    "representativeName": "Mancera Aoud Black Candy 60ml Eau De Parfum",
+    "searchQuery": "Mancera Aoud Black Candy 60ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_hq/mancera/2800011356534_02-o/mancera-aoud-black-candy-eau-de-parfum-unisex___230315.jpg",
+    "sourceUrl": "https://www.notino.ch/mancera/aoud-black-candy-eau-de-parfum-unisex/",
+    "localImage": "/images/parfums/mancera-aoud-black-candy-60ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 44,
+        "nom": "Mancera Aoud Black Candy 60ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "mancera instant crush",
+    "representativeName": "Mancera Instant Crush 120ml Eau De Parfum",
+    "searchQuery": "Mancera Instant Crush 120ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_hq/mancera/3760265193134_02-o/instant-crush___211101.jpg",
+    "sourceUrl": "https://www.notino.fr/mancera/instant-crush-eau-de-parfum-mixte/",
+    "localImage": "/images/parfums/mancera-instant-crush-120ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 45,
+        "nom": "Mancera Instant Crush 120ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "mancera roses vanille",
+    "representativeName": "Mancera Roses Vanille 120ml Eau De Parfum",
+    "searchQuery": "Mancera Roses Vanille 120ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://www.ecseer.com/cdn/shop/files/IMG_7793.jpg?v=1769018120&width=1946",
+    "sourceUrl": "https://www.ecseer.com/products/mancera-roses-vanille-eau-de-parfum-120ml-with-box",
+    "localImage": "/images/parfums/mancera-roses-vanille-120ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 46,
+        "nom": "Mancera Roses Vanille 120ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "marc antoine barrois ganymede",
+    "representativeName": "Marc-Antoine Barrois Ganymède 100ml Eau De Parfum ( format testeur )",
+    "searchQuery": "Marc-Antoine Barrois Ganymède 100ml Eau De Parfum ( format testeur ) perfume bottle",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_mq/marc_antoine_barrois/3770006409028_02-o/ganymede___241023.jpg",
+    "sourceUrl": "https://www.notino.ch/marc-antoine-barrois/ganymede-eau-de-parfum-unisex/",
+    "localImage": "/images/parfums/marc-antoine-barrois-ganymede-100ml-eau-de-parfum-format-testeur.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 47,
+        "nom": "Marc-Antoine Barrois Ganymède 100ml Eau De Parfum ( format testeur )",
+        "type": "testeur",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "marc antoine barrois ganymede extrait",
+    "representativeName": "Marc-Antoine Barrois Ganymède Extrait 50ml Extrait De Parfum ( format testeur )",
+    "searchQuery": "Marc-Antoine Barrois Ganymède Extrait 50ml Extrait De Parfum ( format testeur ) perfume bottle",
+    "imageUrl": "https://thefragrancesecrets.com/cdn/shop/files/Marc-Antoine_Barrois_Ganymede_Extrait_De_Parfum_50ML_unisex_perfume_bottle_side.jpg?v=1777988271&width=1946",
+    "sourceUrl": "https://thefragrancesecrets.com/products/marc-antoine-barrois-ganymede-extrait-50ml-unisex-oriental-spicy-perfume",
+    "localImage": "/images/parfums/marc-antoine-barrois-ganymede-extrait-50ml-extrait-de-parfum-format-testeur.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 48,
+        "nom": "Marc-Antoine Barrois Ganymède Extrait 50ml Extrait De Parfum ( format testeur )",
+        "type": "testeur",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "mauboussin a la folie",
+    "representativeName": "Mauboussin À La Folie 100ml Eau De Parfum",
+    "searchQuery": "Mauboussin À La Folie 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://i.notino.com/view/mauboussin/maualfw_aedp20_02__8.jpg",
+    "sourceUrl": "https://www.notino.fr/mauboussin/a-la-folie-eau-de-parfum-pour-femme/",
+    "localImage": "/images/parfums/mauboussin-a-la-folie-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 49,
+        "nom": "Mauboussin À La Folie 100ml Eau De Parfum + Lait 75ml + Miniature 20ml + Sac Bandoulière",
+        "type": "coffret",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "mauboussin pour elle",
+    "representativeName": "Mauboussin Pour Elle 100ml Eau De Parfum",
+    "searchQuery": "Mauboussin Pour Elle 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://shouet.com/3028-tm_thickbox_default/mauboussin-pour-elle-eau-de-parfum.jpg",
+    "sourceUrl": "https://shouet.com/eau-de-parfum/378-mauboussin-pour-elle-eau-de-parfum.html",
+    "localImage": "/images/parfums/mauboussin-pour-elle-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 50,
+        "nom": "Mauboussin Pour Elle 100ml Eau De Parfum + Lait 75ml + Miniature 20ml + Sac Bandoulière",
+        "type": "coffret",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "mauboussin pour lui in black",
+    "representativeName": "Mauboussin Pour Lui In Black 100ml Eau De Parfum",
+    "searchQuery": "Mauboussin Pour Lui In Black 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_mq/mauboussin/3760048795548_01-o/pour-lui-in-black___200212.jpg",
+    "sourceUrl": "",
+    "localImage": "/images/parfums/mauboussin-pour-lui-in-black-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 51,
+        "nom": "Mauboussin Pour Lui In Black 100ml Eau De Parfum + Miniature 20ml + Gel Douche 75ml + Sac Bandoulière",
+        "type": "coffret",
+        "genre": "Homme"
+      }
+    ]
+  },
+  {
+    "groupKey": "mont blanc individuel",
+    "representativeName": "Mont Blanc Individuel 75ml Eau De Toilette ( Format Testeur )",
+    "searchQuery": "Mont Blanc Individuel 75ml Eau De Toilette ( Format Testeur ) perfume bottle",
+    "imageUrl": "https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/montblanc/EQP426DU47C-1/0/giKZWJts4U-1.jpg",
+    "sourceUrl": "https://sephora.in/product/montblanc-individuel-eau-de-toilette-v-75ml",
+    "localImage": "/images/parfums/mont-blanc-individuel-75ml-eau-de-toilette-format-testeur.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 52,
+        "nom": "Mont Blanc Individuel 75ml Eau De Toilette ( Format Testeur )",
+        "type": "testeur",
+        "genre": "Homme"
+      }
+    ]
+  },
+  {
+    "groupKey": "montale arabians tonka",
+    "representativeName": "Montale Arabians Tonka 100ml Eau De Parfum",
+    "searchQuery": "Montale Arabians Tonka 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "http://zacshop.com/cdn/shop/files/MontaleArabianTonka1.webp?v=1701701555",
+    "sourceUrl": "https://zacshop.com/products/montale-arabians-tonka-for-unisex-eau-de-parfum-100ml",
+    "localImage": "/images/parfums/montale-arabians-tonka-100ml-eau-de-parfum.webp",
+    "status": "validated",
+    "products": [
+      {
+        "index": 53,
+        "nom": "Montale Arabians Tonka 100ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "montale intense cafe",
+    "representativeName": "Montale Intense Café 100ml Eau De Parfum",
+    "searchQuery": "Montale Intense Café 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://i.notino.com/view/montale/mntincu_aedp20_02__12.jpg",
+    "sourceUrl": "https://www.notino.co.uk/montale/intense-cafe-eau-de-parfum-unisex/",
+    "localImage": "/images/parfums/montale-intense-cafe-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 54,
+        "nom": "Montale Intense Café 100ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "montale oud tobacco",
+    "representativeName": "Montale Oud Tobacco 100ml Eau De Parfum",
+    "searchQuery": "Montale Oud Tobacco 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://cdn.idealo.com/folder/Product/200886/7/200886725/s1_produktbild_max_5/montale-oud-tobacco-eau-de-parfum-100ml.jpg",
+    "sourceUrl": "https://www.idealo.de/preisvergleich/OffersOfProduct/200886725_-oud-tobacco-eau-de-parfum-100ml-montale.html",
+    "localImage": "/images/parfums/montale-oud-tobacco-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 55,
+        "nom": "Montale Oud Tobacco 100ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "montale starry nights",
+    "representativeName": "Montale Starry Nights 100ml Eau De Parfum",
+    "searchQuery": "Montale Starry Nights 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://i.notino.com/view/montale/mntstnu_aedp20_01__2.jpg",
+    "sourceUrl": "https://www.notino.co.uk/montale/starry-nights-eau-de-parfum-unisex/",
+    "localImage": "/images/parfums/montale-starry-nights-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 56,
+        "nom": "Montale Starry Nights 100ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "montale sweet vanilla",
+    "representativeName": "Montale Sweet Vanilla 100ml Eau De Parfum",
+    "searchQuery": "Montale Sweet Vanilla 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_mq/montale/mntsvau_aedp10_02-o/sweet-vanilla___171004.jpg",
+    "sourceUrl": "https://www.notino.co.uk/montale/sweet-vanilla-eau-de-parfum-unisex/",
+    "localImage": "/images/parfums/montale-sweet-vanilla-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 57,
+        "nom": "Montale Sweet Vanilla 100ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "narciso rodriguez for her intense intense",
+    "representativeName": "Narciso Rodriguez For Her Intense 100ml Eau De Parfum Intense",
+    "searchQuery": "Narciso Rodriguez For Her Intense 100ml Eau De Parfum Intense perfume bottle",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_hq/narciso-rodriguez/3423222121297_03/for-her-intense___250131.jpg",
+    "sourceUrl": "https://www.notino.fr/narciso-rodriguez/for-her-intense-eau-de-parfum-pour-femme/",
+    "localImage": "/images/parfums/narciso-rodriguez-for-her-intense-100ml-eau-de-parfum-intense.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 58,
+        "nom": "Narciso Rodriguez For Her Intense 100ml Eau De Parfum Intense + Lait Corps 50ml + Miniature 10ml",
+        "type": "coffret",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "narciso rodriguez poudree",
+    "representativeName": "Narciso Rodriguez Poudrée 90ml Eau De Parfum",
+    "searchQuery": "Narciso Rodriguez Poudrée 90ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://i.notino.com/view/narciso-rodriguez/narnapw_aedp20_02__2.jpg",
+    "sourceUrl": "https://www.notino.at/narciso-rodriguez/narciso-poudree-eau-de-parfum-fur-damen/",
+    "localImage": "/images/parfums/narciso-rodriguez-poudree-90ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 59,
+        "nom": "Narciso Rodriguez Poudrée 90ml Eau De Parfum + Miniature 10ml",
+        "type": "coffret",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "nina ricci l air du temps",
+    "representativeName": "Nina Ricci L'air Du Temps 100ml Eau De Toilette ( Format Testeur )",
+    "searchQuery": "Nina Ricci L'air Du Temps 100ml Eau De Toilette ( Format Testeur ) perfume bottle",
+    "imageUrl": "https://i.notino.com/detail_zoom/nina-ricci/3137370302131_01-o/nina-ricci-lair-du-temps-eau-de-parfum-pour-femme-100-ml_.jpg",
+    "sourceUrl": "https://foodbrats.com/lair-nina-ricci-100-ml-lair-du-temps-eau-de-toilette/",
+    "localImage": "/images/parfums/nina-ricci-l-air-du-temps-100ml-eau-de-toilette-format-testeur.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 60,
+        "nom": "Nina Ricci L'air Du Temps 100ml Eau De Toilette ( Format Testeur )",
+        "type": "testeur",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "nina ricci love in paris",
+    "representativeName": "Nina Ricci Love In Paris 50ml Eau De Parfum ( Format Testeur )",
+    "searchQuery": "Nina Ricci Love In Paris 50ml Eau De Parfum ( Format Testeur ) perfume bottle",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_lq/nina-ricci/3137370183822_01-o/love-in-paris___130416.jpg",
+    "sourceUrl": "https://www.notino.fr/nina-ricci/love-in-paris-eau-de-parfum-pour-femme/",
+    "localImage": "/images/parfums/nina-ricci-love-in-paris-50ml-eau-de-parfum-format-testeur.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 61,
+        "nom": "Nina Ricci Love In Paris 50ml Eau De Parfum ( Format Testeur )",
+        "type": "testeur",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "nina ricci nina fleur",
+    "representativeName": "Nina Ricci Nina Fleur 80ml Eau De Toilette",
+    "searchQuery": "Nina Ricci Nina Fleur 80ml Eau De Toilette perfume bottle",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_mq/nina-ricci/3137370359494_02-o/nina-le-parfum___230609.jpg",
+    "sourceUrl": "https://www.notino.co.uk/nina-ricci/nina-le-parfum-eau-de-parfum-for-women/",
+    "localImage": "/images/parfums/nina-ricci-nina-fleur-80ml-eau-de-toilette.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 62,
+        "nom": "Nina Ricci Nina Fleur 80ml Eau De Toilette + Lotion Corps 75ml",
+        "type": "coffret",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "nishane hacivat",
+    "representativeName": "Nishane Hacivat 100ml Extrait De Parfum",
+    "searchQuery": "Nishane Hacivat 100ml Extrait De Parfum perfume bottle",
+    "imageUrl": "https://wholesalekw.com/cdn/shop/files/JeanLouisScherrer2forWomenEDT100mL_6.jpg?v=1694510713&width=2048",
+    "sourceUrl": "https://wholesalekw.com/products/nishane-hacivat-extrait-de-parfum-for-unisex-100ml",
+    "localImage": "/images/parfums/nishane-hacivat-100ml-extrait-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 63,
+        "nom": "Nishane Hacivat 100ml Extrait De Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "paco rabanne paco rabanne rabanne invictus elixir",
+    "representativeName": "Paco Rabanne Paco Rabanne Rabanne Invictus Elixir 100ml Eau De Parfum ( Format Testeur )",
+    "searchQuery": "Paco Rabanne Paco Rabanne Rabanne Invictus Elixir 100ml Eau De Parfum ( Format Testeur ) perfume bottle",
+    "imageUrl": "https://www.parfumdo.com/120396-large_default/invictus-elixir-parfum-elixir.jpg",
+    "sourceUrl": "",
+    "localImage": "/images/parfums/paco-rabanne-paco-rabanne-rabanne-invictus-elixir-100ml-eau-de-parfum-format-testeur.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 68,
+        "nom": "Paco Rabanne Paco Rabanne Rabanne Invictus Elixir 100ml Eau De Parfum ( Format Testeur )",
+        "type": "testeur",
+        "genre": "Homme"
+      }
+    ]
+  },
+  {
+    "groupKey": "paco rabanne paco rabanne rabanne olympea elixir",
+    "representativeName": "Paco Rabanne Paco Rabanne Rabanne Olympea Elixir 80ml Eau De Parfum ( Format Testeur )",
+    "searchQuery": "Paco Rabanne Paco Rabanne Rabanne Olympea Elixir 80ml Eau De Parfum ( Format Testeur ) perfume bottle",
+    "imageUrl": "https://www.tjhughes.co.uk/cdn/shop/files/5740468--Paco-Rabanne-Olympea-Eau-de-Parfum-80ml-10045553-Bottle-Lifestyle_1024x.jpg?v=1763722370",
+    "sourceUrl": "https://www.tjhughes.co.uk/products/paco-rabanne-olympea-eau-de-parfum-80ml-1",
+    "localImage": "/images/parfums/paco-rabanne-paco-rabanne-rabanne-olympea-elixir-80ml-eau-de-parfum-format-testeur.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 69,
+        "nom": "Paco Rabanne Paco Rabanne Rabanne Olympea Elixir 80ml Eau De Parfum ( Format Testeur )",
+        "type": "testeur",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "paco rabanne pure xs",
+    "representativeName": "Paco Rabanne Pure Xs 100ml Eau De Toilette",
+    "searchQuery": "Paco Rabanne Pure Xs 100ml Eau De Toilette perfume bottle",
+    "imageUrl": "https://i.notino.com/zoomMobile/paco-rabanne/3349668545728_02-o__8.jpg",
+    "sourceUrl": "https://www.notino.co.uk/paco-rabanne/pure-xs-eau-de-toilette-for-men/",
+    "localImage": "/images/parfums/paco-rabanne-pure-xs-100ml-eau-de-toilette.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 70,
+        "nom": "Paco Rabanne Pure Xs 100ml Eau De Toilette",
+        "type": "standard",
+        "genre": "Homme"
+      }
+    ]
+  },
+  {
+    "groupKey": "paloma picasso",
+    "representativeName": "Paloma Picasso 100ml Eau De Toilette ( Format Testeur )",
+    "searchQuery": "Paloma Picasso 100ml Eau De Toilette ( Format Testeur ) perfume bottle",
+    "imageUrl": "https://cdn.notinoimg.com/detail_main_hq/paloma-picasso/3614273532990_02-o/paloma-picasso-mon-parfum___230313.jpg",
+    "sourceUrl": "https://www.notino.fr/paloma-picasso/paloma-picasso-mon-eau-de-toilette-pour-femme/",
+    "localImage": "/images/parfums/paloma-picasso-100ml-eau-de-toilette-format-testeur.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 71,
+        "nom": "Paloma Picasso 100ml Eau De Toilette ( Format Testeur )",
+        "type": "testeur",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "tiziana terenzi kirke",
+    "representativeName": "Tiziana Terenzi Kirké 100ml Eau De Parfum",
+    "searchQuery": "Tiziana Terenzi Kirké 100ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://parfumopt24.ru/d/hgfgfhh.jpg",
+    "sourceUrl": "https://parfumopt24.ru/catalog/product/tiziana-terenzi-kirke-extrait-de-parfum-unisex-100-ml-kopiya",
+    "localImage": "/images/parfums/tiziana-terenzi-kirke-100ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 74,
+        "nom": "Tiziana Terenzi Kirké 100ml Eau De Parfum",
+        "type": "standard",
+        "genre": "Mixte"
+      }
+    ]
+  },
+  {
+    "groupKey": "versace l homme",
+    "representativeName": "Versace L'homme 100ml Eau De Toilette ( Format Testeur )",
+    "searchQuery": "Versace L'homme 100ml Eau De Toilette ( Format Testeur ) perfume bottle",
+    "imageUrl": "https://www.la-parfumerie-discount.fr/3642-large_default/versace-l-homme-100ml.jpg",
+    "sourceUrl": "",
+    "localImage": "/images/parfums/versace-l-homme-100ml-eau-de-toilette-format-testeur.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 75,
+        "nom": "Versace L'homme 100ml Eau De Toilette ( Format Testeur )",
+        "type": "testeur",
+        "genre": "Homme"
+      }
+    ]
+  },
+  {
+    "groupKey": "yves saint laurent libre",
+    "representativeName": "Yves Saint Laurent Libre 50ml Eau De Parfum",
+    "searchQuery": "Yves Saint Laurent Libre 50ml Eau De Parfum perfume bottle",
+    "imageUrl": "https://statics.docmorris.de/static/produkte/GTKM39XK/docmorris/ps420r/yves-saint-laurent-libre-eau-de-parfum-50ml-0-05-l-GTKM39XK-right-1743408170584281.jpeg",
+    "sourceUrl": "https://www.docmorris.de/yves-saint-laurent-libre-eau-de-parfum-50ml/GTKM39XK",
+    "localImage": "/images/parfums/yves-saint-laurent-libre-50ml-eau-de-parfum.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 76,
+        "nom": "Yves Saint Laurent Libre 50ml Eau De Parfum + Miniature 10ml",
+        "type": "coffret",
+        "genre": "Femme"
+      }
+    ]
+  },
+  {
+    "groupKey": "zadig voltaire zadig l intense intense",
+    "representativeName": "Zadig & Voltaire Zadig L'intense 90ml Eau De Parfum Intense",
+    "searchQuery": "Zadig & Voltaire Zadig L'intense 90ml Eau De Parfum Intense perfume bottle",
+    "imageUrl": "https://fimgs.net/mdimg/perfume-thumbs/s.39359.2x.jpg",
+    "sourceUrl": "https://www.fragrantica.fr/parfum/Zadig-Voltaire/Zadig-L-Intense-125544.html",
+    "localImage": "/images/parfums/zadig-and-voltaire-zadig-l-intense-90ml-eau-de-parfum-intense.jpg",
+    "status": "validated",
+    "products": [
+      {
+        "index": 77,
+        "nom": "Zadig & Voltaire Zadig L'intense 90ml Eau De Parfum Intense",
+        "type": "standard",
+        "genre": "Femme"
       }
     ]
   }
